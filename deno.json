@@ -17,7 +17,6 @@
     "imports": {
         "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
         "autoprefixer": "npm:autoprefixer@^10.4.20",
-        "gh-pages": "npm:gh-pages@^6.2.0",
         "postcss": "npm:postcss@^8.4.48",
         "tailwindcss": "npm:tailwindcss@^3.4.14",
         "vite": "npm:vite@^5.4.9"
