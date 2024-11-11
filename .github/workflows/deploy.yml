@@ -19,9 +19,6 @@ jobs:
         with:
           deno-version: v2.x
 
-      - name: Install dependencies (if needed)
-        run: deno task install
-
       - name: Build project
         run: deno task build  # Assuming your Deno config has a `build` task
 
