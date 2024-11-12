@@ -1,10 +1,9 @@
 import "./style.css";
-import logo from "./assets/logo_alt.svg";
 import { setupCounter } from "./counter.js";
-
+import navbar from "./navbar.js";
 document.querySelector("#app").innerHTML = `
-  <div class="flex flex-col text-gray-200 items-center mx-auto">
-    <img src="${logo}" alt="snz logo" />
+    <nav id="navbar"></nav>
+  <div class="max-w-3xl flex flex-col text-gray-200 items-center mx-auto">
     <h1>Hello World!</h1>
     <div class="w-fit border-gray-400 border rounded-lg px-4 py-2 my-2">
       <button id="counter" type="button"></button>
@@ -13,3 +12,4 @@ document.querySelector("#app").innerHTML = `
 `;
 
 setupCounter(document.querySelector("#counter"));
+navbar(document.querySelector("#navbar"));
