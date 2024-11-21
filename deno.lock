@@ -1,6 +1,8 @@
 {
   "version": "4",
   "specifiers": {
+    "npm:@catppuccin/tailwindcss@*": "0.1.6_tailwindcss@3.4.14__postcss@8.4.48",
+    "npm:@catppuccin/tailwindcss@~0.1.6": "0.1.6_tailwindcss@3.4.14__postcss@8.4.48",
     "npm:@deno/vite-plugin@1": "1.0.0_vite@5.4.10",
     "npm:autoprefixer@^10.4.20": "10.4.20_postcss@8.4.48",
     "npm:postcss@^8.4.48": "8.4.48",
@@ -12,6 +14,12 @@
   "npm": {
     "@alloc/quick-lru@5.2.0": {
       "integrity": "sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw=="
+    },
+    "@catppuccin/tailwindcss@0.1.6_tailwindcss@3.4.14__postcss@8.4.48": {
+      "integrity": "sha512-V+Y0AwZ5SSyvOVAcDl7Ng30xy+m82OKnEJ+9+kcZZ7lRyXuZrAb2GScdq9XR3v+ggt8qiZ/G4TvaC9cJ88AAXA==",
+      "dependencies": [
+        "tailwindcss"
+      ]
     },
     "@deno/vite-plugin@1.0.0_vite@5.4.10": {
       "integrity": "sha512-Q9UeWqs3s7B5lqzu1Z5QrzYAzqTj3+F9YW17tWobGRbT2G40ihwis6zK/+QgMgcG4fm3IqdIfXmpQYhkZpdMfw==",
@@ -810,6 +818,7 @@
   },
   "workspace": {
     "dependencies": [
+      "npm:@catppuccin/tailwindcss@~0.1.6",
       "npm:@deno/vite-plugin@1",
       "npm:autoprefixer@^10.4.20",
       "npm:postcss@^8.4.48",
