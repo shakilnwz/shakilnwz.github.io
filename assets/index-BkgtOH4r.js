@@ -9,7 +9,7 @@
         <img src="${n}" class="logo vanilla" alt="JavaScript logo" />
       </a>
     </div>
-    <h1>Hello Vite!</h1>
+    <h1>Hello Tailwind 4!</h1>
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
