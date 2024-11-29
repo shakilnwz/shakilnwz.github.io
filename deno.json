@@ -9,11 +9,12 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"]
   },
   "imports": {
-    "@catppuccin/tailwindcss": "npm:@catppuccin/tailwindcss@^0.1.6",
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
     "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.0.0-beta.3",
+    "@vitejs/plugin-vue": "npm:@vitejs/plugin-vue@^5.1.4",
     "tailwindcss": "npm:tailwindcss@^4.0.0-beta.3",
-    "vite": "npm:vite@^5.4.9"
+    "vite": "npm:vite@^5.4.9",
+    "vue": "npm:vue@^3.5.12"
   },
     "nodeModulesDir": "auto"
 }
