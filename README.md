@@ -18,17 +18,18 @@ Steps:
 We can install Deno using following command:
 
 ArchLinux (from AUR):
-```sh
+```zsh
 $ yay -S deno
 ```
 Ubuntu (using APT):
-```sh
+```zsh
 $ sudo apt install deno
 ```
 Universal command for MacOS or Linux (requires curl):
 > [!NOTE]
 > This might require adding deno executable or local bin to PATH
-```sh
+
+```zsh
 $ curl -fsSL https://deno.land/install.sh | sh
 ```
 Windows (using PowerShell):
@@ -38,15 +39,15 @@ irm https://deno.land/install.ps1 | iex
 Upgrade Deno:
 The distro specific package for deno might not be the latest version.
 To upgrade Deno we can run following command:
-```sh
+```zsh
 $ deno upgrade
 ```
 More Information for troubleshooting and installation can be found at [Official Website of Deno](https://deno.com/).
 
-## Create vite project
+## Create Vite project
 
 Assuming Deno already installed in the system having version 2 or up.
-```sh
+```zsh
 $ deno run --allow-read --allow-write --allow-env npm:create-vite-extra@latest .
 ```
 Deno will use the npm packages for creating a vite app.
@@ -59,7 +60,7 @@ Now we can choose which project we want to create.
 ## Add TailwindCSS
 
 To add latest TailwindCSS (beta in this case) we can use the following command.
-```sh
+```zsh
 $ deno add npm:tailwindcss@next npm:@tailwindcss/vite@next
 ```
 This command will add those packages from npm. The tailwindcss 4 will use it's dedicated vite plugin.
@@ -92,7 +93,7 @@ Deno config:
 }
 ```
 Now we can run deno install to install those packages but we have to pass `--allow-scripts` flag.
-```sh
+```zsh
 $ deno install --allow-scripts=npm:svelte-preprocess@6.0.3
 ```
 The `--allow-scripts` flag takes the scripts to run.
@@ -100,6 +101,7 @@ In this case `svelte-preprocess@6.0.3` and as it is from an npm package `npm:` w
 This extra steps are needed as deno is secure by default. So we need to pass explicitly what we want to run.
 
 Now we have to import tailwindcss in our vite config.
+
 Vite Config:
 ```js
 import { defineConfig } from "vite";
@@ -118,6 +120,7 @@ This imports deno, vue (as vue was selected as project type in this case), and t
 
 TailwindCSS v4 uses CSS first as configuration, So no `tailwind.config.json` is not needed.
 In our main style.css we simply have to import tailwindcss.
+
 Main CSS:
 ```css
 @import 'tailwindcss';
@@ -133,6 +136,7 @@ That's all we have to do.
 
 When we created the project deno added some tasks in the config.
 
+
 ### Start a dev server
 
 To run a local development server we have to run:
@@ -140,10 +144,10 @@ To run a local development server we have to run:
 $ deno task dev
 ```
 
-### Build production assets:
+### Build production assets
 
 To build for production assets we can run:
-```sh
+```zsh
 $ deno task build
 ```
-That's all
+That's all.
