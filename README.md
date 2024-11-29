@@ -7,11 +7,11 @@ Tools used:
 - TailwindCSS v4 beta
 
 Steps:
-- [[Install Deno]].
-- [[Create vite project]].
-- [[Add TailwindCSS]].
-- [[Configure Deno and Vite]].
-- [[Usage]].
+- [Install Deno](#install-deno).
+- [Create Vite project](#create-vite-project).
+- [Add TailwindCSS](#add-tailwindcss).
+- [Configure Deno and Vite](#configure-deno-and-vite).
+- [Usage](#usage).
 
 ## Install Deno
 
