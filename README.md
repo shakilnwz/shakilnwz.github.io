@@ -21,9 +21,9 @@ ArchLinux (from AUR):
 ```zsh
 $ yay -S deno
 ```
-Ubuntu (using APT):
+Ubuntu (using snap):
 ```zsh
-$ sudo apt install deno
+$ sudo snap install deno
 ```
 Universal command for MacOS or Linux (requires curl):
 > [!NOTE]
