@@ -1,9 +1,11 @@
 <script setup>
-
+defineProps({
+    msg: String,
+})
 </script>
 
 <template>
     <div>
-        some random text
+        {{ msg }}
     </div>
 </template>
