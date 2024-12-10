@@ -6,6 +6,7 @@ defineProps({
 
 <template>
     <div>
+        <img src="../assets/logo_dark.svg" alt="logo">
         {{ msg }}
     </div>
 </template>
