@@ -1,0 +1,31 @@
+@import 'tailwindcss';
+
+
+@layer base{
+    :root{
+        --color-brand-x: rgba(14, 47, 115, 1);
+        --color-brand-y: rgba(114, 135, 253, 1);
+        --color-base-x: rgba(239, 241, 245, 1);
+        --color-base-y: rgba(220, 224, 232, 1);
+        --color-surface: rgba(255, 255, 255, 1);
+    }
+    :root [class~="dark"]{
+        --color-brand-x: rgba(202, 210, 255, 1);
+        --color-brand-y: rgba(114, 135, 253, 1);
+        --color-base-x: rgba(30, 30, 46, 1);
+        --color-base-y: rgba(17, 17, 27, 1);
+        --color-surface: rgba(49, 50, 68, 1);
+    }
+}
+
+@theme{
+    --font-display: "Space Grotesk", system-ui;
+
+    
+    --color-brand-x: var(--color-brand-x);
+    --color-brand-y: var(--color-brand-y);
+    --color-base-x: var(--color-base-x);
+    --color-base-y: var(--color-base-y);
+    --color-surface: var(--color-surface); 
+
+}
