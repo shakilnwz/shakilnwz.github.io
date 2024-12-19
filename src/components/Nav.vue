@@ -7,12 +7,22 @@ const themeSwitch = {
 }
 
 let switchIcon = themeSwitch['d-moon'];
-function toggleDark(){
-    document.body.classList.toggle("dark")
+
+const applyTheme = (theme) =>{
+    document.body.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('theme', theme);
 }
-if (document.body.classList.contains('dark')){
-    switchIcon = themeSwitch['d-moon']
+
+const savedTheme = localStorage.getItem('theme');
+savedTheme ? applyTheme(savedTheme) : window.matchMedia('(prefers-color-scheme: dark)').matches ? applyTheme('dark') : applyTheme('light')
+
+const toggleTheme = ()=>{
+    const currentTheme = document.body.classList.contains('dark') ? 'dark' : 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    applyTheme(newTheme); 
 }
+
+
 </script>
 
 <template>
@@ -78,7 +88,7 @@ if (document.body.classList.contains('dark')){
                 </a>
 
                 <!-- theme toggle -->
-                <div class="cursor-pointer hover:text-brand-y" @click="toggleDark()">
+                <div class="cursor-pointer hover:text-brand-y" @click="toggleTheme()">
                     <svg class="h-5" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 22 22">
                         <path
                             class="fill-current"

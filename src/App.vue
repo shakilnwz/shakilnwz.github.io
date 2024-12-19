@@ -7,7 +7,7 @@ import Main from './components/Main.vue'
 </script>
 
 <template>
-    <div class="mx-auto text-brand-x text-lg font-display bg-gradient-to-b from-base-x to-base-y">
+    <div class="mx-auto bg-no-repeat bg-gradient-to-b from-base-x to-base-y text-brand-x text-lg">
         <Nav />
         <Main />
         

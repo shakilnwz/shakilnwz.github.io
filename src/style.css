@@ -9,21 +9,30 @@
         --color-base-y: oklch(90.6% 0.0117 264.51);
         --color-surface: oklch(100% 0 0);
     }
-    @media (prefers-color-scheme: dark){
-    :root{
+    
+    .dark{
         --color-brand-x: oklch(87.24% 0.0629 277.11);
         --color-brand-y: oklch(66.38% 0.1751 273.13);
         --color-base-x: oklch(24.29% 0.0304 283.91);
         --color-base-y: oklch(18.28% 0.0204 284.2);
         --color-surface: oklch(32.4% 0.0319 281.98);
-        }
     }
+    
+    /* @media (prefers-color-scheme: dark){ */
+    /*     :root{ */
+    /*         --color-brand-x: oklch(87.24% 0.0629 277.11); */
+    /*         --color-brand-y: oklch(66.38% 0.1751 273.13); */
+    /*         --color-base-x: oklch(24.29% 0.0304 283.91); */
+    /*         --color-base-y: oklch(18.28% 0.0204 284.2); */
+    /*         --color-surface: oklch(32.4% 0.0319 281.98); */
+    /*     } */
+    /* } */
 }
 
 @theme{
-    --font-display: "Space Grotesk", system-ui;
+    --font-sans: "Space Grotesk", system-ui;
 
-    
+    --color-* : initial;
     --color-brand-x: var(--color-brand-x);
     --color-brand-y: var(--color-brand-y);
     --color-base-x: var(--color-base-x);
