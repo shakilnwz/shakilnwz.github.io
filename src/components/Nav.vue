@@ -10,7 +10,9 @@ let switchIcon = themeSwitch['d-moon'];
 function toggleDark(){
     document.body.classList.toggle("dark")
 }
-
+if (document.body.classList.contains('dark')){
+    switchIcon = themeSwitch['d-moon']
+}
 </script>
 
 <template>
@@ -27,8 +29,8 @@ function toggleDark(){
             </a>
 
             <!-- tab -->
-            <div class="bg-surface fixed bottom-0 left-0 right-0 sm:relative sm:rounded-xl overflow-hidden drop-shadow-black/20 drop-shadow-sm">
-                <ul class="flex flex-row *:grow *:not-last:border-r *:not-last:border-r-brand-y">
+            <div class="bg-surface fixed bottom-0 left-0 right-0 sm:relative sm:rounded-xl overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] sm:shadow-[0_1px_5px_rgba(0,0,0,0.25)] ">
+                <ul class="flex flex-row *:grow *:basis-1 *:not-last:border-r *:not-last:border-r-brand-y">
                     <li>
                         <NavLink 
                             href="/about"

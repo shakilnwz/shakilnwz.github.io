@@ -16,7 +16,7 @@ import Button from "./Button.vue"
             </div>
 
             <div class="sm:row-span-2 sm:justify-self-end justify-self-center self-center">
-                <div class="bg-radial from-brand-x/90 to-brand-y/30 to-45% max-w-60 aspect-ratio-1 rounded-full drop-shadow-[0_0_9px_black/50]">
+                <div class="bg-radial from-brand-x/90 to-brand-y/30 to-45% max-w-60 aspect-ratio-1 rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)]">
                     <img class="w-full aspect-ratio-1" src="../assets/avatar.png" alt="avatar" loading='lazy' />
                 </div>
             </div> 
@@ -29,7 +29,7 @@ import Button from "./Button.vue"
                     I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.
                 </p>
 
-                <div class="flex flex-row gap-2">
+                <div class="flex flex-row gap-2 flex-wrap">
                     <Button 
                         text="More About Me" 
                         href="/about" 
