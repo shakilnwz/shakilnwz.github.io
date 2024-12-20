@@ -7,11 +7,11 @@ const themeSwitch = {
     'dark' : 'M11.621.09C5.556.09.646 5.017.646 11.09c0 6.075 4.91 11 10.975 11 2.976 0 5.672-1.188 7.651-3.113a.785.785 0 0 0-.682-1.335 8.616 8.616 0 0 1-1.479.127c-4.758 0-8.618-3.87-8.618-8.642a8.64 8.64 0 0 1 4.385-7.529.785.785 0 0 0-.324-1.463c-.31-.025-.619-.04-.933-.04V.092Z'
 }
 
-const switchIcon = ref(themeSwitch['light']);
+const switchIcon = ref(themeSwitch['light'])
 
 const applyTheme = (theme) =>{
-    document.body.classList.toggle('dark', theme === 'dark');
-    localStorage.setItem('theme', theme);
+    document.body.classList.toggle('dark', theme === 'dark')
+    localStorage.setItem('theme', theme)
     switchIcon.value = themeSwitch[theme]
 }
 
@@ -79,7 +79,7 @@ const toggleTheme = ()=>{
             <div class="flex flex-row gap-4">
 
                 <a  class="hover:text-brand-y" href="https://github.com/shakilnwz" target="_blank">
-                    <svg class="h-5" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 23 22">
+                    <svg class="h-5 transition duration-300" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 23 22">
                         <path
                             class="fill-current"
                             fill-rule="evenodd"
@@ -91,7 +91,7 @@ const toggleTheme = ()=>{
 
                 <!-- theme toggle -->
                 <div class="cursor-pointer hover:text-brand-y" @click="toggleTheme()">
-                    <svg class="h-5" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 22 22">
+                    <svg class="h-5 transition duration-300" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 22 22">
                         <path
                             class="fill-current"
                             fill-rule="evenodd"
@@ -99,9 +99,13 @@ const toggleTheme = ()=>{
                             clip-rule="evenodd"
                         />
                     </svg>
+                    
                 </div>
+                
             </div>
         </div>
     </nav>
 </template>
 
+<style scoped>
+</style>
