@@ -1,12 +1,70 @@
 <script setup>
+import { inject } from 'vue'
+import SocialLink from './SocialLink.vue'
+const currentYear = new Date().getFullYear()
+
+const iconList = inject('icons')
 
 </script>
 <template>
-    <footer >
-        <div class="mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-5xl">
+    <footer>
+        <div class="mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-5xl space-y-2.5 sm:space-y-7">
             <h2>Connect</h2>
+            <p>I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.</p>
+            <!-- social links with text -->
+            <ul class="space-y-2.5 sm:space-y-4 ">
+                <li>
+                    <SocialLink
+                        text="Email me at"
+                        textHighlight="shakilnwz@gmail.com"
+                        href="mailto:shakilnwz@gmail.com"
+                        :svgd="iconList.email"
+                    />
+                </li>
+                <li>
+                    <SocialLink
+                        text="Let's connect on"
+                        textHighlight="WhatsApp"
+                        href="https://wa.me/8801791907711"
+                        :svgd="iconList.whatsapp"
+                    />
+                </li>
+                <li>
+                    <SocialLink
+                        text="Find me on"
+                        textHighlight="Discord"
+                        href="https://discord.com/channels/@me/shakilnwz"
+                        :svgd="iconList.discord"
+                    />
+                </li>
+            </ul>
+
+            <!-- social icons -->
+            <div class="flex flex-row gap-2.5 py-2.5">
+                <SocialLink
+                    icon
+                    href="https://www.linkedin.com/in/shakilnwz/"
+                    :svgd="iconList.linkedin"
+                />
+                <SocialLink
+                    icon
+                    href="https://github.com/shakilnwz"
+                    :svgd="iconList.github"
+                />
+                <SocialLink
+                    icon
+                    href="https://x.com/shakilnwz"
+                    :svgd="iconList.twitter"
+                />
+            </div>
         </div>
-
+        <div class="relative">
+            <p class="text-base relative z-1 mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-5xl">&copy; {{ currentYear }} snz</p>
+            <div class="z-0 w-full flex flex-row absolute left-0 top-0 h-full">
+                <span class="w-3/5 bg-base-x"></span>
+                <span class="w-[30%] bg-brand-y"></span>
+                <span class="w-[10%] bg-brand-x"></span>
+            </div>
+        </div>
     </footer>
-
 </template>

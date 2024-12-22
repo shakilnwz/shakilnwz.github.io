@@ -6,13 +6,13 @@ import Button from "./Button.vue"
 <template>
     <Section class="grid sm:grid-cols-3 gap-2 sm:gap-0">
         <div class="sm:col-span-2">
-            <h1 class="text-brand-y text-xl">
+            <h1 class="text-brand-y text-lg sm:text-xl">
                 Hello World! I'm
                 <span class="text-transparent w-fit bg-gradient-to-r from-brand-y to-brand-x bg-clip-text text-5xl sm:text-6xl font-bold block">
                     Shakil Nawaz
                 </span>
             </h1>
-            <p class="text-xl font-bold">A web developer, Specialized in JavaScript and PHP</p>
+            <p class="text-lg sm:text-xl font-bold">A web developer, Specialized in JavaScript and PHP</p>
         </div>
 
         <div class="sm:row-span-2 sm:justify-self-end justify-self-center self-center">
