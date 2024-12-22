@@ -1,9 +1,9 @@
 <script setup>
 import { provide } from 'vue'
 import icons from './assets/icons.json'
-import Nav from './components/Nav.vue'
-import Main from './components/Main.vue'
-import Footer from './components/Footer.vue'
+import Nav from './Nav.vue'
+import Main from './Main.vue'
+import Footer from './Footer.vue'
 
 // make icons available to all component
 provide('icons', icons)

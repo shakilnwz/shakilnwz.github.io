@@ -1,5 +1,5 @@
 <script setup>
-import NavLink from "./NavLink.vue"
+import NavLink from "./components/NavLink.vue"
 import { ref, onMounted, onUnmounted, inject } from 'vue'
 
 const iconList = inject('icons')
@@ -42,7 +42,7 @@ onUnmounted(()=>{
 </script>
 
 <template>
-    <nav class="sm:sticky top-0 transition-shadow duration-300" :class="isSticky ? 'sm:shadow-sm sm:backdrop-blur-2xl': 'sm:shadow-none' " ref='stickyHeader'>
+    <nav class="sm:sticky top-0 transition-shadow duration-300 relative z-50" :class="isSticky ? 'sm:shadow-sm sm:backdrop-blur-2xl': 'sm:shadow-none' " ref='stickyHeader'>
         <div class="relative z-999 max-w-5xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 py-2.5 sm:py-5 gap-2">
             <!-- logo -->
             <a class="block" href="/">
@@ -55,7 +55,7 @@ onUnmounted(()=>{
             </a>
 
             <!-- tab -->
-            <div class="backdrop-blur-2xl fixed bottom-0 left-0 right-0 sm:relative sm:rounded-xl overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] sm:shadow-[0_1px_5px_rgba(0,0,0,0.25)] ">
+            <div class="backdrop-blur-2xl sm:bg-surface fixed bottom-0 left-0 right-0 sm:relative sm:rounded-xl overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] sm:shadow-[0_1px_5px_rgba(0,0,0,0.25)] ">
                 <ul class="flex flex-row *:grow *:basis-1 *:not-last:border-r *:not-last:border-r-brand-y">
                     <li>
                         <NavLink 
@@ -93,7 +93,7 @@ onUnmounted(()=>{
             <div class="flex flex-row gap-4">
 
                 <a  class="hover:text-brand-y" href="https://github.com/shakilnwz" target="_blank">
-                    <svg class="h-5 transition duration-300" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 35 35">
+                    <svg class="h-5 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"  >
                         <path
                             class="fill-current"
                             fill-rule="evenodd"
@@ -105,7 +105,7 @@ onUnmounted(()=>{
 
                 <!-- theme toggle -->
                 <div class="cursor-pointer hover:text-brand-y" @click="toggleTheme()">
-                    <svg class="h-5 transition duration-300" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 22 22">
+                    <svg class="h-5 transition duration-300" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 16 16">
                         <path
                             class="fill-current"
                             fill-rule="evenodd"
@@ -113,9 +113,7 @@ onUnmounted(()=>{
                             clip-rule="evenodd"
                         />
                     </svg>
-                    
                 </div>
-                
             </div>
         </div>
     </nav>

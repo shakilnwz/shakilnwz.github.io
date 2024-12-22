@@ -1,6 +1,6 @@
 <script setup>
 import { inject } from 'vue'
-import SocialLink from './SocialLink.vue'
+import SocialLink from './components/SocialLink.vue'
 const currentYear = new Date().getFullYear()
 
 const iconList = inject('icons')
