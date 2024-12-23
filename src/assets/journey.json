@@ -1,0 +1,66 @@
+{
+    "vue" : {
+        "id": 8,
+        "iconSrc" : "/src/assets/vue.svg",
+        "iconAlt" : "vue logo",
+        "date" : "December 2024",
+        "title" : "Vue, Vue Router",
+        "summary" : "Worked on several project"
+    },
+    "tailwindcss" : {
+        "id": 7,
+        "iconSrc" : "/src/assets/tailwind.svg",
+        "iconAlt" : "vue logo",
+        "date" : "December 2024",
+        "title" : "Vue, Vue Router",
+        "summary" : "Worked on several project"
+    },
+    "laravel" : {
+        "id": 6,
+        "iconSrc" : "/src/assets/laravel.svg",
+        "iconAlt" : "vue logo",
+        "date" : "December 2024",
+        "title" : "Vue, Vue Router",
+        "summary" : "Worked on several project"
+    },
+    "wordpress" : {
+        "id": 5,
+        "iconSrc" : "/src/assets/wordpress.svg",
+        "iconAlt" : "vue logo",
+        "date" : "December 2024",
+        "title" : "Vue, Vue Router",
+        "summary" : "Worked on several project"
+    },
+    "php" : {
+        "id": 4,
+        "iconSrc" : "/src/assets/php.svg",
+        "iconAlt" : "vue logo",
+        "date" : "December 2024",
+        "title" : "Vue, Vue Router",
+        "summary" : "Worked on several project"
+    },
+    "javascript" : {
+        "id": 3,
+        "iconSrc" : "/src/assets/js.svg",
+        "iconAlt" : "vue logo",
+        "date" : "December 2024",
+        "title" : "Vue, Vue Router",
+        "summary" : "Worked on several project"
+    },
+    "css" : {
+        "id": 2,
+        "iconSrc" : "/src/assets/css.svg",
+        "iconAlt" : "css logo",
+        "date" : "March 2022",
+        "title" : "CSS, SCSS, Modern CSS with nesting",
+        "summary" : "Worked on several project"
+    },
+    "html" : {
+        "id": 1,
+        "iconSrc" : "/src/assets/html.svg",
+        "iconAlt" : "html logo",
+        "date" : "January 2022",
+        "title" : "HTML, Semantic HTML, HTML5",
+        "summary" : "Worked on several project"
+    }
+}
