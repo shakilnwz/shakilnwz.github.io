@@ -1,5 +1,10 @@
 <script setup>
+import { inject } from 'vue';
 import Section from '../components/Section.vue'
+import Button from '../components/Button.vue';
+
+const iconList = inject('icons')
+
 </script>
 
 <template>
@@ -15,6 +20,12 @@ import Section from '../components/Section.vue'
 
             </div>
         </div>
-        
+
+        <Button 
+            secondary
+            href="/articles"
+            :svgd="iconList.list"
+            text="Show All"
+        />
     </Section>
 </template>
