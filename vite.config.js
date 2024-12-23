@@ -5,4 +5,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [deno(), vue(), tailwindcss()],
+  base: "/shakilnwz.github.io/",
 });
