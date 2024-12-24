@@ -5,6 +5,8 @@ import Nav from './Nav.vue'
 import Main from './Main.vue'
 import Footer from './Footer.vue'
 
+const iconStatic = import.meta.glob('./assets/*.svg', { eager: true })
+provide('iconStatic', iconStatic)
 // make icons available to all component
 provide('icons', icons)
 
