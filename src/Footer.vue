@@ -19,6 +19,7 @@ const iconList = inject('icons')
                         textHighlight="shakilnwz@gmail.com"
                         href="mailto:shakilnwz@gmail.com"
                         :svgd="iconList.email"
+                        ariaLebel="Email me at shakilnwz@gmail.com"
                     />
                 </li>
                 <li>
@@ -27,6 +28,7 @@ const iconList = inject('icons')
                         textHighlight="WhatsApp"
                         href="https://wa.me/8801791907711"
                         :svgd="iconList.whatsapp"
+                        ariaLebel="Let's connect on whatsapp"
                     />
                 </li>
                 <li>
@@ -35,6 +37,7 @@ const iconList = inject('icons')
                         textHighlight="Discord"
                         href="https://discord.com/channels/@me/shakilnwz"
                         :svgd="iconList.discord"
+                        ariaLebel="find me on discord"
                     />
                 </li>
             </ul>
@@ -45,25 +48,28 @@ const iconList = inject('icons')
                     icon
                     href="https://www.linkedin.com/in/shakilnwz/"
                     :svgd="iconList.linkedin"
+                    ariaLebel="connect on linkedin"
                 />
                 <SocialLink
                     icon
                     href="https://github.com/shakilnwz"
                     :svgd="iconList.github"
+                    ariaLebel="view my github"
                 />
                 <SocialLink
                     icon
                     href="https://x.com/shakilnwz"
                     :svgd="iconList.twitter"
+                    ariaLebel="find me on x"
                 />
             </div>
         </div>
         <div class="relative">
             <p class="text-base relative z-1 mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-5xl">&copy; {{ currentYear }} snz</p>
-            <div class="z-0 w-full flex flex-row absolute left-0 top-0 h-full">
-                <span class="w-3/5 bg-base-x"></span>
-                <span class="w-[30%] bg-brand-y"></span>
-                <span class="w-[10%] bg-brand-x"></span>
+            <div class="z-0 w-full flex flex-row absolute left-0 top-0 h-full" aria-hidden="true">
+                <span class="w-3/5 bg-base-x" aria-hidden="true"></span>
+                <span class="w-[30%] bg-brand-y" aria-hidden="true"></span>
+                <span class="w-[10%] bg-brand-x" aria-hidden="true"></span>
             </div>
         </div>
     </footer>

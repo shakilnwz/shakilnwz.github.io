@@ -45,7 +45,7 @@ onUnmounted(()=>{
     <nav class="sm:sticky top-0 transition-shadow duration-300 relative z-50" :class="isSticky ? 'sm:shadow-sm sm:backdrop-blur-2xl': 'sm:shadow-none' " ref='stickyHeader'>
         <div class="relative z-999 max-w-5xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 py-2.5 sm:py-5 gap-2">
             <!-- logo -->
-            <a class="block" href="/">
+            <a class="block" href="/" aria-lebel='Home'>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10" viewBox="0 0 45 40">
                     <g class="fill-current" fill-rule="evenodd">
                         <path class="text-brand-x" d="M0 0h16.548L45 18.912 28.216 40H15.782l15.32-18.854L0 0Z"/>
