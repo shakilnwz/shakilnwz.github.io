@@ -2,6 +2,7 @@
 import Hero from './sections/Hero.vue'
 import Journey from './sections/Journey.vue'
 import Articles from './sections/Articles.vue'
+import Projects from './sections/Projects.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Articles from './sections/Articles.vue'
         <Hero />
         <Journey />
         <Articles />
+        <Projects />
     </main>
 </template>
 

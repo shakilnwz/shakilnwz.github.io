@@ -2,6 +2,8 @@
 import { inject } from 'vue';
 import Section from '../components/Section.vue'
 import Button from '../components/Button.vue';
+import placeholder from '../assets/placeholder.webp'
+import PostLink from '../components/PostLink.vue';
 
 const iconList = inject('icons')
 
@@ -15,24 +17,28 @@ const iconList = inject('icons')
 
             <div class="sm:basis-xl grow space-y-11">
                 <!-- article card -->
-                <a 
-                    href="#" 
-                    class="group w-full flex flex-row overflow-clip gap-1 sm:gap-3 items-center bg-surface/60 rounded-2xl shadow hover:shadow-lg hover:shadow-brand-y/30 transition-shadow duration-300 h-30">
-                    <span class="bg-brand-y w-40 h-full grow grayscale group-hover:grayscale-0 transition-all duration-300">
-                        <img class="object-center object-contain w-full h-full" src="../assets/placeholder.webp" alt="">
-                    </span>
-                    
+               <PostLink 
+                    type="article"
+                    title="My First Post"
+                    link="/"
+                    :thumbnail="placeholder"
+                    date="22d"
+                    summary="This is the post excerpt. This is the post excerpt."
 
-                    <div class="grow p-2 h-full">
-                        <div 
-                            class="flex flex-row justify-between">
-                            <h3 class="font-bold">My post title</h3> 
-                            <span class="font-light">22d</span>
-                        </div>
-                        <p>This is some post excerpt content. This is some post excerpt content</p>
-                    </div>
-                </a>
+                /> 
+                <PostLink 
+                    type="article"
+                    title="My First Post"
+                    link="/"
+                    :thumbnail="placeholder"
+                    date="22d"
+                    summary="This is the post excerpt. This is the post excerpt."
 
+                />
+                <PostLink 
+                    type="article"
+                />
+                
 
             </div>
         </div>
