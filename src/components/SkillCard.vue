@@ -1,5 +1,5 @@
 <script setup>
- import {ref, onMounted} from 'vue'
+ // import {ref, onMounted} from 'vue'
 const data = defineProps({
     'iconSrc' : String,
     'iconAlt' : String,
@@ -8,12 +8,7 @@ const data = defineProps({
     'summary' : String
 })
 
-const icon = ref(null)
 
-onMounted(async () => {
-  const imported = await import(data.iconSrc)
-  icon.value = imported.default
-})
 
 </script>
 
@@ -23,7 +18,7 @@ onMounted(async () => {
         <div class="w-17 h-17 sm:w-25 sm:h-25 shrink-0 bg-surface rounded-full shadow-brand-y shadow-sm grid place-items-center transition-all duration-500">
             <img 
                 class="w-10 h-10 sm:h-12 sm:w-13" 
-                :src="icon" 
+                :src="data.iconSrc" 
                 :alt="data.iconAlt"
                 loading="lazy"
             >

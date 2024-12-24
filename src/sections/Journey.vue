@@ -3,6 +3,26 @@ import Section from '../components/Section.vue'
 import SkillCard from '../components/SkillCard.vue'
 import journey from '../assets/journey.json'
 
+import vueIcon from '../assets/vue.svg'
+import tailwindIcon from '../assets/tailwind.svg'
+import cssIcon from '../assets/css.svg'
+import jsIcon from '../assets/js.svg'
+import laravelIcon from '../assets/laravel.svg'
+import wordpressIcon from '../assets/wordpress.svg'
+import htmlIcon from '../assets/html.svg'
+import phpIcon from '../assets/php.svg'
+
+const iconStatic = {
+    'vue' : vueIcon,
+    'css' : cssIcon,
+    'js' : jsIcon,
+    'tailwind' : tailwindIcon,
+    'laravel' : laravelIcon,
+    'wordpress' : wordpressIcon,
+    'html' : htmlIcon,
+    'php' : phpIcon
+}
+
 
 </script>
 
@@ -19,7 +39,7 @@ import journey from '../assets/journey.json'
                 <SkillCard
                     v-for='item in journey'
                     :key="item.id"
-                    :iconSrc= "item.iconSrc"
+                    :iconSrc= "iconStatic[item.name]"
                     :iconAlt="item.iconAlt"
                     :date="item.date"
                     :title="item.title"

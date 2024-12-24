@@ -1,7 +1,7 @@
 {
     "vue" : {
         "id": 8,
-        "iconSrc" : "../assets/vue.svg",
+        "name" : "vue",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -9,7 +9,7 @@
     },
     "tailwindcss" : {
         "id": 7,
-        "iconSrc" : "../assets/tailwind.svg",
+        "name" : "tailwind",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -17,7 +17,7 @@
     },
     "laravel" : {
         "id": 6,
-        "iconSrc" : "../assets/laravel.svg",
+        "name" : "laravel",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -25,7 +25,7 @@
     },
     "wordpress" : {
         "id": 5,
-        "iconSrc" : "../assets/wordpress.svg",
+        "name" : "wordpress",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -33,7 +33,7 @@
     },
     "php" : {
         "id": 4,
-        "iconSrc" : "../assets/php.svg",
+        "name" : "php",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -41,7 +41,7 @@
     },
     "javascript" : {
         "id": 3,
-        "iconSrc" : "../assets/js.svg",
+        "name" : "js",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -49,7 +49,7 @@
     },
     "css" : {
         "id": 2,
-        "iconSrc" : "../assets/css.svg",
+        "name" : "css",
         "iconAlt" : "css logo",
         "date" : "March 2022",
         "title" : "CSS, SCSS, Modern CSS with nesting",
@@ -57,7 +57,7 @@
     },
     "html" : {
         "id": 1,
-        "iconSrc" : "../assets/html.svg",
+        "name" : "html",
         "iconAlt" : "html logo",
         "date" : "January 2022",
         "title" : "HTML, Semantic HTML, HTML5",
