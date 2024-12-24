@@ -20,7 +20,11 @@ const iconList = inject('icons');
 
         <div class="sm:row-span-2 sm:justify-self-end justify-self-center self-center">
             <div class="bg-radial from-brand-x/90 to-brand-y/30 to-45% max-w-60 aspect-ratio-1 rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)]">
-                <img class="w-full aspect-ratio-1" loading='lazy' src="../assets/avatar.webp" alt="avatar"  />
+                <img
+                    class="w-60 h-60"
+                    src="../assets/avatar.webp"
+                    alt="avatar"
+                />
             </div>
         </div> 
 

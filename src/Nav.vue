@@ -42,7 +42,12 @@ onUnmounted(()=>{
 </script>
 
 <template>
-    <nav class="sm:sticky top-0 transition-shadow duration-300 relative z-50" :class="isSticky ? 'sm:shadow-sm sm:backdrop-blur-2xl': 'sm:shadow-none' " ref='stickyHeader'>
+    <nav 
+        :class="{
+            'sm:sticky top-0 transition-shadow duration-300 relative z-50 sm:shadow-none' : true,
+            'sm:shadow-sm sm:backdrop-blur-xl' : isSticky
+        }"
+        ref='stickyHeader'>
         <div class="relative z-999 max-w-5xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 py-2.5 sm:py-5 gap-2">
             <!-- logo -->
             <a class="block" href="/" aria-lebel='Home'>
@@ -55,7 +60,10 @@ onUnmounted(()=>{
             </a>
 
             <!-- tab -->
-            <div class="backdrop-blur-2xl sm:bg-surface fixed bottom-0 left-0 right-0 sm:relative sm:rounded-xl overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] sm:shadow-[0_1px_5px_rgba(0,0,0,0.25)] ">
+            <div 
+                class="backdrop-blur-2xl sm:bg-surface fixed bottom-0 left-0 right-0 sm:relative sm:rounded-xl overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] sm:shadow-[0_1px_5px_rgba(0,0,0,0.25)] "
+                role="menuitem"
+            >
                 <ul class="flex flex-row *:grow *:basis-1 *:not-last:border-r *:not-last:border-r-brand-y">
                     <li>
                         <NavLink 
