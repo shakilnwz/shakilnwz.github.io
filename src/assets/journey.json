@@ -1,7 +1,7 @@
 {
     "vue" : {
         "id": 8,
-        "iconSrc" : "/src/assets/vue.svg",
+        "iconSrc" : "../assets/vue.svg",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -9,7 +9,7 @@
     },
     "tailwindcss" : {
         "id": 7,
-        "iconSrc" : "/src/assets/tailwind.svg",
+        "iconSrc" : "../assets/tailwind.svg",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -17,7 +17,7 @@
     },
     "laravel" : {
         "id": 6,
-        "iconSrc" : "/src/assets/laravel.svg",
+        "iconSrc" : "../assets/laravel.svg",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -25,7 +25,7 @@
     },
     "wordpress" : {
         "id": 5,
-        "iconSrc" : "/src/assets/wordpress.svg",
+        "iconSrc" : "../assets/wordpress.svg",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -33,7 +33,7 @@
     },
     "php" : {
         "id": 4,
-        "iconSrc" : "/src/assets/php.svg",
+        "iconSrc" : "../assets/php.svg",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -41,7 +41,7 @@
     },
     "javascript" : {
         "id": 3,
-        "iconSrc" : "/src/assets/js.svg",
+        "iconSrc" : "../assets/js.svg",
         "iconAlt" : "vue logo",
         "date" : "December 2024",
         "title" : "Vue, Vue Router",
@@ -49,7 +49,7 @@
     },
     "css" : {
         "id": 2,
-        "iconSrc" : "/src/assets/css.svg",
+        "iconSrc" : "../assets/css.svg",
         "iconAlt" : "css logo",
         "date" : "March 2022",
         "title" : "CSS, SCSS, Modern CSS with nesting",
@@ -57,7 +57,7 @@
     },
     "html" : {
         "id": 1,
-        "iconSrc" : "/src/assets/html.svg",
+        "iconSrc" : "../assets/html.svg",
         "iconAlt" : "html logo",
         "date" : "January 2022",
         "title" : "HTML, Semantic HTML, HTML5",

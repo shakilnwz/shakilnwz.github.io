@@ -2,6 +2,8 @@
 import Section from '../components/Section.vue'
 import SkillCard from '../components/SkillCard.vue'
 import journey from '../assets/journey.json'
+
+
 </script>
 
 <template>
