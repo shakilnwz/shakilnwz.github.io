@@ -11,7 +11,15 @@ const iconList = inject('icons')
 
 <template>
     <Section class="space-y-2.5 sm:space-y-7 relative">
-        <h2 class="sticky top-0 z-10 backdrop-blur-2xl sm:top-20">Recent Articles</h2>
+        <div class="sticky top-0 z-10 backdrop-blur-3xl sm:top-20 gap-2 flex flex-wrap justify-between items-baseline pb-2">
+            <h2>Recent Articles</h2>
+            <Button 
+                secondary
+                href="/articles"
+                :svgd="iconList.list"
+                text="Show All"
+            />
+        </div>
         <div class="flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4">
             <p class="sm:basis-72 grow">I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.</p>
 
@@ -43,11 +51,6 @@ const iconList = inject('icons')
             </div>
         </div>
 
-        <Button 
-            secondary
-            href="/articles"
-            :svgd="iconList.list"
-            text="Show All"
-        />
+        
     </Section>
 </template>
