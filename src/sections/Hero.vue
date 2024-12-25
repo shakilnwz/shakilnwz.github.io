@@ -7,7 +7,7 @@ const iconList = inject('icons');
 </script>
 
 <template>
-    <Section class="grid sm:grid-cols-3 gap-2 sm:gap-0">
+    <Section contained class="grid sm:grid-cols-3 gap-2 sm:gap-0">
         <div class="sm:col-span-2">
             <h1 class="text-brand-y text-lg sm:text-xl">
                 Hello World! I'm
@@ -21,7 +21,7 @@ const iconList = inject('icons');
         <div class="sm:row-span-2 sm:justify-self-end justify-self-center self-center">
             <div class="bg-radial from-brand-x/90 to-brand-y/30 to-45% max-w-60 aspect-ratio-1 rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)]">
                 <img
-                    class="w-60 h-60"
+                    class="w-60 object-contain"
                     src="../assets/avatar.webp"
                     alt="avatar"
                 />

@@ -1,12 +1,16 @@
 <script setup>
 const setup = defineProps(
     {
-        "fullWidth" : Boolean
+        "contained" : Boolean
     }
 )
 </script>
 <template>
-    <section class="mx-auto px-5 sm:px-8 sm:py-10 py-5" :class="setup.fullWidth ? '':'max-w-5xl' ">
+    <section 
+        :class="{
+            'mx-auto sm:py-10 py-5' : true,
+            'max-w-5xl px-5 sm:px-8' : setup.contained
+        }">
         <slot></slot>
     </section>
 </template>

@@ -27,9 +27,11 @@ const iconStatic = {
 </script>
 
 <template>
-    <Section class="space-y-2.5 sm:space-y-7 relative">
-        <h2 class="sticky top-0 z-10 backdrop-blur-2xl sm:top-20">Journey</h2>
-        <div class="flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4">
+    <Section class="space-y-2.5 sm:space-y-4 relative">
+        <div class="sticky top-0 z-10 backdrop-blur-3xl sm:top-15 gap-2 flex flex-wrap justify-between py-2 items-center">
+            <h2 class="max-w-5xl mx-auto w-full px-5 sm:px-8">Journey</h2>
+        </div>
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4 px-5 sm:px-8">
             <p class="sm:max-w-70">I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.</p>
 
             <div class="grow relative space-y-11">
