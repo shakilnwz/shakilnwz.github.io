@@ -17,13 +17,13 @@ const articleData = defineProps({
         :class="{
             'group overflow-clip gap-1 sm:gap-3 items-center bg-surface/60 rounded-2xl shadow hover:shadow-lg hover:shadow-brand-y/30 transition-shadow duration-300 ' : true,
             'w-full flex flex-row h-30' : articleData.type == 'article',
-            'flex-col' : articleData.type == 'project'
+            'flex-col w-full sm:min-w-80 flex-1 h-fit' : articleData.type == 'project'
         }">
         <span 
             :class="{
-            'bg-brand-y w-40 max-w-40 grow grayscale group-hover:grayscale-0 transition-all duration-300' : true,
-            'h-full' : articleData.type == 'article',
-            'h-100' : articleData.type == 'project'
+            'bg-brand-y grayscale grow inline-block group-hover:grayscale-0 transition-all duration-300' : true,
+            'h-full w-40 max-w-40' : articleData.type == 'article',
+            'h-40 sm:h-70 w-full'  : articleData.type == 'project'
             }">
             <img
                 class="object-center object-contain w-full h-full" 
@@ -32,7 +32,7 @@ const articleData = defineProps({
             >
         </span>
 
-        <div class="grow p-2 h-full flex flex-col justify-around">
+        <div class="grow py-2 px-4 h-full flex flex-col justify-center">
             <div 
                 :class="{
                     'flex flex-row justify-between' : true,
@@ -47,7 +47,7 @@ const articleData = defineProps({
                 </span>
             </div>
             <p :class="{
-                    'bg-brand-x/20 w-full h-12 rounded-lg' : !articleData.summary
+                    'bg-brand-x/20 w-full h-12 rounded-lg mt-2' : !articleData.summary
                 }">
                 {{ articleData.summary }}
             </p>

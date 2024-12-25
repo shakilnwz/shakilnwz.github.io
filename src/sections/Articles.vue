@@ -15,7 +15,7 @@ const iconList = inject('icons')
         <div class="flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4">
             <p class="sm:basis-72 grow">I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.</p>
 
-            <div class="sm:basis-xl grow space-y-11">
+            <div class="sm:basis-xl grow space-y-4">
                 <!-- article card -->
                <PostLink 
                     type="article"

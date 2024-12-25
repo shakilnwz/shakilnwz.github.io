@@ -11,8 +11,16 @@ const iconList = inject('icons')
 
 <template>
     <Section class="space-y-2.5 sm:space-y-7 relative">
-        <h2 class="sticky top-0 z-10 backdrop-blur-2xl sm:top-20">Recent Projects</h2>
-        <div class="flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4">
+        <div class="sticky top-0 z-10 backdrop-blur-3xl sm:top-20 gap-2 flex flex-wrap justify-between items-baseline pb-2">
+            <h2>Recent Projects</h2>
+            <Button 
+                secondary
+                href="/articles"
+                :svgd="iconList.projects"
+                text="Show All"
+            />
+        </div>
+        <div class="flex flex-col sm:flex-row flex-wrap gap-4">
 
             <PostLink 
                 type="project"
@@ -32,15 +40,8 @@ const iconList = inject('icons')
                 summary="This is the post excerpt. This is the post excerpt."
 
             />
-            <PostLink />
-
         </div>
 
-        <Button 
-            secondary
-            href="/articles"
-            :svgd="iconList.projects"
-            text="Show All"
-        />
+        
     </Section>
 </template>
