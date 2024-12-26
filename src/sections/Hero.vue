@@ -16,11 +16,24 @@ const pointer = (e)=>{
 </script>
 
 <template>
-    <Section id="hero" @mousemove="pointer" class="relative overflow-hidden group">
+    <Section id="hero" @mousemove="pointer" @touchmove="pointer" class="relative overflow-hidden group">
         <span id="fancybox" class="z-0 absolute  top-0 left-0 right-0 bottom-0">
-            <span id="cursorpulse"  :style="cursorPos.style.value" class="transition-all rounded-3xl duration-300 top-1/4 sm:top-0 group-hover:w-80 w-full h-50 sm:h-full absolute bg-gradient-to-r from-transparent via-brand-y/70 to-transparent"></span>
+            <span 
+                id="cursorpulse"  
+                :style="cursorPos.style.value" 
+                class="
+                transition-all
+                rounded-3xl 
+                duration-300 
+                h-50
+                group-hover:sm:h-full 
+                sm:top-80
+                group-hover:sm:top-0
+                absolute top-1/4
+                bg-gradient-to-r from-transparent via-brand-y/70 to-transparent
+                "></span>
         </span>
-        <div class="relative z-10 max-w-5xl px-5 sm:px-8 mx-auto grid sm:grid-cols-3 gap-2 sm:gap-0">
+        <div class="relative z-10 max-w-5xl px-5 sm:px-8 mx-auto grid sm:grid-cols-3 gap-2 sm:gap-0 backdrop-blur-xs">
 
             <div class="sm:col-span-2">
                 <h1 class="text-brand-y text-lg sm:text-xl">
@@ -72,11 +85,14 @@ const pointer = (e)=>{
 
 </template>
 <style scoped>
+
 #cursorpulse{
     animation: run 5s linear infinite;
+    width: 200dvw;
 }
 #hero:hover #cursorpulse{
     animation: none;
+    width: 20rem;
 }
 @keyframes run {
 from{
@@ -88,7 +104,7 @@ to {
 }
 
 #fancybox{
-    mask-image: url('../assets/bgfull.svg');
+    mask-image: url('../assets/bgvector.svg');
     mask-size: 70%;
     mask-position: center;
 }
