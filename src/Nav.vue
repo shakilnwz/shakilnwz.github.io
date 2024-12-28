@@ -27,7 +27,6 @@ const toggleTheme = ()=>{
 
 const isSticky = ref(false);
 
-const stickyHeader = ref(null);
 
 const handleScroll = ()=>{
     isSticky.value = window.scrollY > 0;
@@ -48,7 +47,7 @@ onUnmounted(()=>{
             'sm:py-5' : !isSticky,
             'sm:shadow-sm sm:backdrop-blur-xl sm:py-2.5' : isSticky
         }"
-        ref='stickyHeader'>
+        >
         <div class="relative z-999 max-w-5xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 gap-2">
             <!-- logo -->
             <a class="block" href="/" aria-lebel='Home'>
