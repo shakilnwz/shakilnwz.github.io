@@ -1,9 +1,10 @@
 <script setup>
-import {ref, reactive, onMounted} from 'vue'
+import {ref, reactive, onMounted, onUnmounted} from 'vue'
 import Section from '../components/Section.vue'
 import SkillCard from '../components/SkillCard.vue'
-import journey from '../assets/journey.json'
 
+// import static assets
+import journey from '../assets/journey.json'
 import vueIcon from '../assets/vue.svg'
 import tailwindIcon from '../assets/tailwind.svg'
 import cssIcon from '../assets/css.svg'
@@ -25,25 +26,37 @@ const iconStatic = reactive({
     'php' : {icon: phpIcon, inView: false}
 }) 
 
+
 //get all the item to animate
 const listItem = ref([])
+
 // add observer and update view status
 const intObserver = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                const id = entry.target.id
-                if(iconStatic[id]){
-                    iconStatic[id].inView = entry.isIntersecting
-                }
-            });
-        },
-        { root: null, threshold: 0.5, rootMargin: "0px 0px -200px 0px" },
-    );
+    (entries) => {
+        entries.forEach((entry) => {
+            const id = entry.target.id
+            if(iconStatic[id]){
+                iconStatic[id].inView = entry.isIntersecting
+            }
+        });
+    },
+    { root: null, threshold: 0.5, rootMargin: "700px 0px -200px 0px" },
+);
+
+// mount the observer
 onMounted(()=>{
     listItem.value = listItem.value.map((el) => el.$el)
     listItem.value.forEach(
         (elem)=>intObserver.observe(elem)
     )
+})
+
+// unmount the observer
+onUnmounted(()=>{
+    listItem.value.forEach(
+        (elem)=>intObserver.unobserve(elem)
+    )
+    intObserver.disconnect()
 })
 </script>
 
@@ -74,11 +87,7 @@ onMounted(()=>{
 
             </div>
         </div>
-        
     </Section>
 </template>
 <style scoped>
-.animated{
-    background: red;
-}
 </style>
