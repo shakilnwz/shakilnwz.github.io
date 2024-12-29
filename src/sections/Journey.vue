@@ -14,6 +14,7 @@ import wordpressIcon from '../assets/wordpress.svg'
 import htmlIcon from '../assets/html.svg'
 import phpIcon from '../assets/php.svg'
 
+
 // creating icon path and view status
 const iconStatic = reactive({
     'vue' : {icon: vueIcon, inView: false},
@@ -61,7 +62,7 @@ onUnmounted(()=>{
 </script>
 
 <template>
-    <Section ref="journeySection" class="space-y-2.5 sm:space-y-4 relative">
+    <Section  class="space-y-2.5 sm:space-y-4 relative">
         <div class="sticky top-0 z-10 backdrop-blur-3xl sm:top-15 gap-2 flex flex-wrap justify-between py-2 items-center">
             <h2 class="max-w-5xl mx-auto w-full px-5 sm:px-8">Journey</h2>
         </div>
@@ -69,7 +70,7 @@ onUnmounted(()=>{
             <p class="sm:max-w-70">I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.</p>
 
             <div id="cards" class="grow relative space-y-11">
-                <span id="hline" class="absolute h-full w-1 bg-brand-y top-0 left-8 sm:left-12 z-0"></span>
+                <span id="hline"  class="absolute h-full w-1 bg-brand-y top-0 left-8 sm:left-12 z-0"></span>
 
                 <!-- skill card -->
                 <SkillCard
