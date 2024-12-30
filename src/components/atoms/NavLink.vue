@@ -10,6 +10,7 @@ const link = defineProps(
 
 </script>
 <template>
+    <!-- TODO: add router link -->
     <a 
         class="justify-center flex flex-col sm:flex-row items-center gap-x-2 hover:bg-brand-y hover:text-surface sm:px-5 py-1.5 transition-all duration-300" 
         :href="link.href"

@@ -11,6 +11,7 @@ const link = defineProps(
 
 </script>
 <template>
+    <!-- TODO: add router link -->
     <a
         :class="link.secondary ? 'bg-surface hover:bg-brand-y text-brand-y hover:text-surface':'bg-brand-y hover:bg-surface text-surface hover:text-brand-y'" 
         class="justify-center font-bold rounded-xl border-brand-y border-2 w-fit flex flex-row flex-wrap items-center gap-x-2  px-5 py-1 transition-all duration-300" 

@@ -1,5 +1,5 @@
 <script setup>
-import placeholder from '../assets/placeholder.webp'
+import placeholder from '../../assets/images/placeholder.webp'
 const articleData = defineProps({
     'type' : String,
     'link' : String,
@@ -12,6 +12,7 @@ const articleData = defineProps({
 </script>
 
 <template>
+    <!-- TODO: add router link -->
     <a 
         :href="articleData.link" 
         :class="{

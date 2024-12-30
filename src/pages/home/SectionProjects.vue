@@ -1,9 +1,9 @@
 <script setup>
 import { inject } from 'vue';
-import Section from '../components/Section.vue'
-import Button from '../components/Button.vue';
-import placeholder from '../assets/placeholder.webp'
-import PostLink from '../components/PostLink.vue';
+import Section from '../../components/atoms/Section.vue'
+import Button from '../../components/atoms/Button.vue';
+import placeholder from '../../assets/images/placeholder.webp'
+import PostLink from '../../components/templates/PostLink.vue';
 
 const iconList = inject('icons')
 

@@ -1,7 +1,8 @@
 <script setup>
 import { ref, inject } from 'vue'
-import Section from '../components/Section.vue'
-import Button from "../components/Button.vue"
+import avater from '../../assets/images/avatar.webp'
+import Section from '../../components/atoms/Section.vue'
+import Button from '../../components/atoms/Button.vue'
 
 const iconList = inject('icons');
 const cursorPos = {
@@ -51,7 +52,7 @@ const pointer = (e)=>{
 
                     <img
                         class="relative z-10 w-60 object-contain"
-                        src="../assets/avatar.webp"
+                        :src="avater"
                         alt="avatar"
                     />
                 </div>
@@ -64,7 +65,7 @@ const pointer = (e)=>{
                 <p>
                     I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.
                 </p>
-
+                <!-- TODO: add router link -->
                 <div class="flex flex-row gap-2 flex-wrap">
                     <Button
                         text="More About Me"
@@ -104,7 +105,7 @@ to {
 }
 
 #fancybox{
-    mask-image: url('../assets/bgvector.svg');
+    mask-image: url('../../assets/images/bgvector.svg');
     mask-size: 70%;
     mask-position: center;
 }

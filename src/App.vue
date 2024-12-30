@@ -1,9 +1,8 @@
 <script setup>
 import { provide } from 'vue'
-import icons from './assets/icons.json'
-import Nav from './Nav.vue'
-import Main from './Main.vue'
-import Footer from './Footer.vue'
+import icons from './assets/icons/icons.json'
+import Layout from './layout/Layout.vue';
+import IndexHome from './pages/home/IndexHome.vue';
 
 // make icons available to all component
 provide('icons', icons)
@@ -11,9 +10,9 @@ provide('icons', icons)
 </script>
 
 <template>
-        <Nav />
-        <Main />
-        <Footer />
+    <Layout>
+        <IndexHome />
+    </Layout>
 </template>
 
 <style scoped>

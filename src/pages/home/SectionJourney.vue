@@ -1,18 +1,18 @@
 <script setup>
 import {ref, reactive, onMounted, onUnmounted} from 'vue'
-import Section from '../components/Section.vue'
-import SkillCard from '../components/SkillCard.vue'
+import Section from '../../components/atoms/Section.vue'
+import SkillCard from '../../components/templates/SkillCard.vue'
 
 // import static assets
-import journey from '../assets/journey.json'
-import vueIcon from '../assets/vue.svg'
-import tailwindIcon from '../assets/tailwind.svg'
-import cssIcon from '../assets/css.svg'
-import jsIcon from '../assets/js.svg'
-import laravelIcon from '../assets/laravel.svg'
-import wordpressIcon from '../assets/wordpress.svg'
-import htmlIcon from '../assets/html.svg'
-import phpIcon from '../assets/php.svg'
+import journey from '../../assets/journey.json'
+import vueIcon from '../../assets/icons/vue.svg'
+import tailwindIcon from '../../assets/icons/tailwind.svg'
+import cssIcon from '../../assets/icons/css.svg'
+import jsIcon from '../../assets/icons/js.svg'
+import laravelIcon from '../../assets/icons/laravel.svg'
+import wordpressIcon from '../../assets/icons/wordpress.svg'
+import htmlIcon from '../../assets/icons/html.svg'
+import phpIcon from '../../assets/icons/php.svg'
 
 
 // creating icon path and view status
@@ -91,4 +91,6 @@ onUnmounted(()=>{
     </Section>
 </template>
 <style scoped>
+@import "tailwindcss/theme" theme(reference);
+
 </style>

@@ -1,6 +1,6 @@
 <script setup>
-import NavLink from "./components/NavLink.vue"
 import { ref, onMounted, onUnmounted, inject } from 'vue'
+import NavLink from "../atoms/NavLink.vue"
 
 const iconList = inject('icons')
 const themeSwitch = {
@@ -27,7 +27,6 @@ const toggleTheme = ()=>{
 
 const isSticky = ref(false);
 
-
 const handleScroll = ()=>{
     isSticky.value = window.scrollY > 0;
 
@@ -41,6 +40,7 @@ onUnmounted(()=>{
 </script>
 
 <template>
+    <!-- TODO: add router link -->
     <nav 
         :class="{
             'sm:sticky top-0 transition-all duration-300 relative z-50 sm:shadow-none py-2.5' : true,
@@ -50,7 +50,7 @@ onUnmounted(()=>{
         >
         <div class="relative z-999 max-w-5xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 gap-2">
             <!-- logo -->
-            <a class="block" href="/" aria-lebel='Home'>
+            <a class="block" href="/" aria-label='Home'>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10" viewBox="0 0 45 40">
                     <g class="fill-current" fill-rule="evenodd">
                         <path class="text-brand-x" d="M0 0h16.548L45 18.912 28.216 40H15.782l15.32-18.854L0 0Z"/>
