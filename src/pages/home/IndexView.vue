@@ -3,7 +3,6 @@ import SectionHero from './SectionHero.vue'
 import SectionJourney from './SectionJourney.vue'
 import SectionArticles from './SectionArticles.vue';
 import SectionProjects from './SectionProjects.vue';
-import SectionFooter from './SectionFooter.vue';
 </script>
 
 <template>
@@ -11,7 +10,6 @@ import SectionFooter from './SectionFooter.vue';
     <SectionJourney />
     <SectionArticles />
     <SectionProjects />
-    <SectionFooter />
 </template>
 
 

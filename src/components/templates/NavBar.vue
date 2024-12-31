@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, onUnmounted, inject } from 'vue'
+import { RouterLink } from 'vue-router';
 import NavLink from "../atoms/NavLink.vue"
 
 const iconList = inject('icons')
@@ -50,14 +51,15 @@ onUnmounted(()=>{
         >
         <div class="relative z-999 max-w-5xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 gap-2">
             <!-- logo -->
-            <a class="block" href="/" aria-label='Home'>
+
+            <RouterLink class="block" to="/" aria-label='Home'>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-10" viewBox="0 0 45 40">
                     <g class="fill-current" fill-rule="evenodd">
                         <path class="text-brand-x" d="M0 0h16.548L45 18.912 28.216 40H15.782l15.32-18.854L0 0Z"/>
                         <path class="text-brand-y" d="M22.979 0h10.486L10.789 40H0L22.979 0Z"/>
                     </g>
                 </svg>
-            </a>
+            </RouterLink>
 
             <!-- tab -->
             <div 
