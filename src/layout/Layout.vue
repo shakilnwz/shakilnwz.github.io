@@ -5,6 +5,8 @@ import PrimaryFooter from '../components/templates/PrimaryFooter.vue';
 </script>
 <template>
     <NavBar />
-    <slot></slot>
+    <main class="h-full">
+        <slot></slot>
+    </main>
     <PrimaryFooter />
 </template>

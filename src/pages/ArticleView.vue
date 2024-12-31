@@ -3,6 +3,6 @@
 </script>
 <template>
     <Section contained>
-        <h2>About page</h2>
+        <h2>Articles page</h2>
     </Section>
 </template>
