@@ -58,14 +58,14 @@ onUnmounted(() => {
     <Section contained>
         <h2>Projects page</h2>
         <h3 class="text-brand-y text-xl font-semibold pt-5">Drag to resize box</h3>
-        <div class="flex gap-4 w-full justify-between pb-4">
-            <label>
+        <div class="flex flex-wrap gap-4 w-full justify-between pb-4">
+            <label class="flex-auto flex justify-between">
                 Box Width:
-                <input type="number" v-model="boxWidth" />
+                <input class=" outline-1 rounded-lg px-2" type="number" v-model="boxWidth" />
             </label>
-            <label>
+            <label class="flex-auto flex justify-between">
                 Box Height:
-                <input type="number" v-model="boxHeight" />
+                <input class="outline-1 rounded-lg px-2" type="number" v-model="boxHeight" />
             </label>
         </div>
         <div
@@ -73,15 +73,19 @@ onUnmounted(() => {
             :style="{ width: boxWidth + 'px', height: boxHeight + 'px' }"
         >
             <div
-                class="absolute cursor-e-resize top-0 bottom-0 bg-brand-y right-0 w-2"
+                class="absolute cursor-e-resize top-0 bottom-0 bg-brand-y/40 right-0 w-5 flex" 
                 @mousedown="startResizing"
-            />
+            >
+                <span class='my-auto user-select-none text-sm rotate-270 origin-center'>{{boxHeight}}</span>
+            </div>
             <div
-                class="absolute cursor-s-resize left-0 bottom-0 bg-brand-y right-0 h-2"
+                class="absolute cursor-s-resize left-0 bottom-0 bg-brand-y/40 right-0 h-5 user-select-none"
                 @mousedown="startResizing"
-            />
+            >
+                <span class='mx-auto w-fit block user-select-none text-sm'>{{boxWidth}}</span>
+            </div>
             <div
-                class="absolute cursor-nwse-resize w-4 h-4 right-0 bottom-0 bg-brand-x"
+                class="absolute cursor-nwse-resize w-5 h-5 right-0 bottom-0 bg-brand-x/50"
                 @mousedown="startResizing"
             />
         </div>
