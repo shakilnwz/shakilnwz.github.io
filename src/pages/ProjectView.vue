@@ -8,58 +8,65 @@ const isResizing = ref(false);
 const startX = ref(0);
 const startY = ref(0);
 
-const startResizing = (event) => {
+const startResizing = (func, event) => {
     event.preventDefault()
     isResizing.value = true;
     const touch = event.touches ? event.touches[0] : event
     startX.value = touch.clientX;
     startY.value = touch.clientY;
 
-    // Add global event listeners for resizing
-    window.addEventListener("mousemove", resizeBox);
-    window.addEventListener("touchmove", resizeBox);
+    window.addEventListener("mousemove", func);
+    window.addEventListener("touchmove", func);
     window.addEventListener("mouseup", stopResizing);
     window.addEventListener("touchend", stopResizing);
 };
 
 const resizeBox = (event) => {
-    if (isResizing.value) {
-        const touch = event.touches ? event.touches[0] : event
-        const deltaX = touch.clientX - startX.value;
-        const deltaY = touch.clientY - startY.value;
-        boxWidth.value += deltaX;
-        boxHeight.value += deltaY;
-        startX.value = touch.clientX;
-        startY.value = touch.clientY;
-    }
+    resizeWidth(event)
+    resizeHeight(event)
 };
 
 const resizeHeight = (event) => {
     if (isResizing.value) {
-        const deltaY = event.clientY - startY.value;
+        const touch = event.touches ? event.touches[0] : event
+        const deltaY = touch.clientY - startY.value;
         boxHeight.value += deltaY;
-        startY.value = event.clientY;
+        startY.value = touch.clientY;
+    }
+};
+
+const resizeWidth = (event) => {
+    if (isResizing.value) {
+        const touch = event.touches ? event.touches[0] : event
+        const deltaX = touch.clientX - startX.value;
+        boxWidth.value += deltaX;
+        startX.value = touch.clientX;
     }
 };
 
 const stopResizing = () => {
     isResizing.value = false;
 
-    // Clean up global event listeners
-    window.removeEventListener("mousemove", resizeBox);
-    window.removeEventListener("mouseup", stopResizing);
-    window.removeEventListener("touchmove", resizeBox);
+    window.removeEventListener("mousemove", resizeHeight)
+    window.removeEventListener("mousemove", resizeWidth)
+    window.removeEventListener("mousemove", resizeBox)
+    window.removeEventListener("mouseup", stopResizing)
+    window.removeEventListener("touchmove", resizeHeight)
+    window.removeEventListener("touchmove", resizeWidth)
+    window.removeEventListener("touchmove", resizeBox)
     window.removeEventListener("touchend", stopResizing)
 };
 
-// Cleanup in case the component is destroyed during resizing
 onUnmounted(() => {
-    window.removeEventListener("mousemove", resizeBox);
-    window.removeEventListener("mouseup", stopResizing);
-    window.removeEventListener("touchmove", resizeBox);
+    window.removeEventListener("mousemove", resizeHeight)
+    window.removeEventListener("mousemove", resizeWidth)
+    window.removeEventListener("mousemove", resizeBox)
+    window.removeEventListener("mouseup", stopResizing)
+    window.removeEventListener("touchmove", resizeHeight)
+    window.removeEventListener("touchmove", resizeWidth)
+    window.removeEventListener("touchmove", resizeBox)
     window.removeEventListener("touchend", stopResizing)
 })
-
 
 
 </script>
@@ -83,19 +90,19 @@ onUnmounted(() => {
         >
             <div
                 class="absolute cursor-e-resize top-0 bottom-0 bg-brand-y/40 right-0 w-5 flex" 
-                @mousedown="startResizing" @touchstart="startResizing"
+                @mousedown="(e)=>{startResizing(resizeWidth, e)}" @touchstart="(e)=>{startResizing(resizeWidth, e)}"
             >
                 <span class='my-auto user-select-none text-sm rotate-270 origin-center'>{{boxHeight}}</span>
             </div>
             <div
                 class="absolute cursor-s-resize left-0 bottom-0 bg-brand-y/40 right-0 h-5 user-select-none"
-                @mousedown="startResizing" @touchstart="startResizing"
+                @mousedown="(e)=>{startResizing(resizeHeight, e)}" @touchstart="(e)=>{startResizing(resizeHeight, e)}"
             >
                 <span class='mx-auto w-fit block user-select-none text-sm'>{{boxWidth}}</span>
             </div>
             <div
                 class="absolute cursor-nwse-resize w-5 h-5 right-0 bottom-0 bg-brand-x/50"
-                @mousedown="startResizing" @touchstart="startResizing"
+                @mousedown="(e)=>{startResizing(resizeBox, e)}" @touchstart="(e)=>{startResizing(resizeBox, e)}"
             />
         </div>
     </Section>
