@@ -15,7 +15,9 @@ const startResizing = (event) => {
 
     // Add global event listeners for resizing
     window.addEventListener("mousemove", resizeBox);
+    window.addEventListener("touchmove", resizeBox);
     window.addEventListener("mouseup", stopResizing);
+    window.addEventListener("touchend", stopResizing);
 };
 
 const resizeBox = (event) => {
@@ -43,12 +45,16 @@ const stopResizing = () => {
     // Clean up global event listeners
     window.removeEventListener("mousemove", resizeBox);
     window.removeEventListener("mouseup", stopResizing);
+    window.removeEventListener("touchmove", resizeBox);
+    window.removeEventListener("touchend", stopResizing)
 };
 
 // Cleanup in case the component is destroyed during resizing
 onUnmounted(() => {
     window.removeEventListener("mousemove", resizeBox);
     window.removeEventListener("mouseup", stopResizing);
+    window.removeEventListener("touchmove", resizeBox);
+    window.removeEventListener("touchend", stopResizing)
 })
 
 
@@ -74,19 +80,19 @@ onUnmounted(() => {
         >
             <div
                 class="absolute cursor-e-resize top-0 bottom-0 bg-brand-y/40 right-0 w-5 flex" 
-                @mousedown="startResizing"
+                @mousedown="startResizing" @touchstart="startResizing"
             >
                 <span class='my-auto user-select-none text-sm rotate-270 origin-center'>{{boxHeight}}</span>
             </div>
             <div
                 class="absolute cursor-s-resize left-0 bottom-0 bg-brand-y/40 right-0 h-5 user-select-none"
-                @mousedown="startResizing"
+                @mousedown="startResizing" @touchstart="startResizing"
             >
                 <span class='mx-auto w-fit block user-select-none text-sm'>{{boxWidth}}</span>
             </div>
             <div
                 class="absolute cursor-nwse-resize w-5 h-5 right-0 bottom-0 bg-brand-x/50"
-                @mousedown="startResizing"
+                @mousedown="startResizing" @touchstart="startResizing"
             />
         </div>
     </Section>
