@@ -9,9 +9,11 @@ const startX = ref(0);
 const startY = ref(0);
 
 const startResizing = (event) => {
+    event.preventDefault()
     isResizing.value = true;
-    startX.value = event.clientX;
-    startY.value = event.clientY;
+    const touch = event.touches ? event.touches[0] : event
+    startX.value = touch.clientX;
+    startY.value = touch.clientY;
 
     // Add global event listeners for resizing
     window.addEventListener("mousemove", resizeBox);
@@ -22,12 +24,13 @@ const startResizing = (event) => {
 
 const resizeBox = (event) => {
     if (isResizing.value) {
-        const deltaX = event.clientX - startX.value;
-        const deltaY = event.clientY - startY.value;
+        const touch = event.touches ? event.touches[0] : event
+        const deltaX = touch.clientX - startX.value;
+        const deltaY = touch.clientY - startY.value;
         boxWidth.value += deltaX;
         boxHeight.value += deltaY;
-        startX.value = event.clientX;
-        startY.value = event.clientY;
+        startX.value = touch.clientX;
+        startY.value = touch.clientY;
     }
 };
 
