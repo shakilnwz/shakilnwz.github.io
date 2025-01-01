@@ -6,11 +6,16 @@ import ArticleView from "../pages/ArticleView.vue";
 import ContactView from "../pages/ContactView.vue";
 import ProjectView from "../pages/ProjectView.vue";
 const routes = [
-  { path: "/", component: HomeView },
-  { path: "/about", component: AboutView },
-  { path: "/articles", component: ArticleView },
-  { path: "/contact", component: ContactView },
-  { path: "/projects", component: ProjectView },
+  {
+    path: "/",
+    children: [
+      { path: "/", component: HomeView },
+      { path: "/about", component: AboutView },
+      { path: "/articles", component: ArticleView },
+      { path: "/contact", component: ContactView },
+      { path: "/projects", component: ProjectView },
+    ],
+  },
 ];
 
 const router = createRouter({
