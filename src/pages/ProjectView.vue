@@ -59,13 +59,13 @@ onUnmounted(() => {
         <h2>Projects page</h2>
         <h3 class="text-brand-y text-xl font-semibold pt-5">Drag to resize box</h3>
         <div class="flex flex-wrap gap-4 w-full justify-between pb-4">
-            <label class="flex-auto flex justify-between">
+            <label class="flex-auto flex justify-between sm:justify-start gap-4">
                 Box Width:
-                <input class=" outline-1 rounded-lg px-2" type="number" v-model="boxWidth" />
+                <input class="outline-1 outline-brand-y rounded-lg px-2" type="number" v-model="boxWidth" />
             </label>
-            <label class="flex-auto flex justify-between">
+            <label class="flex-auto flex justify-between sm:justify-start gap-4">
                 Box Height:
-                <input class="outline-1 rounded-lg px-2" type="number" v-model="boxHeight" />
+                <input class="outline-1 outline-brand-y rounded-lg px-2" type="number" v-model="boxHeight" />
             </label>
         </div>
         <div
