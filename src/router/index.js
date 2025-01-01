@@ -1,10 +1,11 @@
-import { createWebHistory, createRouter } from "vue-router";
+import { createWebHashHistory, createRouter } from "vue-router";
 
 import HomeView from "../pages/home/IndexView.vue";
 import AboutView from "../pages/AboutView.vue";
 import ArticleView from "../pages/ArticleView.vue";
 import ContactView from "../pages/ContactView.vue";
 import ProjectView from "../pages/ProjectView.vue";
+
 const routes = [
   {
     path: "/",
@@ -19,7 +20,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 
