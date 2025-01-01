@@ -70,7 +70,7 @@ onUnmounted(()=>{
             <p class="sm:max-w-70">I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.</p>
 
             <div id="cards" class="grow relative space-y-11">
-                <span id="hline"  class="absolute h-full w-1 bg-brand-y top-0 left-8 sm:left-12 z-0"></span>
+                <span id="hline"  class="absolute bottom-0 w-1 bg-brand-y top-2 left-5.5 sm:left-12 z-0"></span>
 
                 <!-- skill card -->
                 <SkillCard
@@ -90,7 +90,4 @@ onUnmounted(()=>{
         </div>
     </Section>
 </template>
-<style scoped>
-@import "tailwindcss/theme" theme(reference);
 
-</style>

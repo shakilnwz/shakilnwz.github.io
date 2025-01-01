@@ -65,7 +65,7 @@ const pointer = (e)=>{
                 <p>
                     I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.
                 </p>
-                <!-- TODO: add router link -->
+                <!--  added router link -->
                 <div class="flex flex-row gap-2 flex-wrap">
                     <Button
                         text="More About Me"

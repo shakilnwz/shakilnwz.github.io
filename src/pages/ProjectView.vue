@@ -2,6 +2,7 @@
 import {ref, onUnmounted } from 'vue'
 import Section from '../components/atoms/Section.vue';
 
+const canvas = ref(null)
 const boxWidth = ref(200);
 const boxHeight = ref(200);
 const isResizing = ref(false);
@@ -84,26 +85,28 @@ onUnmounted(() => {
                 <input class="outline-1 outline-brand-y rounded-lg px-2" type="number" v-model="boxHeight" />
             </label>
         </div>
-        <div
-            class="relative overflow-hidden cursor-grab border-2 border-brand-x rounded-lg"
-            :style="{ width: boxWidth + 'px', height: boxHeight + 'px' }"
-        >
+        <div ref="canvas" class="w-full">
             <div
-                class="absolute cursor-e-resize top-0 bottom-0 bg-brand-y/40 right-0 w-5 flex" 
-                @mousedown="(e)=>{startResizing(resizeWidth, e)}" @touchstart="(e)=>{startResizing(resizeWidth, e)}"
+                class="relative overflow-hidden cursor-grab border-2 border-brand-x rounded-lg"
+                :style="{ width: boxWidth + 'px', height: boxHeight + 'px' }"
             >
-                <span class='my-auto user-select-none text-sm rotate-270 origin-center'>{{boxHeight}}</span>
+                <div
+                    class="absolute cursor-e-resize top-0 bottom-0 bg-brand-y/40 right-0 w-5 flex" 
+                    @mousedown="(e)=>{startResizing(resizeWidth, e)}" @touchstart="(e)=>{startResizing(resizeWidth, e)}"
+                >
+                    <span class='my-auto user-select-none text-sm rotate-270 origin-center'>{{boxHeight}}</span>
+                </div>
+                <div
+                    class="absolute cursor-s-resize left-0 bottom-0 bg-brand-y/40 right-0 h-5 user-select-none"
+                    @mousedown="(e)=>{startResizing(resizeHeight, e)}" @touchstart="(e)=>{startResizing(resizeHeight, e)}"
+                >
+                    <span class='mx-auto w-fit block user-select-none text-sm'>{{boxWidth}}</span>
+                </div>
+                <div
+                    class="absolute cursor-nwse-resize w-5 h-5 right-0 bottom-0 bg-brand-x/50"
+                    @mousedown="(e)=>{startResizing(resizeBox, e)}" @touchstart="(e)=>{startResizing(resizeBox, e)}"
+                />
             </div>
-            <div
-                class="absolute cursor-s-resize left-0 bottom-0 bg-brand-y/40 right-0 h-5 user-select-none"
-                @mousedown="(e)=>{startResizing(resizeHeight, e)}" @touchstart="(e)=>{startResizing(resizeHeight, e)}"
-            >
-                <span class='mx-auto w-fit block user-select-none text-sm'>{{boxWidth}}</span>
-            </div>
-            <div
-                class="absolute cursor-nwse-resize w-5 h-5 right-0 bottom-0 bg-brand-x/50"
-                @mousedown="(e)=>{startResizing(resizeBox, e)}" @touchstart="(e)=>{startResizing(resizeBox, e)}"
-            />
         </div>
     </Section>
 </template>

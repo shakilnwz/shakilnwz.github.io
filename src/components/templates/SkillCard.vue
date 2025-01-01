@@ -17,11 +17,11 @@
 <template>
     <div 
         :class="{
-            'flex flex-row gap-4 transition-all duration-500 relative': true,
+            'flex flex-row gap-2 sm:gap-4 transition-all duration-500 relative items-center': true,
             '' : data.isVisible
         }">
         <!-- svg icon -->
-        <div class="w-17 h-17 sm:h-25 sm:w-25 grid place-items-center">
+        <div class="w-12 h-12 aspect-square sm:h-25 sm:w-25 grid place-items-center">
             <div 
                 :class="{
                     'w-2 h-2 shrink-0 bg-surface rounded-full shadow-brand-y shadow-sm grid place-items-center transition-all duration-500':true,
@@ -31,7 +31,7 @@
                 <img 
                     :class="{
                         'w-0 h-0 transition-all duration-700': true,
-                        'w-10 h-10 sm:w-13 sm:h-12 ': data.isVisible
+                        'w-7 h-7 sm:w-13 sm:h-12 ': data.isVisible
                     }" 
                     :src="data.iconSrc" 
                     :alt="data.iconAlt"

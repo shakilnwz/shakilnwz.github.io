@@ -1,5 +1,5 @@
 <script setup>
-    import Section from '../components/atoms/Section.vue';
+    import Section from '../../components/atoms/Section.vue';
 </script>
 <template>
     <Section contained>

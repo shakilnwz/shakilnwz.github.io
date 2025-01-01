@@ -16,7 +16,7 @@ const iconList = inject('icons')
                 <h2>Recent Projects</h2>
                 <Button 
                     secondary
-                    href="/articles"
+                    href="/projects"
                     :svgd="iconList.projects"
                     text="Show All"
                 />
