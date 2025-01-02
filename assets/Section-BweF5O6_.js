@@ -1,1 +1,0 @@
-import{o as a,a as t,p as n,n as c}from"./index-CW4N_3px.js";const l={__name:"Section",props:{contained:Boolean},setup(e){const o=e;return(s,r)=>(a(),t("section",{class:c({"mx-auto sm:py-10 py-5":!0,"max-w-5xl px-5 sm:px-8":o.contained})},[n(s.$slots,"default")],2))}};export{l as _};
