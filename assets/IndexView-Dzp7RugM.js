@@ -1,0 +1,1 @@
+import{_ as t}from"./Section-BweF5O6_.js";import{c as a,o,w as r,b as s}from"./index-CW4N_3px.js";const i={__name:"IndexView",setup(n){return(_,e)=>(o(),a(t,{contained:""},{default:r(()=>e[0]||(e[0]=[s("h2",null,"About page",-1)])),_:1}))}};export{i as default};

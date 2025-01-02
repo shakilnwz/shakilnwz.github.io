@@ -1,0 +1,1 @@
+import{_ as t}from"./Section-BweF5O6_.js";import{c as a,w as r,o,b as s}from"./index-CW4N_3px.js";const l={__name:"ArticleView",setup(c){return(n,e)=>(o(),a(t,{contained:""},{default:r(()=>e[0]||(e[0]=[s("h2",null,"Articles page",-1)])),_:1}))}};export{l as default};
