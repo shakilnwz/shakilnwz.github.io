@@ -1,27 +1,38 @@
 import { createWebHashHistory, createRouter } from "vue-router";
 
-import HomeView from "../pages/home/IndexView.vue";
-import AboutView from "../pages/about/IndexView.vue";
-import ResumeView from "../pages/about/ResumeView.vue";
-import ArticleView from "../pages/ArticleView.vue";
-import ContactView from "../pages/ContactView.vue";
-import ProjectView from "../pages/ProjectView.vue";
-
 const routes = [
   {
     path: "/",
     children: [
-      { path: "", component: HomeView },
+      {
+        path: "",
+        component: () => import("../pages/home/IndexView.vue"),
+      },
       {
         path: "/about",
         children: [
-          { path: "", component: AboutView },
-          { path: "/resume", component: ResumeView },
+          {
+            path: "",
+            component: () => import("../pages/about/IndexView.vue"),
+          },
+          {
+            path: "/resume",
+            component: () => import("../pages/about/ResumeView.vue"),
+          },
         ],
       },
-      { path: "/articles", component: ArticleView },
-      { path: "/contact", component: ContactView },
-      { path: "/projects", component: ProjectView },
+      {
+        path: "/articles",
+        component: () => import("../pages/ArticleView.vue"),
+      },
+      {
+        path: "/contact",
+        component: () => import("../pages/ContactView.vue"),
+      },
+      {
+        path: "/projects",
+        component: () => import("../pages/ProjectView.vue"),
+      },
     ],
   },
 ];
