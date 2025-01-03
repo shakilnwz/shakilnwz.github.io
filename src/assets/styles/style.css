@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './theme.css';
 @variant dark (&:where(.dark, .dark *));
 
 @layer base{
@@ -17,18 +18,6 @@
         --color-base-y: oklch(18.28% 0.0204 284.2);
         --color-surface: oklch(32.4% 0.0319 281.98);
     }
-}
-
-@theme{
-    --font-sans: "Space Grotesk", system-ui;
-
-    --color-* : initial;
-    --color-brand-x: var(--color-brand-x);
-    --color-brand-y: var(--color-brand-y);
-    --color-base-x: var(--color-base-x);
-    --color-base-y: var(--color-base-y);
-    --color-surface: var(--color-surface);
-
 }
 
 @layer components{
