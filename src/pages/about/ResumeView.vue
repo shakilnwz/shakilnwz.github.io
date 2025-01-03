@@ -4,43 +4,9 @@ import avater from '../../assets/images/avatar.webp'
 import SocialLink from '../../components/atoms/SocialLink.vue';
 import { inject } from 'vue';
 const iconList = inject('icons')
-
-const resumeContent = {
-    skills: ["Responsive Web Development", "WordPress", "Elementor", "BreakDance", "JavaScript", "PHP", "Tailwind CSS", "CSS", "HTML", "QA and Analysis"],
-    interests: ['Linux', 'Laravel', "Artificial Intelligence", "Open Source Alternatives", "Renewable energy", "Astro Physics", "Music"],
-    education:[
-        {
-            class: 'BSc',
-            major: 'Physics',
-            institute: "Satkhira Govt. College, Satkhira",
-            passYear: '2022',
-            result: 'CGPA: 2.41 (Scale 4)'
-        },
-        {
-            class: 'HSC',
-            major: 'Science',
-            institute: "Shimanta Adarsha College, Satkhira",
-            passYear: '2014',
-            result: 'GPA: 3.40 (Scale 5)'
-        }
-    ],
-    language:[
-        {
-            name: 'Bengali',
-            fluency: 'Native'
-        },
-        {
-            name: 'English',
-            fluency: 'Fluent in Reading, Writing, Speaking'
-        }
-    ],
-    projects: [
-
-    ],
-    workExp: []
+import resumeContent from '../../assets/resumeContent.json'
 
 
-}
 
 </script>
 <template>
