@@ -1,1 +1,0 @@
-import{c as a,o as t,w as o,a as s,_ as n}from"./index-okFhJ9X7.js";const p={__name:"IndexView",setup(r){return(_,e)=>(t(),a(n,{contained:""},{default:o(()=>e[0]||(e[0]=[s("h2",null,"About page",-1)])),_:1}))}};export{p as default};
