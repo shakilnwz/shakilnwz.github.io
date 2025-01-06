@@ -14,7 +14,7 @@
     "interests": [
         "Linux",
         "Laravel",
-        "Artificial Intelligence",
+        "LLM",
         "Open Source Alternatives",
         "Renewable energy",
         "Astro Physics",
@@ -46,6 +46,48 @@
             "fluency": "Fluent in Reading, Writing, Speaking"
         }
     ],
-    "projects": [],
-    "workExp": []
+    "projects": [
+        {
+            "title": "Responsive Landing Page Using WordPress",
+            "link": "https://lifkoach.eliteabu.com",
+            "startDate": "August 2024",
+            "endDate": "September 2024"
+        },
+        {
+            "title": "WordPress Site using Breakdance Builder",
+            "link": "https://shakil.eliteabu.com",
+            "startDate": "May 2024",
+            "endDate": "June 2024"
+        }
+    ],
+    "workExp": [
+        {
+            "jobtitle": "Web Developer",
+            "company": "Freelance Marketplace",
+            "location": "Satkhira",
+            "startdate": "April 2023",
+            "enddate": "Present",
+            "achievements": [
+                "Develop fast and responsive websites using WordPress and various builders for WP (Elementor, Breakdance).",
+                "Create/set up WordPress plugins to meet clients’ requirements.",
+                "Customize themes or builder default elements using php or js to match clients required design.",
+                "Customize/set up woocommerce for e-commerce functionality.",
+                "Create stunning landing pages with user friendly and interactive animation using JavaScript and CSS.",
+                "Perform security fixes and deploy sites according to clients' requirements."
+            ]
+        },
+        {
+            "jobtitle": "QA Inspector, Senior QA Inspector",
+            "company": "KM International GmbH (Organic Shrimp Project)",
+            "location": "Satkhira, Cox's Bazar",
+            "startdate": "September 2017",
+            "enddate": "December 2022",
+            "achievements": [
+                "Maintained post-larvae, farm environment and product quality as well as provided action plans.",
+                "Conducted training for hatchery employees, inspected hatchery.",
+                "Developed and implemented a data collection system and provided personalized solutions to farmers based on data.",
+                "Ensure proper HACCP practice of the production team."
+            ]
+        }
+    ]
 }

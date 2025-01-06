@@ -16,9 +16,9 @@ import resumeContent from '../../assets/resumeContent.json'
             <!-- aside section -->
             <div class="px-4">
                 <!-- avater -->
-                <div class="w-full grid place-items-center">
+                <div class="w-full grid place-items-center pb-10">
                     <div 
-                        class="bg-radial from-brand-x/90 to-brand-y/30 to-45% max-w-40 aspect-square rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)]">
+                        class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/90 dark:to-brand-x/90 max-w-40 aspect-square rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)]">
                         <img
                             class="relative z-10 w-40 object-contain"
                             :src="avater"
@@ -107,11 +107,36 @@ import resumeContent from '../../assets/resumeContent.json'
 
                 <!-- recent project -->
                 <h2>Recent Projects</h2>
-                <ul></ul>
+                <ul class="projects">
+                    <li v-for="(project, index) in resumeContent.projects" :key="index">
+                        <a target="_blank" :href="project.link">
+                            <p><strong>{{ project.title }}</strong></p>
+                            {{ project.link }}
+                            <p><i>{{ project.startDate ? project.startDate + ' - ' : ""}}{{ project.endDate }}</i></p>
+                        </a>
+                    </li>
+                </ul>
                 
                 <!-- work experience -->
                 <h2>Work Experience</h2>
-                <ul></ul>
+                <ul class="workexp">
+                    <li v-for="(wexp, index) in resumeContent.workExp" :key="index">
+                        <p><strong>{{ wexp.jobtitle }}</strong></p>
+                        <div class="flex flex-row justify-between pb-2">
+                            <div>
+                                <p>{{ wexp.company }}</p>
+                                <p><i>{{ wexp.startdate ? wexp.startdate + ' - ' : ""}}{{ wexp.enddate }}</i></p>
+                            </div>
+                            <p>{{ wexp.location }}</p>
+                        </div>
+                        <i class="font-bold text-base">Achievements/Tasks:</i>
+                        <ul class="tasks">
+                            <li v-for="(task, index) in wexp.achievements" :key="index">
+                                {{ task }}
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
     </Section>
@@ -121,29 +146,49 @@ import resumeContent from '../../assets/resumeContent.json'
 @import "tailwindcss/theme" theme(reference);
 @import "../../assets/styles/theme.css" theme(reference);
 
-.skills {
+ul.skills {
     @apply flex flex-row flex-wrap gap-1;
 
     &>li{
         @apply bg-brand-y text-surface font-bold w-fit rounded py-0.5 px-1;
     }
 }
-.interests{
+ul.interests{
     &>li{
         &::before{
             @apply font-bold content-['\2192\0020'];
         }
     }
 }
+
+ul.projects{
+    @apply space-y-2 pb-4;
+}
+
+ul.workexp{
+
+    & .tasks{
+        @apply list-disc pl-3;
+
+
+    }
+    & strong{
+        @apply text-lg text-brand-x/90;
+    }
+}
+
 ul{
-    @apply pb-4;
+    @apply pb-4 pt-1;
 }
 a, p, li{
     @apply text-sm;
 }
+i{
+    @apply text-brand-x/80;
+}
 
 h2{
-    @apply text-xl;
+    @apply text-2xl;
     &::before{
     @apply content-['❖\0020'];
     }

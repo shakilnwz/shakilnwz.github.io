@@ -48,7 +48,7 @@ const pointer = (e)=>{
 
             <div class="sm:row-span-2 sm:justify-self-end justify-self-center place-self-center">
                 <div 
-                    class="bg-radial from-brand-x/90 to-brand-y/30 to-45% max-w-60 aspect-square rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)]">
+                    class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/30 dark:to-brand-x/90 max-w-60 aspect-square rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)]">
 
                     <img
                         class="relative z-10 w-60 object-contain"
