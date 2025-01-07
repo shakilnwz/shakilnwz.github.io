@@ -1,24 +1,35 @@
 <script setup>
+import Button from '../../components/atoms/Button.vue'
 import Section from '../../components/atoms/Section.vue';
 import avater from '../../assets/images/avatar.webp'
 import SocialLink from '../../components/atoms/SocialLink.vue';
 import { inject } from 'vue';
-const iconList = inject('icons')
 import resumeContent from '../../assets/resumeContent.json'
 
+const iconList = inject('icons')
 
+const printPage = ()=> window.print()
 
 </script>
 <template>
     <Section contained>
+        <div class="flex flex-wrap justify-between py-2 items-center print:hidden">
+            <h2 class="resumeheader">Resume</h2>
+            <Button
+                @click.prevent="printPage"
+                secondary
+                :svgd="iconList.pdf"
+                text="Print"
+            />
+        </div>
         <!-- resume -->
-        <div class="grid-cols-3 grid divide-brand-y divide-x w-full border-1 border-brand-y py-4">
+        <div class="grid-cols-3 grid divide-brand-y divide-x-2 bg-surface divide-x w-full border-1 border-brand-y/40 py-6">
             <!-- aside section -->
-            <div class="px-4">
+            <div class="px-6">
                 <!-- avater -->
                 <div class="w-full grid place-items-center pb-10">
                     <div 
-                        class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/90 dark:to-brand-x/90 max-w-40 aspect-square rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)]">
+                        class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/90 dark:to-brand-x/90 max-w-40 aspect-square rounded-full">
                         <img
                             class="relative z-10 w-40 object-contain"
                             :src="avater"
@@ -63,14 +74,14 @@ import resumeContent from '../../assets/resumeContent.json'
                 </ul>
             </div>
             <!-- resume main section -->
-            <div class="col-span-2 px-4">
+            <div class="col-span-2 px-6">
                 <h1 class="text-4xl font-bold text-brand-y">Shakil Nawaz</h1>
-                <h3>Web Developer, Tech Nerd</h3>
+                <h3 class="font-bold">Web Developer, Tech Nerd</h3>
                 <p class="text-justify py-4">
                     Driven and goal-oriented web developer with over a year of experience in creating responsive, optimized, and user-focused websites. Committed to leveraging the latest web technologies to build fast, feature-rich, and accessible online experiences. Skilled in integrating innovative solutions to enhance project efficiency while focusing on impactful outcomes.
                 </p>
                 <!-- contact section -->
-                <ul class="gap-2 grid grid-rows-2 grid-flow-col">
+                <ul class="gap-2 grid grid-flow-row sm:grid-rows-2 sm:grid-flow-col">
                     <li>
                         <SocialLink
                             textHighlight="shakilnwz@gmail.com"
@@ -122,7 +133,7 @@ import resumeContent from '../../assets/resumeContent.json'
                 <ul class="workexp">
                     <li v-for="(wexp, index) in resumeContent.workExp" :key="index">
                         <p><strong>{{ wexp.jobtitle }}</strong></p>
-                        <div class="flex flex-row justify-between pb-2">
+                        <div class="flex flex-row justify-between pb-1">
                             <div>
                                 <p>{{ wexp.company }}</p>
                                 <p><i>{{ wexp.startdate ? wexp.startdate + ' - ' : ""}}{{ wexp.enddate }}</i></p>
@@ -163,10 +174,15 @@ ul.interests{
 
 ul.projects{
     @apply space-y-2 pb-4;
+    &>li{
+        @apply flex flex-row gap-2;
+        &::before{
+            @apply pl-1 leading-5 content-['\2192'] font-bold text-lg;
+    }}
 }
 
 ul.workexp{
-
+    @apply space-y-2;
     & .tasks{
         @apply list-disc pl-3;
 
@@ -178,7 +194,11 @@ ul.workexp{
 }
 
 ul{
-    @apply pb-4 pt-1;
+    @apply pt-1;
+
+    &:not(:last-of-type){
+        @apply pb-4;
+    }
 }
 a, p, li{
     @apply text-sm;
@@ -187,7 +207,7 @@ i{
     @apply text-brand-x/80;
 }
 
-h2{
+h2:not(.resumeheader){
     @apply text-2xl;
     &::before{
     @apply content-['❖\0020'];

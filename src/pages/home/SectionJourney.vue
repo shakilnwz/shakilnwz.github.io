@@ -41,7 +41,7 @@ const intObserver = new IntersectionObserver(
             }
         });
     },
-    { root: null, threshold: 0.5, rootMargin: "700px 0px -200px 0px" },
+    { root: null, threshold: 0.5, rootMargin: "700px 0px -70px 0px" },
 );
 
 // mount the observer
@@ -66,11 +66,12 @@ onUnmounted(()=>{
         <div class="sticky top-0 z-10 backdrop-blur-3xl sm:top-15 gap-2 flex flex-wrap justify-between py-2 items-center">
             <h2 class="max-w-5xl mx-auto w-full px-5 sm:px-8">Journey</h2>
         </div>
-        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4 px-5 sm:px-8">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4 px-5 sm:px-8"> 
+            
             <p class="sm:max-w-70">I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.</p>
 
             <div id="cards" class="grow relative space-y-11">
-                <span id="hline"  class="absolute bottom-0 w-1 bg-brand-y top-2 left-5.5 sm:left-12 z-0"></span>
+                <span id="hline" class="absolute bottom-0 w-1 bg-brand-y top-2 left-5.5 sm:left-12 z-0"></span>
 
                 <!-- skill card -->
                 <SkillCard
@@ -79,7 +80,7 @@ onUnmounted(()=>{
                     v-for='(item, index) in journey'
                     :key="index"
                     :iconSrc= "iconStatic[item.name].icon"
-                    :iconAlt="item.iconAlt"
+                    :iconAlt="item.name + ' logo'"
                     :date="item.date"
                     :title="item.title"
                     :summary="item.summary"
@@ -88,6 +89,7 @@ onUnmounted(()=>{
 
             </div>
         </div>
+        
     </Section>
 </template>
 

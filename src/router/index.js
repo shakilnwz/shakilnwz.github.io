@@ -1,6 +1,5 @@
 import { createWebHashHistory, createRouter } from "vue-router";
 import HomeView from "../pages/home/IndexView.vue";
-import { createWebHistory } from "vue-router";
 
 const routes = [
   {
@@ -40,7 +39,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 

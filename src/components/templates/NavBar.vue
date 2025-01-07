@@ -29,7 +29,7 @@ const toggleTheme = ()=>{
 const isSticky = ref(false);
 
 const handleScroll = ()=>{
-    isSticky.value = window.scrollY > 0;
+    isSticky.value = window.scrollY > 20;
 
 }
 onMounted(()=>{
@@ -41,10 +41,9 @@ onUnmounted(()=>{
 </script>
 
 <template>
-    <!-- TODO: add router link -->
     <nav 
         :class="{
-            'sm:sticky top-0 transition-all duration-300 relative z-50 sm:shadow-none py-2.5' : true,
+            'sm:fixed left-0 right-0 top-0 transition-all duration-300 relative z-50 sm:shadow-none py-2.5' : true,
             'sm:py-5' : !isSticky,
             'sm:shadow-sm sm:backdrop-blur-xl sm:py-2.5' : isSticky
         }"

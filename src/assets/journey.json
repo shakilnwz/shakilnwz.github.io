@@ -1,64 +1,48 @@
 {
     "vue": {
-        "id": 8,
         "name": "vue",
-        "iconAlt": "vue logo",
         "date": "December 2024",
         "title": "Vue, Vue Router",
         "summary": "Worked on several project"
     },
     "tailwind": {
-        "id": 7,
         "name": "tailwind",
-        "iconAlt": "vue logo",
         "date": "December 2024",
         "title": "Vue, Vue Router",
         "summary": "Worked on several project"
     },
     "laravel": {
-        "id": 6,
         "name": "laravel",
-        "iconAlt": "vue logo",
         "date": "December 2024",
         "title": "Vue, Vue Router",
         "summary": "Worked on several project"
     },
     "wordpress": {
-        "id": 5,
         "name": "wordpress",
-        "iconAlt": "vue logo",
         "date": "December 2024",
         "title": "Vue, Vue Router",
         "summary": "Worked on several project"
     },
     "php": {
-        "id": 4,
         "name": "php",
-        "iconAlt": "vue logo",
         "date": "December 2024",
         "title": "Vue, Vue Router",
         "summary": "Worked on several project"
     },
     "js": {
-        "id": 3,
         "name": "js",
-        "iconAlt": "vue logo",
         "date": "December 2024",
         "title": "Vue, Vue Router",
         "summary": "Worked on several project"
     },
     "css": {
-        "id": 2,
         "name": "css",
-        "iconAlt": "css logo",
         "date": "March 2022",
         "title": "CSS, SCSS, Modern CSS with nesting",
         "summary": "Worked on several project"
     },
     "html": {
-        "id": 1,
         "name": "html",
-        "iconAlt": "html logo",
         "date": "January 2022",
         "title": "HTML, Semantic HTML, HTML5",
         "summary": "Worked on several project"

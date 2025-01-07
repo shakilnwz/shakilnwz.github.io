@@ -5,7 +5,7 @@ import PrimaryFooter from '../components/templates/PrimaryFooter.vue';
 </script>
 <template>
     <NavBar />
-    <main class="h-full">
+    <main class="h-full sm:pt-16">
         <slot></slot>
     </main>
     <PrimaryFooter />
