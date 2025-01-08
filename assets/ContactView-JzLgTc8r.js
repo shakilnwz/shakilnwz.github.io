@@ -1,0 +1,1 @@
+import{c as t,w as e,d as o,o as n,a as s}from"./index-DF2_cw6n.js";const p={__name:"ContactView",setup(c){return(r,a)=>(n(),t(o,{contained:""},{default:e(()=>a[0]||(a[0]=[s("h2",null,"Contact page",-1)])),_:1}))}};export{p as default};
