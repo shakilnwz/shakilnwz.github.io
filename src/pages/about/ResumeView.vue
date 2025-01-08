@@ -6,6 +6,8 @@ import SocialLink from '../../components/atoms/SocialLink.vue';
 import { inject } from 'vue';
 import resumeContent from '../../assets/resumeContent.json'
 
+import allProjects from '../../assets/projects.json'
+const projects = allProjects.slice(0, 2)
 const iconList = inject('icons')
 
 const printPage = ()=> window.print()
@@ -119,7 +121,7 @@ const printPage = ()=> window.print()
                 <!-- recent project -->
                 <h2>Recent Projects</h2>
                 <ul class="projects">
-                    <li v-for="(project, index) in resumeContent.projects" :key="index">
+                    <li v-for="(project, index) in projects" :key="index">
                         <a target="_blank" :href="project.link">
                             <p><strong>{{ project.title }}</strong></p>
                             {{ project.link }}
@@ -134,11 +136,11 @@ const printPage = ()=> window.print()
                     <li v-for="(wexp, index) in resumeContent.workExp" :key="index">
                         <p><strong>{{ wexp.jobtitle }}</strong></p>
                         <div class="flex flex-row justify-between pb-1">
-                            <div>
+                            <div class="grow w-full">
                                 <p>{{ wexp.company }}</p>
                                 <p><i>{{ wexp.startdate ? wexp.startdate + ' - ' : ""}}{{ wexp.enddate }}</i></p>
                             </div>
-                            <p>{{ wexp.location }}</p>
+                            <p class="shrink grow-0 text-right">{{ wexp.location }}</p>
                         </div>
                         <i class="font-bold text-base">Achievements/Tasks:</i>
                         <ul class="tasks">
@@ -158,10 +160,10 @@ const printPage = ()=> window.print()
 @import "../../assets/styles/theme.css" theme(reference);
 
 ul.skills {
-    @apply flex flex-row flex-wrap gap-1;
+    @apply flex flex-row flex-wrap gap-1.5;
 
     &>li{
-        @apply bg-brand-y text-surface font-bold w-fit rounded py-0.5 px-1;
+        @apply bg-brand-y/30 font-bold w-fit rounded p-1.5;
     }
 }
 ul.interests{

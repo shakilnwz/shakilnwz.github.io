@@ -8,43 +8,43 @@
     "tailwind": {
         "name": "tailwind",
         "date": "December 2024",
-        "title": "Vue, Vue Router",
+        "title": "Tailwind CSS",
         "summary": "Worked on several project"
     },
     "laravel": {
         "name": "laravel",
         "date": "December 2024",
-        "title": "Vue, Vue Router",
+        "title": "Laravel, Blade, Eloquent",
         "summary": "Worked on several project"
     },
     "wordpress": {
         "name": "wordpress",
         "date": "December 2024",
-        "title": "Vue, Vue Router",
+        "title": "WordPress, Elementor, BreakDance",
         "summary": "Worked on several project"
     },
     "php": {
         "name": "php",
-        "date": "December 2024",
-        "title": "Vue, Vue Router",
+        "date": "January 2024",
+        "title": "PHP, OOP",
         "summary": "Worked on several project"
     },
     "js": {
         "name": "js",
-        "date": "December 2024",
-        "title": "Vue, Vue Router",
+        "date": "October 2023",
+        "title": "JavaScript, ES6, jQuery",
         "summary": "Worked on several project"
     },
     "css": {
         "name": "css",
-        "date": "March 2022",
-        "title": "CSS, SCSS, Modern CSS with nesting",
+        "date": "March 2023",
+        "title": "CSS, SCSS, CSS Nesting",
         "summary": "Worked on several project"
     },
     "html": {
         "name": "html",
-        "date": "January 2022",
-        "title": "HTML, Semantic HTML, HTML5",
+        "date": "February 2023",
+        "title": "HTML, HTML5",
         "summary": "Worked on several project"
     }
 }

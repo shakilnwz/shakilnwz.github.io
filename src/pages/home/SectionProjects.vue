@@ -2,8 +2,12 @@
 import { inject } from 'vue';
 import Section from '../../components/atoms/Section.vue'
 import Button from '../../components/atoms/Button.vue';
-import placeholder from '../../assets/images/placeholder.webp'
 import PostLink from '../../components/templates/PostLink.vue';
+import eliteabu from '../../assets/projects/eliteabu.webp';
+import lifkoach from '../../assets/projects/lifkoach.webp';
+import projects from '../../assets/projects.json'
+
+const projectThumb = {eliteabu, lifkoach}
 
 const iconList = inject('icons')
 
@@ -25,23 +29,15 @@ const iconList = inject('icons')
         <div class="max-w-5xl px-5 sm:px-8 mx-auto flex flex-col sm:flex-row flex-wrap gap-4">
 
             <PostLink 
+                v-for="(project, index) in projects.slice(0,2)"
+                :key="index"
                 type="project"
-                title="My First Post"
-                link="/"
-                :thumbnail="placeholder"
-                date="22d"
-                summary="This is the post excerpt. This is the post excerpt."
-
+                :title="project.title"
+                :link="project.link"
+                :thumbnail="projectThumb[project.thumbnail]"
+                :date="project.endDate"
+                :summary="project.summary"
             /> 
-            <PostLink 
-                type="project"
-                title="My First Post"
-                link="/"
-                :thumbnail="placeholder"
-                date="22d"
-                summary="This is the post excerpt. This is the post excerpt."
-
-            />
         </div>
 
         

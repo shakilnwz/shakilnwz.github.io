@@ -14,26 +14,27 @@ const articleData = defineProps({
 <template>
     <!-- TODO: add router link -->
     <a 
+        target="_blank"
         :href="articleData.link" 
         :class="{
             'group overflow-clip gap-1 sm:gap-3 items-center bg-surface/60 rounded-2xl shadow hover:shadow-lg hover:shadow-brand-y/30 transition-shadow duration-300 ' : true,
             'w-full flex flex-row h-30' : articleData.type == 'article',
-            'flex-col w-full sm:min-w-80 flex-1 h-fit' : articleData.type == 'project'
+            'flex-col w-full flex-1 sm:min-w-80' : articleData.type == 'project'
         }">
         <span 
             :class="{
-            'bg-brand-y grayscale grow inline-block group-hover:grayscale-0 transition-all duration-300' : true,
+            'bg-brand-y grow inline-block transition-all duration-300' : true,
             'h-full w-40 max-w-40' : articleData.type == 'article',
             'h-40 sm:h-70 w-full'  : articleData.type == 'project'
             }">
             <img
-                class="object-center object-contain w-full h-full" 
+                class="object-center object-cover w-full h-full" 
                 :src="articleData.thumbnail ?? placeholder"
                 :alt="articleData.title"
             >
         </span>
 
-        <div class="grow py-2 px-4 h-full flex flex-col justify-center">
+        <div class="grow pt-2 pb-4 px-4 flex flex-col justify-center">
             <div 
                 :class="{
                     'flex flex-row justify-between' : true,
@@ -43,7 +44,7 @@ const articleData = defineProps({
                     class="font-bold">
                     {{ articleData.title }}
                 </h3> 
-                <span class="font-light">
+                <span class="font-light text-right">
                     {{ articleData.date }}
                 </span>
             </div>
