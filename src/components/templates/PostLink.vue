@@ -17,7 +17,7 @@ const articleData = defineProps({
         target="_blank"
         :href="articleData.link" 
         :class="{
-            'group overflow-clip gap-1 sm:gap-3 items-center bg-surface/60 rounded-2xl shadow hover:shadow-lg hover:shadow-brand-y/30 transition-shadow duration-300 ' : true,
+            'group overflow-clip gap-1 sm:gap-3 items-center bg-surface/60 hover:bg-surface rounded-2xl shadow hover:shadow-lg hover:shadow-brand-y/30 transition-shadow duration-300 ' : true,
             'w-full flex flex-row h-30' : articleData.type == 'article',
             'flex-col w-full flex-1 sm:min-w-80' : articleData.type == 'project'
         }">

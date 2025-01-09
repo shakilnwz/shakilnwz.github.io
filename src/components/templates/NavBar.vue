@@ -3,6 +3,7 @@ import { ref, onMounted, onUnmounted, inject } from 'vue'
 import { RouterLink } from 'vue-router';
 import NavLink from "../atoms/NavLink.vue"
 
+const route = inject('route')
 const iconList = inject('icons')
 const themeSwitch = {
     'light' : iconList.sun,
@@ -30,7 +31,6 @@ const isSticky = ref(false);
 
 const handleScroll = ()=>{
     isSticky.value = window.scrollY > 20;
-
 }
 onMounted(()=>{
     window.addEventListener('scroll', handleScroll);
@@ -45,7 +45,8 @@ onUnmounted(()=>{
         :class="{
             'sm:fixed left-0 right-0 top-0 transition-all duration-300 relative z-50 sm:shadow-none py-2.5' : true,
             'sm:py-5' : !isSticky,
-            'sm:shadow-sm sm:backdrop-blur-xl sm:py-2.5' : isSticky
+            'sm:shadow-sm sm:backdrop-blur-xl sm:py-2.5' : isSticky,
+            'print:hidden' : route.path === '/resume'
         }"
         >
         <div class="relative z-999 max-w-5xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 gap-2">

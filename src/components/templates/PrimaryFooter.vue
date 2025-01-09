@@ -4,10 +4,10 @@ import SocialLink from '../../components/atoms/SocialLink.vue'
 const currentYear = new Date().getFullYear()
 
 const iconList = inject('icons')
-
+const route = inject('route')
 </script>
 <template>
-    <footer>
+    <footer :class="{'print:hidden': route.path === '/resume'}">
         <div class="mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-5xl space-y-2.5 sm:space-y-4">
             <h2 class="py-2">Connect</h2>
             <p>Let's get connected and plan on building your next dream WebSite.</p>
