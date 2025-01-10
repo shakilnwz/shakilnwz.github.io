@@ -12,7 +12,6 @@
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
     "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.0.0-beta.7",
     "@vitejs/plugin-vue": "npm:@vitejs/plugin-vue@^5.1.4",
-    "markdown-it": "npm:markdown-it@^14.1.0",
     "tailwindcss": "npm:tailwindcss@^4.0.0-beta.7",
     "vite": "npm:vite@^5.4.9",
     "vue": "npm:vue@^3.5.12",
