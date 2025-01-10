@@ -1,1 +1,0 @@
-import{c as a,w as t,d as s,o as r,a as o}from"./index-Cfs0QjNy.js";const i={__name:"ArticleView",setup(c){return(n,e)=>(r(),a(s,{contained:""},{default:t(()=>e[0]||(e[0]=[o("h2",null,"Articles page",-1)])),_:1}))}};export{i as default};
