@@ -1,25 +1,25 @@
 {
     "vue": {
         "name": "vue",
-        "date": "December 2024",
+        "date": "Running",
         "title": "Vue, Vue Router",
-        "summary": "Worked on several project"
-    },
-    "tailwind": {
-        "name": "tailwind",
-        "date": "December 2024",
-        "title": "Tailwind CSS",
-        "summary": "Worked on several project"
+        "summary": "Currently learning from Laracasts YouTube"
     },
     "laravel": {
         "name": "laravel",
-        "date": "December 2024",
+        "date": "Running",
         "title": "Laravel, Blade, Eloquent",
+        "summary": "Currently learning from Laracasts YouTube"
+    },
+    "tailwind": {
+        "name": "tailwind",
+        "date": "April 2024",
+        "title": "Tailwind CSS",
         "summary": "Worked on several project"
     },
     "wordpress": {
         "name": "wordpress",
-        "date": "December 2024",
+        "date": "March 2024",
         "title": "WordPress, Elementor, BreakDance",
         "summary": "Worked on several project"
     },
@@ -27,24 +27,24 @@
         "name": "php",
         "date": "January 2024",
         "title": "PHP, OOP",
-        "summary": "Worked on several project"
+        "summary": "Completed Laracasts' PHP For Beginners"
     },
     "js": {
         "name": "js",
         "date": "October 2023",
         "title": "JavaScript, ES6, jQuery",
-        "summary": "Worked on several project"
+        "summary": "Completed JS DSA Course on freeCodeCamp"
     },
     "css": {
         "name": "css",
         "date": "March 2023",
         "title": "CSS, SCSS, CSS Nesting",
-        "summary": "Worked on several project"
+        "summary": "Completed RWD Course on freeCodeCamp"
     },
     "html": {
         "name": "html",
         "date": "February 2023",
         "title": "HTML, HTML5",
-        "summary": "Worked on several project"
+        "summary": "Completed RWD Course on freeCodeCamp"
     }
 }

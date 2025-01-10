@@ -8,7 +8,7 @@ const articleData = defineProps({
     'date' : String,
     'summary' : String,
 })
-    
+
 </script>
 
 <template>
@@ -51,7 +51,7 @@ const articleData = defineProps({
             <p :class="{
                     'bg-brand-x/20 w-full h-12 rounded-lg mt-2' : !articleData.summary
                 }">
-                {{ articleData.summary }}
+                {{ articleData.summary.substring(0, 45).concat('...') }}
             </p>
         </div>
     </a>

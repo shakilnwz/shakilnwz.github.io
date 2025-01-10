@@ -2,8 +2,11 @@
 import { inject } from 'vue';
 import Section from '../../components/atoms/Section.vue'
 import Button from '../../components/atoms/Button.vue';
-import placeholder from '../../assets/images/placeholder.webp'
-import PostLink from '../../components/templates/PostLink.vue';
+
+import denovite from '../../assets/articles/deno-vite.webp';
+import articles from '../../assets/articles.json';
+
+const thumbs ={denovite}
 
 const iconList = inject('icons')
 
@@ -27,32 +30,18 @@ const iconList = inject('icons')
 
             <div class="sm:basis-xl grow space-y-4">
                 <!-- article card -->
-               <PostLink 
-                    type="article"
-                    title="My First Post"
-                    link="/"
-                    :thumbnail="placeholder"
-                    date="22d"
-                    summary="This is the post excerpt. This is the post excerpt."
-
-                /> 
                 <PostLink 
+                    v-for="(article, index) in articles.slice(0,3)"
+                    :key="index"
                     type="article"
-                    title="My First Post"
-                    link="/"
-                    :thumbnail="placeholder"
-                    date="22d"
-                    summary="This is the post excerpt. This is the post excerpt."
-
+                    :title="article.title"
+                    :link="article.link"
+                    :thumbnail="thumbs[article.thumbnail]"
+                    :date="article.postdate"
+                    :summary="article.summary"
                 />
-                <PostLink 
-                    type="article"
-                />
-                
-
             </div>
         </div>
 
-        
     </Section>
 </template>

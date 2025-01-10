@@ -24,7 +24,7 @@ const routes = [
       },
       {
         path: "/articles",
-        component: () => import("../pages/ArticleView.vue"),
+        component: () => import("../pages/articles/IndexView.vue"),
       },
       {
         path: "/contact",

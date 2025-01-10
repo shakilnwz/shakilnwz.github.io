@@ -1,0 +1,9 @@
+[
+    {
+        "title": "Vite project with TailwindCSS v4 beta using Deno",
+        "link": "https://www.linkedin.com/pulse/vite-project-tailwindcss-v4-beta-using-deno-shakil-nawaz-kaasf",
+        "postdate": "Nov 29, 2024",
+        "summary": "Deno is a relatively new javascript runtime which is created by the same creator of Nodejs. It's faster, safer and packed with options. Recently, it is bumped to version 2 with some exciting feature.",
+        "thumbnail": "denovite"
+    }
+]
