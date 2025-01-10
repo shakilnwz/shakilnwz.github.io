@@ -2,7 +2,7 @@
 import { inject } from 'vue';
 import Section from '../../components/atoms/Section.vue'
 import Button from '../../components/atoms/Button.vue';
-
+import PostLink from '../../components/templates/PostLink.vue'
 import denovite from '../../assets/articles/deno-vite.webp';
 import articles from '../../assets/articles.json';
 
