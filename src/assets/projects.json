@@ -5,6 +5,11 @@
         "startDate": "August 2024",
         "endDate": "September 2024",
         "summary": "Landing Page created using Breakdance Builder",
+        "tags": [
+            "WordPress",
+            "Breakdance",
+            "CSS"
+        ],
         "thumbnail": "lifkoach"
     },
     {
@@ -13,6 +18,12 @@
         "startDate": "May 2024",
         "endDate": "June 2024",
         "summary": "Wordpress Site created using Breakdance Builder, Used custom PHP and JS code for animation",
+        "tags": [
+            "WordPress",
+            "Breakdance",
+            "CSS",
+            "PHP"
+        ],
         "thumbnail": "eliteabu"
     }
 ]

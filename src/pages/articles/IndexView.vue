@@ -11,7 +11,7 @@ const thumbs = { denovite }
 <template>
     <Section contained>
         <h2 class="pb-6">Articles</h2>
-        <div>
+        <div class="space-y-4 sm:space-y-8">
             <!-- article card -->
             <a class="article-card flex h-fit flex-col relative sm:flex-row gap-4 hover:border-brand-y/90 border-b-6 border-transparent rounded-3xl transition-all overflow-hidden"
                 v-for="(article, index) in articles" :key="index" :href="article.link" target="_blank">
