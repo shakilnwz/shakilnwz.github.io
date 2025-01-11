@@ -1,1 +1,0 @@
-import{c as a,o as t,w as n,a as o,b as c,u as r,_ as i,d as u,i as _}from"./index-rJGmww-E.js";const m={__name:"IndexView",setup(d){const s=_("icons");return(f,e)=>(t(),a(u,{contained:""},{default:n(()=>[e[0]||(e[0]=o("h2",null,"About page",-1)),c(i,{secondary:"",text:"My Résumé",href:"/resume",svgd:r(s).pdf},null,8,["svgd"])]),_:1}))}};export{m as default};

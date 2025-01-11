@@ -1,0 +1,1 @@
+import{c as a,w as e,d as o,o as n,a as s}from"./index-BGtwVzJ9.js";const i={__name:"ContactView",setup(c){return(r,t)=>(n(),a(o,{contained:""},{default:e(()=>t[0]||(t[0]=[s("h2",null,"Contact",-1)])),_:1}))}};export{i as default};
