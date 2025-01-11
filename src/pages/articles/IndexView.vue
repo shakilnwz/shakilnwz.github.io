@@ -4,28 +4,24 @@ import Section from '../../components/atoms/Section.vue'
 import denovite from '../../assets/articles/deno-vite.webp';
 import articles from '../../assets/articles.json';
 
-const thumbs ={denovite}
+const thumbs = { denovite }
 
 
 </script>
 <template>
     <Section contained>
-        <h2 class="pb-6">Articles page</h2>
+        <h2 class="pb-6">Articles</h2>
         <div>
             <!-- article card -->
-            <a 
-                class="flex flex-col sm:flex-row gap-4 hover:border-brand-y border-b-6 border-transparent rounded-3xl transition-all" 
-                v-for="(article, index) in articles" 
-                :key="index" 
-                :href="article.link" 
-                target="_blank">
-                <span class="flex-1 rounded">
-                    <img class="rounded-2xl" :src="thumbs[article.thumbnail]" :alt="article.title">
+            <a class="article-card flex h-fit flex-col relative sm:flex-row gap-4 hover:border-brand-y/90 border-b-6 border-transparent rounded-3xl transition-all overflow-hidden"
+                v-for="(article, index) in articles" :key="index" :href="article.link" target="_blank">
+                <span class="basis-full block rounded">
+                    <img class="rounded-2xl h-full object-cover" :src="thumbs[article.thumbnail]" :alt="article.title">
                 </span>
-                <span class="flex-1 space-y-4 px-2">
+                <span class="basis-full space-y-4 px-2">
                     <h3>{{ article.title }}</h3>
-                    <p class="font-light">Published on: {{ article.postdate }}</p>
-                    <p>{{ article.summary}}</p>
+                    <p class="font-light text-brand-x/90 text-base">Published on: {{ article.postdate }}</p>
+                    <p>{{ article.summary }}</p>
                 </span>
             </a>
         </div>
@@ -35,7 +31,18 @@ const thumbs ={denovite}
 <style scoped>
 @import "tailwindcss/theme" theme(reference);
 @import "../../assets/styles/theme.css" theme(reference);
-h3{
+
+.article-card {
+    &:before {
+        @apply absolute text-center font-bold inset-full rounded-t-3xl bottom-0 text-transparent content-['Read_More'] font-bold py-4 transition-all;
+    }
+
+    &:hover:before {
+        @apply text-brand-x inset-x-0 top-auto bg-brand-y/80 backdrop-blur-sm;
+    }
+}
+
+h3 {
     @apply text-brand-y text-3xl font-bold;
 }
 </style>
