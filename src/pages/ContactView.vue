@@ -1,8 +1,39 @@
 <script setup>
 import Section from '../components/atoms/Section.vue'
 import SocialLink from '../components/atoms/SocialLink.vue';
-import { inject } from 'vue'
+import { inject, ref } from 'vue'
 const iconList = inject('icons')
+
+const name = ref('');
+const email = ref('');
+const message = ref('');
+
+const submitToGoogleForm = async ()=>{
+    const formId = "1FAIpQLSdOIQQL_gZwrQX9eIrKn22ynVThxyhxQU73g_aKYpd-gcZoPg"; // Replace with your Google Form ID
+    const url = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
+    //entry.252721265
+    //entry.1305900489
+    //entry.509312173
+    const formData = new FormData();
+    formData.append("entry.252721265", name.value); // Replace with your Name field's entry ID
+    formData.append("entry.1305900489", email.value); // Replace with your Email field's entry ID
+    formData.append("entry.509312173", message.value); // Replace with your Message field's entry ID
+
+    try {
+        await fetch(url, {
+            method: "POST",
+            body: formData,
+            mode: "no-cors", // Required for Google Forms
+        });
+        alert("Message sent successfully!");
+        name.value = ""
+        email.value = "" 
+        message.value = "" // Reset form
+    } catch (error) {
+        alert("There was an error sending your message. Please try again.");
+    }
+}
+
 </script>
 <template>
     <Section contained>
@@ -42,6 +73,35 @@ const iconList = inject('icons')
             </ul>
 
         </div>
+        <div>
+            <form @submit.prevent="submitToGoogleForm">
+                <label>
+                    Your Name
+                    <input type='text' v-model="name" name="name">
+                </label>
+                <label>
+                    Your Email
+                    <input type='email' v-model="email" name="email">
+                </label>
+                <label>
+                    Message
+                    <textarea type='email' v-model="message" name="message"></textarea>
+                </label>
+                <button
+                    class="bg-brand-y hover:bg-surface text-surface hover:text-brand-y justify-center font-bold rounded-xl border-brand-y border-2 w-fit flex flex-row flex-wrap items-center gap-x-2  px-5 py-1 transition-all duration-300" 
+                    >
+                    <svg  class="fill-current h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                        <path
+                            fill-rule="evenodd"
+                            :d="iconList.email"
+                            clip-rule="evenodd"
+                        />
+                    </svg>
+                    Send Message
+                </button>
+            </form>
+            
+        </div>
         <!-- TODO: add contact detail -->
         <!-- TODO: add skype detail -->
         <!-- TODO: add linkedin detail -->
@@ -52,3 +112,16 @@ const iconList = inject('icons')
         <!-- TODO: add qr for easier access -->
     </Section>
 </template>
+<style scoped>
+    @import 'tailwindcss/theme' theme(reference);
+    @import '../assets/styles/theme.css' theme(reference);
+    form{
+        @apply space-y-4;
+        & label{
+            @apply block;
+            & input, textarea{
+              @apply block  mt-1 border-b-2 border-brand-y/30 focus:outline-none focus:border-brand-y py-1 px-2 bg-surface/40;  
+            }
+        }
+    }
+</style>
