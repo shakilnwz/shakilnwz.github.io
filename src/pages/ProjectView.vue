@@ -13,8 +13,7 @@ const thumbs = { eliteabu, lifkoach, educavo }
 <template>
     <Section contained>
         <h2 class="pb-6">Projects</h2>
-        <div class="space-y-4 sm:space-y-8">
-            <!-- article card -->
+        <div class="space-y-8 sm:space-y-16">
             <a class="project-card flex h-fit flex-col relative sm:flex-row sm:even:flex-row-reverse gap-4 hover:border-brand-y/90 border-b-6 border-transparent rounded-3xl transition-all overflow-hidden"
                 v-for="(project, index) in projects" :key="index" :href="project.link" target="_blank">
                 <span class="basis-full block rounded">
