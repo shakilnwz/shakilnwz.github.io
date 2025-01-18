@@ -1,9 +1,10 @@
-[{
+[
+    {
         "title": "WordPress Site using Elementor Page builder",
         "link": "https://dev-educavo-shakilnwz.pantheonsite.io",
         "startDate": "Jan 2025",
         "endDate": "Jan 2025",
-        "summary": "Wordpress Site created using Elementor. Used custom css to achieve design goal",
+        "summary": "Wordpress Site created using Elementor Page Builder. Used custom css to achieve design goal",
         "tags": [
             "WordPress",
             "Elementor",
@@ -37,6 +38,5 @@
             "PHP"
         ],
         "thumbnail": "eliteabu"
-    }    
-
+    }
 ]
