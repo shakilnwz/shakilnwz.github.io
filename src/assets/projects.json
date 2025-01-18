@@ -1,4 +1,16 @@
-[
+[{
+        "title": "WordPress Site using Elementor Page builder",
+        "link": "https://dev-educavo-shakilnwz.pantheonsite.io",
+        "startDate": "Jan 2025",
+        "endDate": "Jan 2025",
+        "summary": "Wordpress Site created using Elementor. Used custom css to achieve design goal",
+        "tags": [
+            "WordPress",
+            "Elementor",
+            "CSS"
+        ],
+        "thumbnail": "educavo"
+    },
     {
         "title": "Responsive Landing Page Using WordPress",
         "link": "https://lifkoach.eliteabu.com",
@@ -25,5 +37,6 @@
             "PHP"
         ],
         "thumbnail": "eliteabu"
-    }
+    }    
+
 ]
