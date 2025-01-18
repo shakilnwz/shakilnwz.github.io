@@ -4,9 +4,10 @@ import Section from '../components/atoms/Section.vue'
 import eliteabu from '../assets/projects/eliteabu.webp';
 import lifkoach from '../assets/projects/lifkoach.webp';
 import educavo from '../assets/projects/educavo.webp';
+import fccrwd from '../assets/projects/fccrwd.webp';
 import projects from '../assets/projects.json';
 
-const thumbs = { eliteabu, lifkoach, educavo }
+const thumbs = { eliteabu, lifkoach, educavo, fccrwd }
 
 
 </script>

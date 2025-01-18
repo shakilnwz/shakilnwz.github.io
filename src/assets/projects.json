@@ -38,5 +38,17 @@
             "PHP"
         ],
         "thumbnail": "eliteabu"
+    },
+    {
+        "title": "freeCodeCamp Responsive Web Design Certification",
+        "link": "https://www.freecodecamp.org/certification/shakilnwz/responsive-web-design",
+        "startDate": "January 2023",
+        "endDate": "March 2023",
+        "summary": "Completed learning Responsive web design using HTML, CSS. Created 5 assignment project as part of certification program.",
+        "tags": [
+            "HTML",
+            "CSS"
+        ],
+        "thumbnail": "fccrwd"
     }
 ]
