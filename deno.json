@@ -10,9 +10,9 @@
   },
   "imports": {
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
-    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.0.0-beta.7",
+    "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.0.0",
     "@vitejs/plugin-vue": "npm:@vitejs/plugin-vue@^5.1.4",
-    "tailwindcss": "npm:tailwindcss@^4.0.0-beta.7",
+    "tailwindcss": "npm:tailwindcss@^4.0.0",
     "vite": "npm:vite@^5.4.9",
     "vue": "npm:vue@^3.5.12",
     "vue-router": "npm:vue-router@^4.5.0"
