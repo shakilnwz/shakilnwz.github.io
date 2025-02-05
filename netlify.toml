@@ -1,10 +1,9 @@
 
 [build]
-  command = "deno task build"
+  command = "vite build"
   publish = "dist"
 
 [build.environment]
-  DENO_VERSION = "2.0.0"  # Use the latest stable version of Deno
   NODE_VERSION = "20"      # Required if Vite depends on Node.js
   NPM_FLAGS = "--legacy-peer-deps" # Avoid dependency issues
 
