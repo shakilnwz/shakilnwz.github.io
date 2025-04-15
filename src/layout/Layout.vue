@@ -11,7 +11,7 @@ provide('route', route)
     <NavBar />
     <main 
         :class="{
-            'h-full sm:pt-16': true, 
+            'h-vh overflow-y-auto sm:pt-16': true, 
             'print:pt-0' : route.path === '/resume'
         }">
         <slot></slot>

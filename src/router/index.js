@@ -34,6 +34,10 @@ const routes = [
         path: "/projects",
         component: () => import("../pages/ProjectView.vue"),
       },
+      {
+        path: "/wppost",
+        component: () => import("../pages/WPProjectsView.vue"),
+      },
     ],
   },
 ];

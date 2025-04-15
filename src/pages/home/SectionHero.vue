@@ -1,39 +1,40 @@
 <script setup>
-import { ref, inject } from 'vue'
+import { inject } from 'vue'
 import avater from '../../assets/images/avatar.webp'
 import Section from '../../components/atoms/Section.vue'
 import Button from '../../components/atoms/Button.vue'
 
 const iconList = inject('icons');
-const cursorPos = {
-    'style' : ref(null)
-}
+// const cursorPos = {
+//     'style' : ref(null)
+// }
 
-const pointer = (e)=>{
-    e.stopImmediatePropagation();
-    cursorPos.style.value = `left: ${e.clientX - 160}px`
-}
+// const pointer = (e)=>{
+//     e.stopImmediatePropagation();
+//     cursorPos.style.value = `left: ${e.clientX - 160}px`
+// }
 
 </script>
 
 <template>
-    <Section id="hero" @mousemove="pointer" @touchmove="pointer" class="relative overflow-hidden group">
-        <span id="fancybox" class="z-0 absolute  top-0 left-0 right-0 bottom-0">
-            <span 
-                id="cursorpulse"  
-                :style="cursorPos.style.value" 
-                class="
-                transition-all
-                rounded-3xl 
-                duration-300 
-                h-50
-                group-hover:sm:h-full 
-                sm:top-80
-                group-hover:sm:top-0
-                absolute top-1/4
-                bg-gradient-to-r from-transparent via-brand-y/70 to-transparent
-                "></span>
-        </span>
+    <!-- <Section id="hero" @mousemove="pointer" @touchmove="pointer" class="relative overflow-hidden group"> -->
+    <Section id="hero" class="relative overflow-hidden group">
+        <!-- <span id="fancybox" class="z-0 absolute  top-0 left-0 right-0 bottom-0"> -->
+        <!--     <span  -->
+        <!--         id="cursorpulse"   -->
+        <!--         :style="cursorPos.style.value"  -->
+        <!--         class=" -->
+        <!--         transition-all -->
+        <!--         rounded-3xl  -->
+        <!--         duration-300  -->
+        <!--         h-50 -->
+        <!--         group-hover:sm:h-full  -->
+        <!--         sm:top-80 -->
+        <!--         group-hover:sm:top-0 -->
+        <!--         absolute top-1/4 -->
+        <!--         bg-gradient-to-r from-transparent via-brand-y/70 to-transparent -->
+        <!--         "></span> -->
+        <!-- </span> -->
         <div class="relative z-10 max-w-5xl px-5 sm:px-8 mx-auto grid sm:grid-cols-3 gap-2 sm:gap-0 backdrop-blur-xs">
 
             <div class="sm:col-span-2">
