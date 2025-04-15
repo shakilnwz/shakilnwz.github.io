@@ -26,8 +26,7 @@ const fetchPosts = async () => {
 
 onMounted(() => {
     fetchPosts();
-}
-);
+});
 
 
 </script>

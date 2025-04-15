@@ -49,7 +49,7 @@ onUnmounted(()=>{
             'print:hidden' : route.path === '/resume'
         }"
         >
-        <div class="relative z-999 max-w-5xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 gap-2">
+        <div class="relative z-999 max-w-6xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 gap-2">
             <!-- logo -->
 
             <RouterLink class="block" to="/" aria-label='Home'>

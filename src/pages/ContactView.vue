@@ -39,7 +39,7 @@ const submitToGoogleForm = async ()=>{
     <Section contained>
         <h2>Connect</h2>
         <div class="w-full justify-between flex flex-col gap-2 sm:flex-row">
-            <div class="sm:py-10 py-5 max-w-5xl space-y-2.5 sm:space-y-4">
+            <div class="sm:py-10 py-5 max-w-6xl grow space-y-2.5 sm:space-y-4">
                 <p>Let's get connected and plan on building your next dream WebSite.</p>
                 <!-- social links with text -->
                 <ul class="space-y-2.5 sm:space-y-4 ">
@@ -72,7 +72,7 @@ const submitToGoogleForm = async ()=>{
                 </ul>
 
             </div>
-            <div class="bg-brand-y/20 rounded-xl p-4 shadow hover:bg-brand-y/30 transition-all">
+            <div class="bg-brand-y/20 grow rounded-xl p-4 shadow hover:bg-brand-y/30 transition-all">
                 <form @submit.prevent="submitToGoogleForm">
                     <label>
                         Your Name
@@ -125,11 +125,11 @@ const submitToGoogleForm = async ()=>{
     @import 'tailwindcss/theme' theme(reference);
     @import '../assets/styles/theme.css' theme(reference);
     form{
-        @apply space-y-4;
+        @apply space-y-4 w-full;
         & label{
-            @apply block;
+            @apply block w-full;
             & input, textarea{
-              @apply block  mt-1 border-b-2 border-brand-y/30 focus:outline-none focus:border-brand-y py-1 px-2 bg-surface/40 transition-all;  
+              @apply block w-full mt-1 border-b-2 border-brand-y/30 focus:outline-none focus:border-brand-y py-1 px-2 bg-surface/40 transition-all;  
             }
         }
     }

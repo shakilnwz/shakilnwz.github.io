@@ -35,7 +35,7 @@ const iconList = inject('icons');
         <!--         bg-gradient-to-r from-transparent via-brand-y/70 to-transparent -->
         <!--         "></span> -->
         <!-- </span> -->
-        <div class="relative z-10 max-w-5xl px-5 sm:px-8 mx-auto grid sm:grid-cols-3 gap-2 sm:gap-0 backdrop-blur-xs">
+        <div class="relative z-10 max-w-6xl px-5 sm:px-8 mx-auto grid sm:grid-cols-3 gap-2 sm:gap-0 backdrop-blur-xs">
 
             <div class="sm:col-span-2">
                 <h1 class="text-brand-y text-lg sm:text-xl">

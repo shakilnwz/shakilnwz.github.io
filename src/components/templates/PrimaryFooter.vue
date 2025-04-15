@@ -11,7 +11,7 @@ const route = inject('route')
         'print:hidden': route.path === '/resume'
     }">
         <div :class="{
-            'mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-5xl space-y-2.5 sm:space-y-4': true,
+            'mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-6xl space-y-2.5 sm:space-y-4': true,
             'hidden': route.path === '/contact'
         }">
             <h2 class="py-2">Connect</h2>
@@ -43,7 +43,7 @@ const route = inject('route')
             </div>
         </div>
         <div class="relative">
-            <p class="text-base relative z-1 mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-5xl">&copy; {{ currentYear }} snz
+            <p class="text-base relative z-1 mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-6xl">&copy; {{ currentYear }} snz
             </p>
             <div class="z-0 w-full flex flex-row absolute left-0 top-0 h-full" aria-hidden="true">
                 <span class="w-3/5 bg-base-x" aria-hidden="true"></span>
