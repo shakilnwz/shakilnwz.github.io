@@ -34,9 +34,7 @@ onMounted(() => {
     <Section contained>
         <h1 class="pb-6">Dynamic Posts</h1>
         <div class="space-y-8 sm:space-y-16">
-            <pre>
-                {{ posts }}
-            </pre>
+
             <a class="project-card " v-for="(post, index) in posts" :key="index" :href="post.link" target="_blank">
                 <span class="basis-full block rounded">
                     <img class="rounded-2xl h-full object-cover" :src="post._embedded?.['wp:featuredmedia']?.[0]?.source_url" :alt="post.title">
@@ -52,6 +50,9 @@ onMounted(() => {
                 </span>
             </a>
         </div>
+        <!-- <pre class="overflow-x-auto"> -->
+        <!--     {{ posts }} -->
+        <!-- </pre> -->
     </Section>
 </template>
 
