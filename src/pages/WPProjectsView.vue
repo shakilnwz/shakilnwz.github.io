@@ -7,7 +7,7 @@ import { ref, onMounted } from 'vue';
 const posts = ref([]);
 const loading = ref(true);
 const error = ref(null);
-const url = 'https://dev-shakilnwz.pantheonsite.io/wp-json/wp/v2/posts?_embed';
+const url = import.meta.env.VITE_API_URL + 'posts?_embed';
 
 const fetchPosts = async () => {
     try {
