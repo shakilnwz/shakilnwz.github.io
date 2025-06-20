@@ -69,8 +69,7 @@ onUnmounted(() => {
         </div>
         <div class="max-w-6xl mx-auto flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4 px-5 sm:px-8">
 
-            <p class="sm:max-w-70">I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic
-                HTML and CSS. Currently exploring Laravel.</p>
+            <p class="sm:max-w-70">I enjoy engaging in problem-solving and continuously learning new things.</p>
 
             <div id="cards" class="grow relative space-y-11">
                 <span id="hline" class="absolute bottom-0 w-1 bg-brand-y top-5 left-6.5 sm:left-12 z-0"></span>

@@ -21,8 +21,7 @@ const iconList = inject('icons')
             </div>
         </div>
         <div class="max-w-6xl px-5 sm:px-8 mx-auto flex flex-col sm:flex-row flex-wrap sm:gap-7 gap-4">
-            <p class="sm:basis-72 whitespace-break-spaces grow">I have skills with WordPress, Elementor, Breakdance
-                Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.</p>
+            <p class="sm:basis-72 whitespace-break-spaces grow">My most recent posts on development, learning, and problem-solving — fresh from my desk.</p>
 
             <div class="sm:basis-xl grow space-y-4">
                 <!-- article card -->

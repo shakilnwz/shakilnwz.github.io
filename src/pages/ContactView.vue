@@ -36,7 +36,7 @@ const submitToGoogleForm = async ()=>{
 
 </script>
 <template>
-    <Section contained>
+    <Section contained class="min-h-[76vh]">
         <h2>Connect</h2>
         <div class="w-full justify-between flex flex-col gap-2 sm:flex-row">
             <div class="sm:py-10 py-5 max-w-6xl grow space-y-2.5 sm:space-y-4">

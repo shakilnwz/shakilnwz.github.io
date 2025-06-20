@@ -9,7 +9,7 @@ const thumbs = { denovite }
 
 </script>
 <template>
-    <Section contained>
+    <Section contained class="min-h-[46vh]">
         <h2 class="pb-6">Articles</h2>
         <div class="space-y-4 sm:space-y-8">
             <!-- article card -->
