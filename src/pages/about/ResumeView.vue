@@ -14,7 +14,7 @@ const printPage = ()=> window.print()
 
 </script>
 <template>
-    <Section contained class="print:p-0">
+    <Section contained class="print:max-w-5xl print:p-0">
         <div class="flex flex-wrap justify-between py-2 items-center print:hidden">
             <h2 class="resumeheader">Resume</h2>
             <Button
@@ -25,7 +25,7 @@ const printPage = ()=> window.print()
             />
         </div>
         <!-- resume -->
-        <div class="grid-cols-3 grid divide-brand-y divide-x-2 bg-surface w-full border-1 border-brand-y/40 py-6">
+        <div class="mx-auto max-w-[211mm] print:max-w[210mm] grid-cols-3 grid divide-brand-y divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-6">
             <!-- aside section -->
             <div class="px-6">
                 <!-- avater -->
