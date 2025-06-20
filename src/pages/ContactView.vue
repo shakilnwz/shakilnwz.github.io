@@ -72,7 +72,8 @@ const submitToGoogleForm = async ()=>{
                 </ul>
 
             </div>
-            <div class="bg-brand-y/20 grow rounded-xl p-4 shadow hover:bg-brand-y/30 transition-all">
+            <div class="bg-brand-y/20 grow rounded-xl p-4 shadow hover:bg-brand-y/15 transition-all">
+                <h3 class="text-xl text-brand-y font-bold pb-2">Or Send a Message</h3>
                 <form @submit.prevent="submitToGoogleForm">
                     <label>
                         Your Name
