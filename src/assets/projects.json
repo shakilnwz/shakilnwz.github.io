@@ -1,5 +1,31 @@
 [
     {
+        "title": "Portfolio site + Blog for UI/UX + Web Developer",
+        "link": "https://besomoy.com",
+        "startDate": "May 2025",
+        "endDate": "Jun 2025",
+        "summary": "Client needed a portfolio site with personal blog functionality for his UI/UX and Web development Service. Provided a smooth interactive animated site with place to showcase his work and blog posts.",
+        "tags": [
+            "WordPress",
+            "Breakdance Builder",
+            "PHP"
+        ],
+        "thumbnail": "besomoy"
+    },
+    {
+        "title": "SAAS Product showcase using WordPress",
+        "link": "https://imaginesignage.com",
+        "startDate": "Mar 2025",
+        "endDate": "Apr 2025",
+        "summary": "Client needed a place to showcase their SAAS product and functionality. Provided a responsive WordPress site using Elementor Page Builder.",
+        "tags": [
+            "WordPress",
+            "Elementor Pro",
+            "PHP"
+        ],
+        "thumbnail": "imaginesignage"
+    },
+    {
         "title": "WordPress Site using Elementor Page builder",
         "link": "https://dev-educavo-shakilnwz.pantheonsite.io",
         "startDate": "Jan 2025",

@@ -80,7 +80,7 @@ const printPage = ()=> window.print()
                 <h1 class="text-4xl font-bold text-brand-y">Shakil Nawaz</h1>
                 <h3 class="font-bold">Web Developer, Tech Nerd</h3>
                 <p class="text-justify py-4">
-                    Driven and goal-oriented web developer with over a year of experience in creating responsive, optimized, and user-focused websites. Committed to leveraging the latest web technologies to build fast, feature-rich, and accessible online experiences. Skilled in integrating innovative solutions to enhance project efficiency while focusing on impactful outcomes.
+                    Driven and goal-oriented web developer with over 3 years of experience in creating responsive, optimized, and user-focused websites. Committed to leveraging the latest web technologies to build fast, feature-rich, and accessible online experiences. Skilled in integrating innovative solutions to enhance project efficiency while focusing on impactful outcomes.
                 </p>
                 <!-- contact section -->
                 <ul class="gap-2 grid grid-flow-row sm:grid-rows-2 sm:grid-flow-col">

@@ -3,11 +3,13 @@ import { inject } from 'vue';
 import Section from '../../components/atoms/Section.vue'
 import Button from '../../components/atoms/Button.vue';
 import PostLink from '../../components/templates/PostLink.vue';
-import lifkoach from '../../assets/projects/lifkoach.webp';
-import educavo from '../../assets/projects/educavo.webp';
+
+
+import besomoy from '../../assets/projects/besomoy.webp';
+import imaginesignage from '../../assets/projects/imaginesignage.webp';
 import projects from '../../assets/projects.json'
 
-const projectThumb = { educavo, lifkoach }
+const projectThumb = { besomoy, imaginesignage }
 
 const iconList = inject('icons')
 
