@@ -62,7 +62,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <Section class="space-y-2.5 sm:space-y-4 relative">
+    <Section class="space-y-4 sm:space-y-8 relative">
         <div
             class="sticky z-10 backdrop-blur-3xl sm:top-15 gap-2 flex flex-wrap justify-between py-2 items-center">
             <h2 class=" max-w-6xl mx-auto w-full px-5 sm:px-8">Journey</h2>

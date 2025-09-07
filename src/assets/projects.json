@@ -1,9 +1,24 @@
 [
     {
+        "title": "Redesign themeforest Atroly theme for CreativeHunk",
+        "link": "https://preview.themeforest.net/item/atroly-attorney-lawyer-html-template/full_screen_preview/58756970",
+        "startDate": "July 2025",
+        "endDate": "August 2025",
+        "summary": "Client needed to update their html theme with new design and fix some major issue with sliders, responsiveness and navbar. Reduced previous css by 41% while creating a seamless responsive exprience through every page.",
+        "tags": [
+            "ThemeForest",
+            "HTML",
+            "SCSS",
+            "Bootstrap",
+            "JS"
+        ],
+        "thumbnail": "atroly"
+    },
+    {
         "title": "Portfolio site + Blog for UI/UX + Web Developer",
         "link": "https://besomoy.com",
         "startDate": "May 2025",
-        "endDate": "Jun 2025",
+        "endDate": "June 2025",
         "summary": "Client needed a portfolio site with personal blog functionality for his UI/UX and Web development Service. Provided a smooth interactive animated site with place to showcase his work and blog posts.",
         "tags": [
             "WordPress",
@@ -15,8 +30,8 @@
     {
         "title": "SAAS Product showcase using WordPress",
         "link": "https://imaginesignage.com",
-        "startDate": "Mar 2025",
-        "endDate": "Apr 2025",
+        "startDate": "March 2025",
+        "endDate": "April 2025",
         "summary": "Client needed a place to showcase their SAAS product and functionality. Provided a responsive WordPress site using Elementor Page Builder.",
         "tags": [
             "WordPress",
@@ -26,10 +41,24 @@
         "thumbnail": "imaginesignage"
     },
     {
+        "title": "WordPress Site using Breakdance Builder",
+        "link": "https://shakil.eliteabu.com",
+        "startDate": "May 2024",
+        "endDate": "June 2024",
+        "summary": "Wordpress Site created using Breakdance Builder, Used custom PHP and JS code for animation",
+        "tags": [
+            "WordPress",
+            "Breakdance",
+            "CSS",
+            "PHP"
+        ],
+        "thumbnail": "eliteabu"
+    },
+    {
         "title": "WordPress Site using Elementor Page builder",
         "link": "https://dev-educavo-shakilnwz.pantheonsite.io",
-        "startDate": "Jan 2025",
-        "endDate": "Jan 2025",
+        "startDate": "January 2025",
+        "endDate": "January 2025",
         "summary": "Wordpress Site created using Elementor Page Builder. Used custom css to achieve design goal",
         "tags": [
             "WordPress",
@@ -50,20 +79,6 @@
             "CSS"
         ],
         "thumbnail": "lifkoach"
-    },
-    {
-        "title": "WordPress Site using Breakdance Builder",
-        "link": "https://shakil.eliteabu.com",
-        "startDate": "May 2024",
-        "endDate": "June 2024",
-        "summary": "Wordpress Site created using Breakdance Builder, Used custom PHP and JS code for animation",
-        "tags": [
-            "WordPress",
-            "Breakdance",
-            "CSS",
-            "PHP"
-        ],
-        "thumbnail": "eliteabu"
     },
     {
         "title": "freeCodeCamp Responsive Web Design Certification",

@@ -40,7 +40,7 @@ const iconList = inject('icons');
             <div class="sm:col-span-2">
                 <h1 class="text-brand-y text-lg sm:text-xl">
                     Hello World! I'm
-                    <span class=" text-transparent w-fit bg-gradient-to-r from-brand-y to-brand-x bg-clip-text text-5xl sm:text-6xl font-bold block">
+                    <span class="py-2 text-transparent w-fit bg-gradient-to-r from-brand-y to-brand-x bg-clip-text text-5xl sm:text-6xl font-bold block">
                         Shakil Nawaz
                     </span>
                 </h1>
@@ -67,7 +67,7 @@ const iconList = inject('icons');
                     I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.
                 </p>
                 <!--  added router link -->
-                <div class="flex flex-row gap-2 flex-wrap">
+                <div class="flex pt-4 flex-row gap-2 flex-wrap">
                     <Button
                         text="More About Me"
                         href="/about"

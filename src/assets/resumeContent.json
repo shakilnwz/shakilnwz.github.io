@@ -28,7 +28,7 @@
             "major": "Physics",
             "institute": "Satkhira Govt. College, Satkhira",
             "passYear": 2022,
-            "result": "CGPA: 2.41 (Scale 4)"
+            "result": "CGPA: 2.15 (Scale 4)"
         },
         {
             "class": "HSC",
@@ -67,7 +67,7 @@
         {
             "jobtitle": "QA Inspector, Senior QA Inspector",
             "company": "KM International GmbH (Organic Shrimp Project)",
-            "location": "Satkhira, Cox's Bazar",
+            "location": "Satkhira,<br>Cox's Bazar",
             "startdate": "September 2017",
             "enddate": "December 2022",
             "achievements": [

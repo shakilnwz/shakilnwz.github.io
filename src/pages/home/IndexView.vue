@@ -7,9 +7,9 @@ import SectionProjects from './SectionProjects.vue';
 
 <template>
     <SectionHero />
+    <SectionProjects />
     <SectionJourney />
     <SectionArticles />
-    <SectionProjects />
 </template>
 
 
