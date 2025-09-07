@@ -20,7 +20,7 @@ const iconList = inject('icons')
 <template>
     <Section class="space-y-4 sm:space-y-8 relative">
         <div class="sticky top-0 z-10 backdrop-blur-3xl sm:top-15 gap-2 ">
-            <div class="max-w-6xl px-5 sm:px-8 mx-auto flex flex-wrap justify-between py-2 items-center">
+            <div class="max-w-6xl px-5 sm:px-8 mx-auto flex flex-col sm:flex-row gap-2 flex-wrap justify-between py-2 sm:items-center">
                 <h2>Recent Projects</h2>
                 <Button secondary href="/projects" :svgd="iconList.projects" text="Show All" />
             </div>
