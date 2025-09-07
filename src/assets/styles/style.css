@@ -2,8 +2,8 @@
 @import './theme.css';
 @variant dark (&:where(.dark, .dark *));
 
-@layer base{
-    :root{
+@layer base {
+    :root {
         --color-brand-x: oklch(32.87% 0.1235 262.39);
         --color-brand-y: oklch(66.38% 0.1751 273.13);
         --color-base-x: oklch(95.78% 0.0058 264.53);
@@ -13,7 +13,7 @@
         --color-surface: oklch(100% 0 0);
     }
 
-    .dark{
+    .dark {
         --color-brand-x: oklch(87.24% 0.0629 277.11);
         --color-brand-y: oklch(66.38% 0.1751 273.13);
         --color-base-x: oklch(24.29% 0.0304 283.91);
@@ -21,10 +21,22 @@
         --color-base-y: oklch(0 0 0);
         --color-surface: oklch(32.4% 0.0319 281.98);
     }
+
+    @media print {
+        .dark {
+            --color-brand-x: oklch(32.87% 0.1235 262.39);
+            --color-brand-y: oklch(66.38% 0.1751 273.13);
+            --color-base-x: oklch(95.78% 0.0058 264.53);
+            /* --color-base-y: oklch(90.6% 0.0117 264.51); */
+            /* --color-base-x: oklch(1 0 0); */
+            --color-base-y: oklch(1 0 0);
+            --color-surface: oklch(100% 0 0);
+        }
+    }
 }
 
-@layer components{
-    h2{
+@layer components {
+    h2 {
         @apply text-3xl sm:text-4xl font-bold uppercase text-brand-y;
     }
 }
