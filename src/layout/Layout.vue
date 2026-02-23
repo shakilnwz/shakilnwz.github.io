@@ -8,15 +8,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 onMounted(() => {
-gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
-const smoother = ScrollSmoother.create({
-    wrapper: "#smooth-wrapper",
-    content: "#smooth-content",
-    smooth: 1.3,
-    effects: true,
-    smoothTouch: 0.1,
-    ignoreMobileResize: true
-});
+    gsap.registerPlugin(ScrollTrigger,ScrollSmoother);
+    const smoother = ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 1.3,
+        effects: true,
+        smoothTouch: 0.1,
+        ignoreMobileResize: true
+    });
 })
 
 
@@ -24,19 +24,21 @@ const route = useRoute()
 provide('route', route)
 </script>
 <template>
+
     <NavBar />
-    <main 
-        :class="{
-            'sm:pt-16': true, 
-            'print:pt-0' : route.path === '/resume'
-        }">
-        <div id="smooth-wrapper" class="overscroll-none overflow-y-auto">
-            <div id="smooth-content">
+    <div id="smooth-wrapper" class="overscroll-none overflow-y-auto">
+        <div id="smooth-content">
+            <main 
+                :class="{
+                    'sm:pt-16': true, 
+                    'print:pt-0' : route.path === '/resume'
+                }">
+
                 <slot></slot>
-            </div>
+
+            </main>
+
+            <PrimaryFooter />
         </div>
-
-    </main>
-
-    <PrimaryFooter />
+    </div>
 </template>
