@@ -12,6 +12,9 @@ dist
 dist-ssr
 .vite
 *.local
+dist/
+.astro/
+.output/
 
 # Editor directories and files
 .vscode
