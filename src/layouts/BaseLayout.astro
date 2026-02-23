@@ -1,0 +1,45 @@
+---
+// import "../styles/style.css";
+
+import '../styles/global.css';
+---
+
+<html lang="en" class="h-full">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="description"
+            content="Shakil Nawaz's Portfolio and personal blog site which also showcases his projects" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="image/svg+xml" href="/assets/icons/logo.svg" />
+        <title>Shakil Nawaz - Portfolio</title>
+    </head>
+
+    <body class="h-screen scheme-light dark:scheme-dark  overscroll-none">
+        <header>
+            <nav>
+                <ul>
+
+                </ul>
+            </nav>
+        </header>
+        <main id="app"
+            class="mx-auto bg-no-repeat bg-base-y text-brand-x transition duration-300 sm:text-lg min-h-screen pb-13 sm:pb-0 overscroll-none">
+            <div id="smooth-wrapper">
+                <div id="smooth-content">
+                    <slot />
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+
+        <script src="../scripts/main.js"></script>
+    </body>
+
+</html>
+

@@ -1,5 +1,6 @@
 @theme{
-    --font-sans: "Space Grotesk", system-ui;
+    --font-sans: "Phudu", system-ui;
+    --font-body: "Open Sans", sans-serif;
 
     --color-* : initial;
     --color-brand-x: var(--color-brand-x);
@@ -7,5 +8,4 @@
     --color-base-x: var(--color-base-x);
     --color-base-y: var(--color-base-y);
     --color-surface: var(--color-surface);
-
 }
