@@ -6,10 +6,12 @@ import SectionProjects from './SectionProjects.vue';
 </script>
 
 <template>
-    <SectionHero />
-    <SectionProjects />
-    <SectionJourney />
-    <SectionArticles />
+    <div>
+        <SectionHero />
+        <SectionProjects />
+        <SectionJourney />
+        <SectionArticles />
+    </div>
 </template>
 
 
