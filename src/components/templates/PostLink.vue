@@ -14,7 +14,7 @@ const articleData = defineProps({
 <template>
     <!-- TODO: add router link -->
     <a target="_blank" :href="articleData.link" :class="{
-        'group overflow-clip gap-1 sm:gap-3  bg-surface/60 hover:bg-surface rounded-2xl shadow hover:shadow-lg hover:shadow-brand-y/30 transition-shadow duration-300 group': true,
+        'group overflow-clip gap-1 sm:gap-3 bg-surface/60 border border-brand-y/40 hover:border-brand-y/60 hover:bg-surface hover:shadow hover:shadow-brand-y/20 transition-all duration-300': true,
         'w-full flex flex-row h-70 sm:h-80 relative items-end': articleData.type == 'article',
         'flex-col w-full flex-1 sm:min-w-80 items-center': articleData.type == 'project'
     }">

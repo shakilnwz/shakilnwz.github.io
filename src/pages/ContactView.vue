@@ -36,7 +36,6 @@ const submitToGoogleForm = async ()=>{
 
 </script>
 <template>
-    <div>
         <Section contained class="min-h-[76vh]">
             <h2>Connect</h2>
             <div class="w-full justify-between flex flex-col gap-2 sm:flex-row">
@@ -73,8 +72,8 @@ const submitToGoogleForm = async ()=>{
                     </ul>
 
                 </div>
-                <div class="bg-brand-y/20 grow rounded-xl p-4 shadow hover:bg-brand-y/15 transition-all">
-                    <h3 class="text-xl text-brand-y font-bold pb-2">Or Send a Message</h3>
+                <div class="bg-brand-y/20 grow p-8 shadow hover:bg-brand-y/15 transition-all">
+                    <h3 class="text-2xl text-brand-y font-bold pb-4">Or Send a Message</h3>
                     <form @submit.prevent="submitToGoogleForm">
                         <label>
                             Your Name
@@ -89,7 +88,7 @@ const submitToGoogleForm = async ()=>{
                             <textarea type='email' v-model="message" name="message"></textarea>
                         </label>
                         <button
-                            class="cursor-pointer bg-brand-y hover:bg-surface text-surface hover:text-brand-y justify-center font-bold rounded-xl border-brand-y border-2 w-fit flex flex-row flex-wrap items-center gap-x-2  px-5 py-1 transition-all duration-300" 
+                            class="cursor-pointer bg-brand-y hover:bg-surface text-surface hover:text-brand-y text-lg/4.5 uppercase justify-center font-bold border-brand-y border-1 w-fit flex flex-row flex-wrap items-center gap-x-2  px-6 py-3 transition-all duration-300" 
                         >
                             <svg  class="fill-current h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
                                 <path
@@ -114,21 +113,13 @@ const submitToGoogleForm = async ()=>{
             <!-- TODO: add gmail detail -->
             <!-- TODO: add qr for easier access -->
         </Section>
-        <Section contained>
-            <div id="logo" class="relative h-40 hidden">
-                <img src="../assets/icons/logo.svg">
-                <span id="logoA" ></span>
-                <span id="logoB" ></span>
-                <span id="logoC" ></span>
-            </div>
-        </Section>
-    </div>
+
 </template>
 <style scoped>
     @import 'tailwindcss/theme' theme(reference);
     @import '../assets/styles/theme.css' theme(reference);
     form{
-        @apply space-y-4 w-full;
+        @apply space-y-5 w-full;
         & label{
             @apply block w-full;
             & input, textarea{

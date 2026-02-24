@@ -40,7 +40,8 @@ const iconList = inject('icons');
             <div class="sm:col-span-2">
                 <h1 class="text-brand-y text-lg sm:text-xl">
                     Hello World! I'm
-                    <span class="py-2 text-transparent w-fit bg-gradient-to-r from-brand-y to-brand-x bg-clip-text text-5xl sm:text-6xl font-bold block">
+                    <!-- <span class="py-2 text-transparent w-fit bg-gradient-to-r from-brand-y to-brand-x bg-clip-text text-5xl sm:text-6xl font-bold block"> -->
+                    <span class="py-2 text-brand-y w-fit text-6xl sm:text-8xl font-bold block">
                         Shakil Nawaz
                     </span>
                 </h1>
