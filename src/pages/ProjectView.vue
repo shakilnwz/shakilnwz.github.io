@@ -47,7 +47,7 @@ const thumbs = {atroly, besomoy, imaginesignage, eliteabu, lifkoach, educavo, fc
 
 
 .project-card {
-    @apply flex h-fit flex-col relative sm:flex-row sm:even:flex-row-reverse gap-4 transition-all overflow-hidden;
+    @apply flex h-fit flex-col relative sm:flex-row sm:even:flex-row-reverse border-1 border-transparent hover:not-even:sm:border-e-brand-y/50 hover:even:sm:border-s-brand-y/50 gap-4 transition-all overflow-hidden;
 
 
     & .project-tag {
@@ -62,10 +62,9 @@ const thumbs = {atroly, besomoy, imaginesignage, eliteabu, lifkoach, educavo, fc
         }
     }
     & .project-thumb{
-        @apply block overflow-hidden rounded-2xl border border-brand-x/50;
-        @apply relative;
+        @apply block overflow-hidden border border-brand-y/50 relative;
         &:before {
-            @apply absolute text-center font-bold inset-full rounded-t-2xl bottom-0 text-transparent content-['View_Project'] font-bold py-4 transition-all z-1;
+            @apply absolute text-center font-bold inset-full bottom-0 text-transparent content-['View_Project'] font-bold py-4 transition-all z-1;
         }
     }
     &:hover .project-thumb{

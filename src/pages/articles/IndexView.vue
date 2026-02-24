@@ -13,10 +13,10 @@ const thumbs = { denovite }
         <h2 class="pb-6">Articles</h2>
         <div class="space-y-4 sm:space-y-8">
             <!-- article card -->
-            <a class="article-card flex h-fit flex-col relative sm:flex-row gap-4 hover:border-brand-y/90 border-b-6 border-transparent rounded-3xl transition-all overflow-hidden"
+            <a class="article-card flex h-fit flex-col relative sm:flex-row gap-4 hover:border-brand-y/90 border-b-6 border-transparent transition-all overflow-hidden"
                 v-for="(article, index) in articles" :key="index" :href="article.link" target="_blank">
                 <span class="basis-full block rounded">
-                    <img class="rounded-2xl h-full object-cover" :src="thumbs[article.thumbnail]" :alt="article.title">
+                    <img class=" h-full object-cover" :src="thumbs[article.thumbnail]" :alt="article.title">
                 </span>
                 <span class="basis-full space-y-4 px-2">
                     <h3>{{ article.title }}</h3>
@@ -34,7 +34,7 @@ const thumbs = { denovite }
 
 .article-card {
     &:before {
-        @apply absolute text-center font-bold inset-full rounded-t-3xl bottom-0 text-transparent content-['Read_More'] font-bold py-4 transition-all;
+        @apply absolute text-center font-bold inset-full  bottom-0 text-transparent content-['Read_More'] font-bold py-4 transition-all;
     }
 
     &:hover:before {
