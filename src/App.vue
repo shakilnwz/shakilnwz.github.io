@@ -11,13 +11,14 @@ provide('icons', icons)
 </script>
 
 <template>
-    <Layout>
-        <RouterView v-slot="{ Component }">
-            <Transition name="slide-fade">
-                <component :is="Component" />
-            </Transition>
-        </RouterView>
-    </Layout>
+        <Layout>
+
+            <RouterView v-slot="{ Component }">
+                <Transition name="slide-fade">
+                    <component :is="Component" />
+                </Transition>
+            </RouterView>
+        </Layout>
 </template>
 
 <style>
@@ -35,4 +36,5 @@ provide('icons', icons)
     transform: translateX(20px);
     opacity: 0;
 }
+
 </style>

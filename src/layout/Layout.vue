@@ -29,7 +29,7 @@ provide('route', route)
         <div id="smooth-content">
             <main 
                 :class="{
-                    'sm:pt-16': true, 
+                    'sm:pt-16 ': true, 
                     'print:pt-0' : route.path === '/resume'
                 }">
 
@@ -41,3 +41,11 @@ provide('route', route)
         </div>
     </div>
 </template>
+<style>
+    @import 'tailwindcss/theme' theme(reference);
+    @import '../assets/styles/theme.css' theme(reference);
+#smooth-content:before{
+    content: '';
+    @apply border-brand-y/50 absolute border-x border-dashed h-full max-w-7xl mx-auto block inset-0 inset-x-2 sm:inset-x-0 z-30 pointer-events-none;
+}
+</style>

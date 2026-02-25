@@ -68,7 +68,7 @@ const iconList = inject('icons');
                     I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.
                 </p>
                 <!--  added router link -->
-                <div class="flex pt-4 flex-row gap-2 flex-wrap">
+                <div class="flex pt-4 flex-col sm:flex-row gap-4 flex-wrap">
                     <Button
                         text="More About Me"
                         href="/about"

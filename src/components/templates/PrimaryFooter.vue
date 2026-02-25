@@ -42,7 +42,7 @@ const route = inject('route')
                 <SocialLink icon href="https://x.com/shakilnwz" :svgd="iconList.twitter" ariaLebel="find me on x" />
             </div>
         </div>
-        <div class="relative">
+        <div class="relative z-40">
             <p class="text-base relative z-1 mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-6xl">&copy; {{ currentYear }} snz
             </p>
             <div class="z-0 w-full flex flex-row absolute left-0 top-0 h-full" aria-hidden="true">

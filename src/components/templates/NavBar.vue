@@ -43,7 +43,7 @@ onUnmounted(()=>{
 <template>
     <nav 
         :class="{
-            'sm:fixed left-0 right-0 top-0 transition-all sm:border border-transparent duration-300 relative z-50 sm:shadow-none py-2.5' : true,
+            'sm:fixed left-0 right-0 top-0 transition-all sm:border-b border-dashed border-transparent duration-300 relative z-50 sm:shadow-none py-2.5' : true,
             'sm:py-5' : !isSticky,
             'sm:shadow-sm sm:backdrop-blur-xl sm:py-2.5 sm:border-brand-y/50 ' : isSticky,
             'print:hidden' : route.path === '/resume'
@@ -63,7 +63,7 @@ onUnmounted(()=>{
 
             <!-- tab -->
             <div 
-                class="backdrop-blur-2xl sm:bg-surface fixed bottom-0 left-0 right-0 sm:relative sm:border-1 sm:border-brand-y/50 overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] sm:shadow-sm "
+                class=" backdrop-blur-2xl sm:bg-surface fixed bottom-0 left-0 right-0 sm:relative sm:border-1 sm:border-brand-y/50 overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] sm:shadow-sm "
                 role="menuitem"
             >
                 <ul class="flex flex-row *:grow *:basis-1 divide-brand-y/50 divide-x">
