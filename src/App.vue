@@ -1,9 +1,10 @@
 <script setup>
 import { provide } from 'vue'
 import icons from './assets/icons/icons.json'
-import Layout from './layout/Layout.vue';
+import Layout from './layout/Layout.vue'
+import { useFadeSlide } from './composables/useGsapTransition'
 
-
+const { beforeEnter, enter, leave } = useFadeSlide(0.5)
 
 // make icons available to all component
 provide('icons', icons)
@@ -14,7 +15,10 @@ provide('icons', icons)
         <Layout>
 
             <RouterView v-slot="{ Component }">
-                <Transition name="slide-fade">
+                <Transition 
+                @before-enter="beforeEnter" 
+                @enter="enter" 
+                @leave="leave">
                     <component :is="Component" />
                 </Transition>
             </RouterView>
@@ -22,19 +26,19 @@ provide('icons', icons)
 </template>
 
 <style>
-.slide-fade-enter-active {
-    transition: all 0.3s ease-out;
-    transition-delay: 0.3s;
-}
-
-.slide-fade-leave-active {
-    transition: all 0.3s ease-in;
-}
-
-.slide-fade-enter-from,
-.slide-fade-leave-to {
-    transform: translateX(20px);
-    opacity: 0;
-}
+/* .slide-fade-enter-active { */
+/*     transition: all 0.3s ease-out; */
+/*     transition-delay: 0.3s; */
+/* } */
+/**/
+/* .slide-fade-leave-active { */
+/*     transition: all 0.3s ease-in; */
+/* } */
+/**/
+/* .slide-fade-enter-from, */
+/* .slide-fade-leave-to { */
+/*     transform: translateX(20px); */
+/*     opacity: 0; */
+/* } */
 
 </style>
