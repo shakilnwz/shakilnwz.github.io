@@ -1,4 +1,10 @@
 {
+    "alpinejs": {
+        "name": "alpinejs",
+        "date": "December 2025",
+        "title": "Alpine.js",
+        "summary": "Created ecomm site frontend interactions using Alpinejs"
+    },
     "vue": {
         "name": "vue",
         "date": "Running",

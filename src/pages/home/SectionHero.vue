@@ -38,10 +38,9 @@ const iconList = inject('icons');
         <div class="relative z-10 max-w-6xl px-5 sm:px-8 mx-auto grid sm:grid-cols-3 gap-2 sm:gap-0 backdrop-blur-xs">
 
             <div class="sm:col-span-2">
-                <h1 class="text-brand-y text-lg sm:text-xl">
+                <h1 class="text-brand-x text-lg sm:text-xl">
                     Hello World! I'm
-                    <!-- <span class="py-2 text-transparent w-fit bg-gradient-to-r from-brand-y to-brand-x bg-clip-text text-5xl sm:text-6xl font-bold block"> -->
-                    <span class="py-2 text-brand-y w-fit text-6xl sm:text-8xl font-bold block">
+                    <span class="pb-2 text-brand-y w-fit text-6xl sm:text-8xl font-bold block">
                         Shakil Nawaz
                     </span>
                 </h1>
@@ -50,10 +49,10 @@ const iconList = inject('icons');
 
             <div class="sm:row-span-2 sm:justify-self-end justify-self-center place-self-center">
                 <div 
-                    class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/30 dark:to-brand-x/90 max-w-60 aspect-square rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)] overflow-hidden">
+                    class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/30 dark:to-brand-x/90 max-w-80 aspect-square rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)] overflow-hidden">
 
                     <img
-                        class="relative z-10 w-60 object-contain"
+                        class="relative z-10 w-80 object-contain"
                         :src="avater"
                         alt="avatar"
                     />

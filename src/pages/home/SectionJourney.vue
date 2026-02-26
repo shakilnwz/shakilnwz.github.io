@@ -5,6 +5,7 @@ import SkillCard from '../../components/templates/SkillCard.vue'
 
 // import static assets
 import journey from '../../assets/journey.json'
+import alpinejsIcon from '../../assets/icons/alpinejs.svg'
 import vueIcon from '../../assets/icons/vue.svg'
 import tailwindIcon from '../../assets/icons/tailwind.svg'
 import cssIcon from '../../assets/icons/css.svg'
@@ -17,6 +18,7 @@ import phpIcon from '../../assets/icons/php.svg'
 
 // creating icon path and view status
 const iconStatic = reactive({
+    'alpinejs': { icon: alpinejsIcon, inView: false },
     'vue': { icon: vueIcon, inView: false },
     'css': { icon: cssIcon, inView: false },
     'js': { icon: jsIcon, inView: false },
