@@ -27,7 +27,7 @@ const iconList = inject('icons')
         </div>
         <div class="max-w-6xl px-5 sm:px-8 mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
 
-            <PostLink v-for="(project, index) in projects.slice(0, 4)" :key="index" type="project" :title="project.title"
+            <PostLink v-for="(project, index) in projects.slice(0, 4)" :key="index" :data-delay="index * 0.5" type="project" :title="project.title"
                 :link="project.link" :thumbnail="projectThumb[project.thumbnail]" :date="project.endDate"
                  />
         </div>

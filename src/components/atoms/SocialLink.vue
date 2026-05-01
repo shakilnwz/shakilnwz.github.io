@@ -19,7 +19,7 @@ const content = defineProps(
         role='link'
         :aria-lebel="content.ariaLebel"
     >
-        <span v-if="content.svgd" class="p-2 rounded-full border-brand-y border"  :class="content.icon? 'bg-brand-y group':'bg-surface'" >
+        <span v-if="content.svgd" class="social-link p-2 border-brand-y border"  :class="content.icon? 'bg-brand-y group':'bg-surface'" >
             <svg class="fill-current group-hover:text-brand-x h-4" :class="content.icon? 'text-surface':'text-brand-y'" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
                 <path
                     fill-rule="evenodd"
@@ -36,3 +36,9 @@ const content = defineProps(
         </span>
     </a>
 </template>
+<style scoped>
+.social-link{
+    border-radius: 6px;
+    corner-shape: square bevel square bevel;
+}
+</style>

@@ -43,13 +43,13 @@ onUnmounted(()=>{
 <template>
     <nav 
         :class="{
-            'sm:fixed left-0 right-0 top-0 transition-all sm:border-b border-dashed border-transparent duration-300 relative z-50 sm:shadow-none py-2.5' : true,
-            'sm:py-5' : !isSticky,
-            'sm:shadow-sm sm:backdrop-blur-xl sm:py-2.5 sm:border-brand-y/50 ' : isSticky,
+            'md:fixed left-0 right-0 top-0 transition-all md:border-b border-dashed border-transparent duration-300 relative z-50 md:shadow-none py-2.5 ' : true,
+            'md:py-5' : !isSticky,
+            'md:shadow-sm md:backdrop-blur-xl md:py-2.5 md:border-brand-y/50 ' : isSticky,
             'print:hidden' : route.path === '/resume'
         }"
         >
-        <div class="relative z-999 max-w-6xl mx-auto px-5 flex flex-row items-center justify-between sm:px-8 gap-2">
+        <div class="relative z-999 max-w-6xl mx-auto px-5 flex flex-row items-center justify-between md:px-8 gap-2">
             <!-- logo -->
 
             <RouterLink class="block" to="/" aria-label='Home'>
@@ -63,7 +63,7 @@ onUnmounted(()=>{
 
             <!-- tab -->
             <div 
-                class=" backdrop-blur-2xl sm:bg-surface fixed bottom-0 left-0 right-0 sm:relative sm:border-1 sm:border-brand-y/50 overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] sm:shadow-sm "
+                class=" backdrop-blur-2xl md:bg-surface fixed bottom-0 left-0 right-0 md:relative md:border-1 md:border-brand-y/50 overflow-hidden shadow-[0_-1px_10px_rgba(0,0,0,0.4)] md:shadow-sm navlinkwrap"
                 role="menuitem"
             >
                 <ul class="flex flex-row *:grow *:basis-1 divide-brand-y/50 divide-x">
@@ -130,5 +130,12 @@ onUnmounted(()=>{
 </template>
 
 <style scoped>
+.navlinkwrap{
+    border-radius: 12px;
+    corner-shape: square bevel square bevel;
+    @media (max-width: 768px){
+        border-radius: 0px;
+    }
+}
 
 </style>
