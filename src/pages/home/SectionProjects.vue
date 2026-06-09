@@ -6,12 +6,13 @@ import PostLink from '../../components/templates/PostLink.vue';
 
 
 import atroly from '../../assets/projects/atroly.webp';
+import zuus from '../../assets/projects/zuus.webp';
 import imaginesignage from '../../assets/projects/imaginesignage.webp';
 import eliteabu from '../../assets/projects/eliteabu.webp';
 import besomoy from '../../assets/projects/besomoy.webp';
 import projects from '../../assets/projects.json'
 
-const projectThumb = {atroly, besomoy, imaginesignage, eliteabu}
+const projectThumb = {zuus, atroly, besomoy, imaginesignage, eliteabu}
 
 const iconList = inject('icons')
 

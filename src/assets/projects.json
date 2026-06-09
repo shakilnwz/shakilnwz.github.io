@@ -1,5 +1,20 @@
 [
     {
+        "title": "Create Ecommerce platform theme for Genforge",
+        "link": "https://zuus.com.tr",
+        "startDate": "November 2025",
+        "endDate": "Current",
+        "summary": "Client needed a Full suit of ecommerce theme for their custom ecommerce platform. Built the full project single handed. Managed proper UX for whole theme.",
+        "tags": [
+            "ECommerce",
+            "HTML",
+            "TailwindCSS",
+            "AlpineJS",
+            "JS"
+        ],
+        "thumbnail": "zuus"
+    },
+    {
         "title": "Redesign themeforest Atroly theme for CreativeHunk",
         "link": "https://preview.themeforest.net/item/atroly-attorney-lawyer-html-template/full_screen_preview/58756970",
         "startDate": "July 2025",

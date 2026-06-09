@@ -1,6 +1,7 @@
 <script setup>
 import Section from '../components/atoms/Section.vue'
 
+import zuus from '../assets/projects/zuus.webp';
 import atroly from '../assets/projects/atroly.webp';
 import besomoy from '../assets/projects/besomoy.webp';
 import imaginesignage from '../assets/projects/imaginesignage.webp';
@@ -10,7 +11,7 @@ import educavo from '../assets/projects/educavo.webp';
 import fccrwd from '../assets/projects/fccrwd.webp';
 import projects from '../assets/projects.json';
 
-const thumbs = {atroly, besomoy, imaginesignage, eliteabu, lifkoach, educavo, fccrwd }
+const thumbs = {zuus, atroly, besomoy, imaginesignage, eliteabu, lifkoach, educavo, fccrwd }
 
 
 </script>

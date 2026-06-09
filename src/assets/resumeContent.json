@@ -1,6 +1,7 @@
 {
     "skills": [
-        "Responsive Web Development",
+        "VueJs",
+        "AlpineJs",
         "WordPress",
         "Elementor",
         "PHP",
@@ -10,8 +11,7 @@
         "Tailwind CSS",
         "Quality Assurance & Analysis",
         "Data Modeling & Analysis",
-        "Microsoft 365",
-        "Google Workspace"
+        "Agentic Development"
     ],
     "interests": [
         "Linux",
@@ -28,14 +28,14 @@
             "major": "Physics",
             "institute": "Satkhira Govt. College, Satkhira",
             "passYear": 2022,
-            "result": "CGPA: 2.15 (Scale 4)"
+            "result": ""
         },
         {
             "class": "HSC",
             "major": "Science",
             "institute": "Shimanta Adarsha College, Satkhira",
             "passYear": 2014,
-            "result": "GPA: 3.40 (Scale 5)"
+            "result": ""
         }
     ],
     "language": [
@@ -50,12 +50,13 @@
     ],
     "workExp": [
         {
-            "jobtitle": "Freelance Web Developer",
-            "company": "Freelance Marketplace, Future Innovation Ltd.",
-            "location": "Satkhira",
+            "jobtitle": "Freelance Software Developer",
+            "company": "Freelance Marketplace, <br> Future Innovation Ltd., <br>Genforge.com",
+            "location": "Work From Home",
             "startdate": "April 2023",
             "enddate": "Present",
             "achievements": [
+                "Create Web apps using VueJS, Laravel",
                 "Develop fast and responsive websites using WordPress and various builders for WP (Elementor, Breakdance).",
                 "Create/set up WordPress plugins to meet clients’ requirements.",
                 "Customize themes or builder default elements using php or js to match clients required design.",
@@ -74,7 +75,8 @@
                 "Maintain post-larvae, farm environment and product quality as well as provided action plans.",
                 "Conduct training for hatchery employees, inspected hatchery.",
                 "Developed and implemented a data collection system and provided personalized solutions to farmers based on data.",
-                "Ensure proper HACCP practice of the production team."
+                "Ensure proper HACCP practice of the production team.",
+                "Maintain proper Laboratory environment and conduct tests as per requirements."
             ]
         }
     ]

@@ -159,7 +159,7 @@ const printPage = () => window.print();
             </p>
             <div class="flex flex-row justify-between pb-1">
               <div class="grow w-fit">
-                <p>{{ wexp.company }}</p>
+                <p v-html="wexp.company"></p>
                 <p>
                   <i
                     >{{ wexp.startdate ? wexp.startdate + " - " : ""

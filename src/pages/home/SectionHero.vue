@@ -64,7 +64,7 @@ const iconList = inject('icons');
                     I love to explore newer technologies and build things upon that. Also love to build user centric websites that actually helps.
                 </p>
                 <p>
-                    I have skills with WordPress, Elementor, Breakdance Builder, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.
+                    I have skills with WordPress, VueJs, AlpineJS, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.
                 </p>
                 <!--  added router link -->
                 <div class="flex pt-4 flex-col sm:flex-row gap-4 flex-wrap">
