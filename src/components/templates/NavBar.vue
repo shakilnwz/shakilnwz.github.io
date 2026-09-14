@@ -46,7 +46,7 @@ onUnmounted(()=>{
             'md:fixed left-0 right-0 top-0 transition-all md:border-b border-dashed border-transparent duration-300 relative z-50 md:shadow-none py-2.5 ' : true,
             'md:py-5' : !isSticky,
             'md:shadow-sm md:backdrop-blur-xl md:py-2.5 md:border-brand-y/50 ' : isSticky,
-            'print:hidden' : route.path === '/resume'
+            'print:hidden' : ['/resume', '/bio'].includes(route.path)
         }"
         >
         <div class="relative z-999 max-w-6xl mx-auto px-5 flex flex-row items-center justify-between md:px-8 gap-2">

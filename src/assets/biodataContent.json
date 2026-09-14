@@ -1,0 +1,75 @@
+{
+    "name": "Shakil Nawaz",
+    "title": "Web Developer, Tech Nerd",
+    "website": {
+        "label": "shakilnwz.github.io",
+        "url": "https://shakilnwz.github.io"
+    },
+    "bio": "Driven and goal-oriented web developer with over 3 years of experience in creating responsive, optimized, and user-focused websites. Committed to leveraging modern web technologies to build fast, feature-rich, and accessible online experiences.",
+    "personalInfo": {
+        "dateOfBirth": "04-Nov-1997",
+        "bloodGroup": "O+",
+        "height": "5' 4\"",
+        "maritalStatus": "Unmarried",
+        "religion": "Islam",
+        "nationality": "Bangladeshi",
+        "gender": "Male"
+    },
+    "family": {
+        "fatherName": "Father's Name",
+        "motherName": "Mother's Name"
+    },
+    "address": {
+        "present": "Rampura, Dhaka, Bangladesh",
+        "permanent": "Satkhira, Khulna, Bangladesh"
+    },
+    "contact": {
+        "email": "shakilnwz@gmail.com",
+        "phone": "+880 179 190 7711",
+        "whatsapp": "+880 179 190 7711",
+        "whatsappUrl": "https://wa.me/8801791907711",
+        "linkedin": "linkedin.com/in/shakilnwz",
+        "linkedinUrl": "https://linkedin.com/in/shakilnwz",
+        "github": "github.com/shakilnwz",
+        "githubUrl": "https://github.com/shakilnwz",
+        "discord": "Discord",
+        "discordUrl": "https://discord.com/channels/@me/shakilnwz"
+    },
+    "education": [
+        {
+            "class": "BSc",
+            "major": "Physics",
+            "institute": "Satkhira Govt. College, Satkhira",
+            "passYear": 2022
+        },
+        {
+            "class": "HSC",
+            "major": "Science",
+            "institute": "Shimanta Adarsha College, Satkhira",
+            "passYear": 2014
+        }
+    ],
+    "workHistory": [
+        {
+            "jobtitle": "Frontend Developer",
+            "company": "Genforge LLC",
+            "location": "Full Time",
+            "startdate": "1st May 2026",
+            "enddate": "Present"
+        },
+        {
+            "jobtitle": "Freelance Software Developer",
+            "company": "Freelance Marketplace / Future Innovation Ltd. / Genforge.com",
+            "location": "Work From Home",
+            "startdate": "April 2023",
+            "enddate": "Present"
+        },
+        {
+            "jobtitle": "QA Inspector, Senior QA Inspector",
+            "company": "KM International GmbH (Organic Shrimp Project)",
+            "location": "Satkhira, Cox's Bazar",
+            "startdate": "September 2017",
+            "enddate": "December 2022"
+        }
+    ]
+}

@@ -20,6 +20,11 @@ const routes = [
                         path: "/resume",
                         component: () => import("../pages/about/ResumeView.vue"),
                     },
+                    {
+                        path: "/bio",
+                        name: "bio",
+                        component: () => import("../pages/about/BioDataView.vue"),
+                    },
                 ],
             },
             {

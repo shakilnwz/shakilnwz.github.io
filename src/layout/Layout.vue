@@ -30,7 +30,7 @@ provide('route', route)
                 <main 
                     :class="{
                         'sm:pt-16 ': true, 
-                        'print:pt-0' : route.path === '/resume'
+                        'print:pt-0' : ['/resume', '/bio'].includes(route.path)
                     }">
 
                     <slot></slot>

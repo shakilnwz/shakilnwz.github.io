@@ -8,7 +8,7 @@ const route = inject('route')
 </script>
 <template>
     <footer :class="{
-        'print:hidden': route.path === '/resume'
+        'print:hidden': ['/resume', '/bio'].includes(route.path)
     }">
         <div :class="{
             'mx-auto px-5 sm:px-8 sm:py-10 py-5 max-w-6xl space-y-2.5 sm:space-y-4': true,
