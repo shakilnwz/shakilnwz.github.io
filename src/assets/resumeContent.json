@@ -50,6 +50,18 @@
     ],
     "workExp": [
         {
+            "jobtitle": "Frontend Developer",
+            "company": "Genforge LLC",
+            "location": "Dhaka",
+            "startdate": "1st May 2026",
+            "enddate": "Present",
+            "achievements": [
+                "Build and maintain modern web applications using Vue.js and modern front-end tooling.",
+                "Collaborate on feature development, UI/UX implementation, and performance improvements.",
+                "Write maintainable, accessible front-end code aligned with project standards."
+            ]
+        },
+        {
             "jobtitle": "Freelance Software Developer",
             "company": "Freelance Marketplace, <br> Future Innovation Ltd., <br>Genforge.com",
             "location": "Work From Home",
@@ -58,7 +70,7 @@
             "achievements": [
                 "Create Web apps using VueJS, Laravel",
                 "Develop fast and responsive websites using WordPress and various builders for WP (Elementor, Breakdance).",
-                "Create/set up WordPress plugins to meet clients’ requirements.",
+                "Create/set up WordPress plugins to meet clients\u2019 requirements.",
                 "Customize themes or builder default elements using php or js to match clients required design.",
                 "Customize/set up woocommerce for e-commerce functionality.",
                 "Create stunning landing pages with user friendly and interactive animation using JavaScript and CSS.",
