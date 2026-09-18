@@ -3,16 +3,11 @@
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
-    *, *::before, *::after {
-        border-radius: 0 !important;
-    }
-
+    /* Let components opt into sharp corners — don't force globally */
     :root {
         --color-brand-x: oklch(32.87% 0.1235 262.39);
         --color-brand-y: oklch(66.38% 0.1751 273.13);
         --color-base-x: oklch(95.78% 0.0058 264.53);
-        /* --color-base-y: oklch(90.6% 0.0117 264.51); */
-        /* --color-base-x: oklch(1 0 0); */
         --color-base-y: oklch(1 0 0);
         --color-surface: oklch(1 0 0);
     }
@@ -21,7 +16,6 @@
         --color-brand-x: oklch(87.24% 0.0629 277.11);
         --color-brand-y: oklch(66.38% 0.1751 273.13);
         --color-base-x: oklch(24.29% 0.0304 283.91);
-        /* --color-base-y: oklch(18.28% 0.0204 284.2); */
         --color-base-y: oklch(0 0 0);
         --color-surface: oklch(0 0 0);
     }
@@ -31,26 +25,34 @@
             --color-brand-x: oklch(32.87% 0.1235 262.39);
             --color-brand-y: oklch(66.38% 0.1751 273.13);
             --color-base-x: oklch(95.78% 0.0058 264.53);
-            /* --color-base-y: oklch(90.6% 0.0117 264.51); */
-            /* --color-base-x: oklch(1 0 0); */
             --color-base-y: oklch(1 0 0);
             --color-surface: oklch(1 0 0);
         }
     }
+
+    /* Typography base */
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-sans;
+    }
+    body {
+        @apply font-body;
+    }
+
+    /* Selection color */
+    ::selection {
+        background-color: oklch(66.38% 0.1751 273.13 / 0.25);
+        color: var(--color-brand-y);
+    }
+
+    /* Focus ring for keyboard navigation */
+    :focus-visible {
+        outline: 2px solid var(--color-brand-y);
+        outline-offset: 2px;
+    }
 }
 
 @layer components {
-    h1,h2,h3,h4,h5,h6{
-        @apply font-sans;
-    }
-    body{
-        @apply font-body;
-    }
-    h2 {
-        @apply text-4xl sm:text-5xl font-bold uppercase text-brand-y;
-    }
-
-    /* Sharp HUD Block Styles - Zero Roundness */
+    /* HUD component classes — sharp corners, monochrome tech aesthetic */
     .hud-card {
         @apply rounded-none border border-brand-y/35 bg-surface/80 backdrop-blur-md transition-all duration-300;
     }
@@ -71,22 +73,12 @@
         @apply rounded-none px-2.5 py-0.5 font-mono text-[11px] font-bold border border-brand-y/30 bg-brand-y/15 text-brand-y;
     }
 
-    /* Zero roundness aliases */
-    .clip-chamfer {
-        @apply rounded-none;
-    }
-    .clip-chamfer-sm {
-        @apply rounded-none;
-    }
-    .clip-chamfer-tr {
-        @apply rounded-none;
-    }
-    .clip-chamfer-bl {
-        @apply rounded-none;
-    }
-    .clip-badge {
-        @apply rounded-none;
-    }
+    /* Sharp corner aliases */
+    .clip-chamfer { @apply rounded-none; }
+    .clip-chamfer-sm { @apply rounded-none; }
+    .clip-chamfer-tr { @apply rounded-none; }
+    .clip-chamfer-bl { @apply rounded-none; }
+    .clip-badge { @apply rounded-none; }
 
     /* Glows */
     .glow-brand-y {
@@ -105,17 +97,17 @@
     /* Cyber grid */
     .cyber-grid {
         background-size: 32px 32px;
-        background-image: 
+        background-image:
             linear-gradient(to right, rgba(102, 60, 240, 0.05) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(102, 60, 240, 0.05) 1px, transparent 1px);
     }
     .dark .cyber-grid {
-        background-image: 
+        background-image:
             linear-gradient(to right, rgba(168, 85, 247, 0.08) 1px, transparent 1px),
             linear-gradient(to bottom, rgba(168, 85, 247, 0.08) 1px, transparent 1px);
     }
 
-    /* Hover lift micro-interaction */
+    /* Hover lift */
     .hover-lift {
         @apply transition-transform duration-300;
         transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
@@ -123,30 +115,9 @@
     .hover-lift:hover {
         transform: translateY(-2px);
     }
-
-    /* Focus ring for keyboard accessibility */
-    .hud-btn:focus-visible {
-        outline: 2px solid var(--color-brand-y);
-        outline-offset: 2px;
-    }
-
-    /* Staggered entrance animation */
-    .animate-enter {
-        animation: slideEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
-    }
-    @keyframes slideEnter {
-        from {
-            opacity: 0;
-            transform: translateY(12px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
 }
 
-/* Custom Anime Scrollbars */
+/* Custom scrollbars */
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;

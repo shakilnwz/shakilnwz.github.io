@@ -100,8 +100,8 @@ const printPage = () => window.print();
 
       <!-- main section -->
       <div class="col-span-2 px-6">
-        <h1 class="text-4xl font-bold text-brand-y">{{ bioContent.name }}</h1>
-        <h3 class="font-bold">{{ bioContent.title }}</h3>
+        <h1 class="text-3xl sm:text-4xl font-bold text-brand-y">{{ bioContent.name }}</h1>
+        <h3 class="text-base sm:text-lg font-bold text-brand-x/90">{{ bioContent.title }}</h3>
         <a class="hover:text-brand-y inline-block pb-2" :href="bioContent.website.url">
           🌏
           <span class="underline underline-offset-1">{{ bioContent.website.label }}</span>
@@ -152,19 +152,29 @@ const printPage = () => window.print();
         <h2>Work History</h2>
         <ul class="workhistory">
           <li v-for="(wexp, index) in bioContent.workHistory" :key="index">
-            <div class="flex flex-row justify-between items-baseline">
-              <p>
+            <div class="flex flex-row justify-between items-baseline gap-2">
+              <p class="grow">
                 <strong>{{ wexp.jobtitle }}</strong>
               </p>
-              <p class="text-right text-xs shrink-0 pl-2">
-                <i>
+              <p class="text-right text-xs shrink-0 pl-2 whitespace-nowrap">
+                <span class="text-brand-x/80">
                   {{ wexp.startdate ? wexp.startdate + " - " : "" }}{{ wexp.enddate }}
-                </i>
+                </span>
               </p>
             </div>
-            <div class="flex flex-row justify-between pb-1 text-sm">
-              <p v-html="wexp.company"></p>
-              <p class="text-right shrink-0 pl-2 text-brand-x/80" v-html="wexp.location"></p>
+            <div class="flex flex-row justify-between pb-1 text-sm gap-2">
+              <p class="grow leading-5">
+                <template v-for="(line, i) in wexp.company.split('<br>')" :key="i">
+                  {{ line }}
+                  <br v-if="i < wexp.company.split('<br>').length - 1">
+                </template>
+              </p>
+              <p class="text-right shrink-0 pl-2 text-brand-x/80 leading-5">
+                <template v-for="(line, i) in wexp.location.split('<br>')" :key="i">
+                  {{ line }}
+                  <br v-if="i < wexp.location.split('<br>').length - 1">
+                </template>
+              </p>
             </div>
           </li>
         </ul>
@@ -265,7 +275,7 @@ i {
 h2:not(.bioheader) {
   @apply text-2xl;
   &::before {
-    @apply content-['❖\0020'];
+    @apply content-['•\0020'];
   }
 }
 </style>

@@ -6,13 +6,13 @@ const setup = defineProps(
 )
 </script>
 <template>
-    <div class="border-dashed border-b border-brand-y/50 print:border-none">
-        <section 
+    <div class="border-dashed border-b border-brand-y/50 print:border-none focus:outline-none">
+        <section
             :class="[
                 {
                 'mx-auto sm:py-10 md:py-16 py-6' : true,
                 'max-w-6xl px-5 sm:px-8' : setup.contained,
-                }, 
+                },
                 $attrs.class,
             ]">
             <slot></slot>

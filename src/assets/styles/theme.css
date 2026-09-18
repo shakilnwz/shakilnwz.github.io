@@ -1,8 +1,8 @@
 @theme{
-    --font-sans: "Phudu", system-ui;
-    --font-body: "Open Sans", sans-serif;
+    --font-sans: "Space Grotesk", system-ui, sans-serif;
+    --font-body: "Space Grotesk", sans-serif;
     --font-mono: "JetBrains Mono", monospace;
-    --font-display: "Space Grotesk", sans-serif;
+    --font-display: "JetBrains Mono", monospace;
     --font-anime: "Noto Sans JP", sans-serif;
 
     --color-* : initial;

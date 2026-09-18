@@ -10,20 +10,27 @@ const thumbs = { denovite }
 </script>
 <template>
     <Section contained class="min-h-[46vh]">
-        <h2 class="pb-6">Articles</h2>
+        <h2 class="pb-6 text-3xl sm:text-4xl font-bold text-brand-y uppercase tracking-tight">Articles</h2>
         <div class="space-y-4 sm:space-y-8">
-            <!-- article card -->
-            <a class="article-card flex h-fit flex-col relative sm:flex-row gap-4 hover:border-brand-y/90 border-b-6 border-transparent transition-all overflow-hidden"
-                v-for="(article, index) in articles" :key="index" :href="article.link" target="_blank">
-                <span class="basis-full block rounded-none">
-                    <img class=" h-full object-cover" :src="thumbs[article.thumbnail]" :alt="article.title">
-                </span>
-                <span class="basis-full space-y-4 px-2">
-                    <h3>{{ article.title }}</h3>
-                    <p class="font-light text-brand-x/90 text-base">Published on: {{ article.postdate }}</p>
-                    <p>{{ article.summary }}</p>
-                </span>
-            </a>
+            <template v-if="articles.length">
+                <!-- article card -->
+                <a class="article-card flex h-fit flex-col relative sm:flex-row gap-4 hover:border-brand-y/90 border-b-6 border-transparent transition-all overflow-hidden"
+                    v-for="(article, index) in articles" :key="index" :href="article.link" target="_blank">
+                    <span class="basis-full block rounded-none">
+                        <img class="h-full object-cover" :src="thumbs[article.thumbnail]" :alt="article.title">
+                    </span>
+                    <span class="basis-full space-y-4 px-2">
+                        <h3>{{ article.title }}</h3>
+                        <p class="font-light text-brand-x/90 text-base">Published on: {{ article.postdate }}</p>
+                        <p>{{ article.summary }}</p>
+                    </span>
+                </a>
+            </template>
+            <template v-else>
+                <div class="p-6 border border-brand-y/30 bg-surface/80 text-center">
+                    <p class="text-brand-x/70 font-mono text-sm">// ARCHIVE_EMPTY — articles coming soon</p>
+                </div>
+            </template>
         </div>
     </Section>
 </template>

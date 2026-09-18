@@ -7,7 +7,7 @@ import { inject } from "vue";
 import resumeContent from "../../assets/resumeContent.json";
 
 import allProjects from "../../assets/projects.json";
-const projects = allProjects.slice(0, 2);
+const projects = allProjects;
 const iconList = inject("icons");
 
 const printPage = () => window.print();
@@ -83,8 +83,8 @@ const printPage = () => window.print();
       </div>
       <!-- resume main section -->
       <div class="col-span-2 px-6">
-        <h1 class="text-4xl font-bold text-brand-y">Shakil Nawaz</h1>
-        <h3 class="font-bold">Web Developer, Tech Nerd</h3>
+        <h1 class="text-3xl sm:text-4xl font-bold text-brand-y">Shakil Nawaz</h1>
+        <h3 class="text-base sm:text-lg font-bold text-brand-x/90">Web Developer, Tech Nerd</h3>
         <a class="hover:text-brand-y" href="https://shakilnwz.github.io">
           🌏
           <span class="underline underline-offset-1">shakilnwz.github.io</span>
@@ -139,12 +139,13 @@ const printPage = () => window.print();
               <p>
                 <strong>{{ project.title }}</strong>
               </p>
-              {{ project.link }}
+              <p class="text-brand-x/80">
+                {{ project.link }}
+              </p>
               <p>
-                <i
-                  >{{ project.startDate ? project.startDate + " - " : ""
-                  }}{{ project.endDate }}</i
-                >
+                <span class="text-brand-x/80">
+                  {{ project.startDate ? project.startDate + " - " : "" }}{{ project.endDate }}
+                </span>
               </p>
             </a>
           </li>
@@ -159,17 +160,26 @@ const printPage = () => window.print();
             </p>
             <div class="flex flex-row justify-between pb-1">
               <div class="grow w-fit">
-                <p v-html="wexp.company"></p>
+                <p class="leading-5">
+                  <template v-for="(line, i) in wexp.company.split('<br>')" :key="i">
+                    {{ line }}
+                    <br v-if="i < wexp.company.split('<br>').length - 1">
+                  </template>
+                </p>
                 <p>
-                  <i
-                    >{{ wexp.startdate ? wexp.startdate + " - " : ""
-                    }}{{ wexp.enddate }}</i
-                  >
+                  <span class="text-brand-x/80">
+                    {{ wexp.startdate ? wexp.startdate + " - " : "" }}{{ wexp.enddate }}
+                  </span>
                 </p>
               </div>
-              <p class="grow text-right" v-html="wexp.location"></p>
+              <p class="grow text-right leading-5">
+                <template v-for="(line, i) in wexp.location.split('<br>')" :key="i">
+                  {{ line }}
+                  <br v-if="i < wexp.location.split('<br>').length - 1">
+                </template>
+              </p>
             </div>
-            <i class="font-bold text-base">Achievements/Tasks:</i>
+            <p class="font-bold text-base">Achievements/Tasks:</p>
             <ul class="tasks">
               <li v-for="(task, index) in wexp.achievements" :key="index">
                 {{ task }}
@@ -197,7 +207,17 @@ const printPage = () => window.print();
   }
 }
 .resume {
-  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-hidden gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-6;
+  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-hidden gap-6 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-6;
+}
+
+/* aside column */
+.resume > div:first-child {
+  @apply sm:col-span-1;
+}
+
+/* main column */
+.resume > div:last-child {
+  @apply sm:col-span-2;
 }
 ul.skills {
   @apply flex flex-row flex-wrap gap-1.5;

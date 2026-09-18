@@ -39,12 +39,12 @@ const iconList = inject('icons');
 
             <div class="sm:col-span-2">
                 <h1 class="text-brand-x text-lg sm:text-xl">
-                    Hello World! I'm
+                    I'm
                     <span class="pb-2 text-brand-y w-fit text-6xl sm:text-8xl font-bold block">
                         Shakil Nawaz
                     </span>
                 </h1>
-                <p class="text-lg sm:text-xl font-bold">A web developer, Specialized in JavaScript and PHP</p>
+                <p class="text-lg sm:text-xl font-bold">Web developer &middot; Physics graduate &middot; Currently engineering with Vue, Alpine, Tailwind, Deno &amp; PHP</p>
             </div>
 
             <div class="sm:row-span-2 sm:justify-self-end justify-self-center place-self-center">
@@ -61,12 +61,11 @@ const iconList = inject('icons');
 
             <div class="py-5 space-y-4 sm:col-span-2">
                 <p>
-                    I love to explore newer technologies and build things upon that. Also love to build user centric websites that actually helps.
+                    I'm a web developer with over 3 years of experience building fast, user-focused sites — from custom Vue applications to WordPress themes and e-commerce platforms. I bring a physics graduate's rigor to frontend work: measure, optimize, iterate.
                 </p>
                 <p>
-                    I have skills with WordPress, VueJs, AlpineJS, TailwindCSS, Semantic HTML and CSS. Currently exploring Laravel.
+                    My stack spans VueJs, AlpineJS, TailwindCSS, semantic HTML, PHP and WordPress. I'm currently deepening my backend with Laravel and exploring modern runtimes like Deno. When I'm not shipping features, I'm reading about LLM tooling, open-source alternatives, and whatever's next in web tech.
                 </p>
-                <!--  added router link -->
                 <div class="flex pt-4 flex-col sm:flex-row gap-4 flex-wrap">
                     <Button
                         text="More About Me"

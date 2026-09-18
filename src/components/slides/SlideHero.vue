@@ -35,8 +35,8 @@ defineExpose({ avatarRef });
 <template>
     <div class="w-full h-full flex items-center justify-center p-4 sm:p-6 lg:p-10 relative overflow-hidden">
         
-        <!-- Ambient ASCII Header Watermark -->
-        <div class="absolute -top-6 left-10 font-mono text-[10px] text-brand-y/[0.06] select-none pointer-events-none hidden lg:block leading-none">
+        <!-- Ambient Watermark -->
+        <div class="absolute -top-6 left-10 font-mono text-[10px] text-brand-y/[0.04] select-none pointer-events-none hidden lg:block leading-none">
             <pre>
    _____ _    _          _  ___ _        _   _                 __      __      _____ 
   / ____| |  | |   /\   | |/ / | |      | \ | |   /\   \ \    / //\   |__  /
@@ -47,64 +47,66 @@ defineExpose({ avatarRef });
             </pre>
         </div>
 
-        <div class="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center relative z-10 py-6">
+        <div class="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center relative z-10 py-6">
             
-            <!-- LEFT: Identity & Bio (4 cols on desktop) -->
-            <div class="lg:col-span-4 order-2 lg:order-1 space-y-4 sm:space-y-5 text-center lg:text-left">
+            <!-- LEFT: Narrative Authority (4 cols on desktop) -->
+            <div class="lg:col-span-4 order-2 lg:order-1 space-y-5 text-left">
                 
-                <!-- Tactical Mission Badge -->
-                <div class="inline-flex items-center gap-2 px-3 py-1 bg-brand-y/15 border border-brand-y/40 rounded-none">
-                    <span class="w-2 h-2 rounded-none bg-brand-y animate-ping"></span>
-                    <span class="font-mono text-xs font-bold text-brand-y tracking-wider">
-                        // SECTOR_01 :: PILOT_IDENT
-                    </span>
-                    <span class="text-[10px] font-mono px-1.5 py-0.2 bg-brand-y/20 text-brand-y rounded-none font-bold">
-                        INIT.SYS
-                    </span>
+                <!-- Section Marker -->
+                <div class="inline-flex items-center gap-2 font-mono text-xs text-brand-y border-b border-brand-y/40 pb-1">
+                    <span class="w-1.5 h-1.5 bg-brand-y inline-block"></span>
+                    <span class="tracking-widest font-bold">01 / INTRODUCTION</span>
                 </div>
 
-                <!-- Main Headline with Animated Logo -->
-                <div class="space-y-1">
-                    <p class="font-mono text-xs sm:text-sm text-brand-x/80 tracking-widest uppercase flex items-center gap-2 justify-center lg:justify-start">
-                        <span>&gt; SYSTEM.INIT // HELLO WORLD, I'M</span>
-                    </p>
-                    <div class="flex items-center gap-3 sm:gap-4 flex-wrap justify-center lg:justify-start">
-                        <h1 class="text-4xl sm:text-5xl xl:text-6xl font-black font-sans uppercase tracking-tight text-brand-y text-glow leading-none">
-                            SHAKIL NAWAZ
-                        </h1>
-                        <AnimatedLogo size="sm" :animate="true" :glow="true" />
-                    </div>
-                    <div class="flex items-center gap-2 pt-1 justify-center lg:justify-start">
-                        <span class="h-0.5 w-8 bg-brand-y inline-block"></span>
-                        <h2 class="text-base sm:text-lg font-display font-bold text-brand-x uppercase tracking-wide">
-                            Web Developer &amp; Tech Nerd
+                <!-- Main Name & Title -->
+                <div class="space-y-2">
+                    <h1 class="text-4xl sm:text-5xl xl:text-6xl font-black font-sans uppercase tracking-tight text-brand-y leading-none">
+                        SHAKIL NAWAZ
+                    </h1>
+                    <div class="flex items-center gap-3 pt-0.5">
+                        <AnimatedLogo size="sm" :animate="true" :glow="false" />
+                        <h2 class="text-base sm:text-lg font-mono font-bold text-brand-x tracking-wide">
+                            Physics &bull; Web Engineering
                         </h2>
                     </div>
                 </div>
 
                 <!-- Bio Summary Briefing -->
-                <p class="text-sm sm:text-base text-brand-x/90 leading-relaxed max-w-md mx-auto lg:mx-0 font-body">
-                    A physics-minded software engineer with 3+ years of experience forging fast, responsive, and user-centric web applications. Specializing in <span class="text-brand-y font-bold">Vue.js</span>, <span class="text-brand-y font-bold">Alpine.js</span>, <span class="text-brand-y font-bold">TailwindCSS</span>, and full-scale <span class="text-brand-y font-bold">WordPress &amp; PHP</span> solutions.
+                <p class="text-sm sm:text-base text-brand-x/85 leading-relaxed max-w-md font-body">
+                    A physics graduate and software engineer building high-performance web systems. Focused on reactive architectures, strict type discipline, and clean user-centered interfaces with <span class="text-brand-y font-bold">Vue</span>, <span class="text-brand-y font-bold">Alpine</span>, <span class="text-brand-y font-bold">Tailwind</span>, <span class="text-brand-y font-bold">Deno</span>, and <span class="text-brand-y font-bold">PHP</span>.
                 </p>
+
+                <!-- Quick Navigation Jump -->
+                <div class="pt-2 font-mono text-xs flex flex-wrap gap-4 text-brand-x/70">
+                    <button
+                        @click="goToSlide(4); playClick()"
+                        @mouseenter="playHover"
+                        class="hover:text-brand-y transition-colors flex items-center gap-1.5 cursor-pointer underline underline-offset-4"
+                    >
+                        <span>&rarr; Intel &amp; Articles</span>
+                    </button>
+                    <RouterLink
+                        to="/resume"
+                        @mouseenter="playHover"
+                        @click="playClick"
+                        class="hover:text-brand-y transition-colors flex items-center gap-1.5 underline underline-offset-4"
+                    >
+                        <span>&rarr; Formal Résumé</span>
+                    </RouterLink>
+                </div>
+
             </div>
 
-            <!-- CENTER: Avatar / Persona (4 cols on desktop) -->
+            <!-- CENTER: Visual Anchor Frame (4 cols on desktop) -->
             <div class="lg:col-span-4 order-1 lg:order-2 flex flex-col items-center justify-center">
                 
                 <!-- Avatar / ASCII Art Frame -->
                 <div 
                     ref="avatarRef"
-                    class="relative w-72 sm:w-80 lg:w-full max-w-[360px] aspect-square p-3 bg-surface/85 border-2 border-brand-y/60 rounded-none glow-brand-y-sm transition-all group"
+                    class="relative w-72 sm:w-80 lg:w-full max-w-[360px] aspect-square p-2.5 bg-surface/90 border-2 border-brand-y/60 rounded-none glow-brand-y-sm transition-all group shadow-sm"
                 >
-                    
-                    <!-- Decorative Corner Accents -->
-                    <span class="absolute top-2 left-2 text-[10px] font-mono text-brand-y/60">[SCAN: ACTIVE]</span>
-                    <span class="absolute top-2 right-2 text-[10px] font-mono text-brand-y/60">[RES: 100%]</span>
-                    <span class="absolute bottom-2 left-2 text-[10px] font-mono text-brand-y/60">[UNIT: SNZ-01]</span>
-                    <span class="absolute bottom-2 right-2 text-[10px] font-mono text-brand-y/60">[SYNC: 99.9%]</span>
-
                     <!-- Image / ASCII Display Container -->
-                    <div class="relative w-full h-full rounded-none overflow-hidden bg-black/90 border border-brand-y/40 flex items-center justify-center">
+                    <div class="relative w-full h-full rounded-none overflow-hidden bg-black border border-brand-y/40 flex items-center justify-center">
                         
                         <!-- ASCII Matrix Persona (Featured) -->
                         <div
@@ -130,28 +132,31 @@ defineExpose({ avatarRef });
                             class="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(102,60,240,0.6)] transition-all duration-500 scale-95 group-hover:scale-100"
                         />
 
-                        <!-- Holographic Scanline Overlay -->
-                        <div class="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.3)_50%)] bg-[length:100%_4px] opacity-40"></div>
+                        <!-- Holographic Scanline Overlay (ASCII Mode Only) -->
+                        <div 
+                            v-if="personaMode === 'ascii'"
+                            class="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.3)_50%)] bg-[length:100%_4px] opacity-40"
+                        ></div>
                     </div>
 
                     <!-- Pilot Status Badge -->
                     <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 px-3 py-0.5 bg-surface border border-brand-y font-mono text-[11px] font-bold text-brand-y rounded-none shadow-sm flex items-center gap-1.5 whitespace-nowrap">
                         <span class="w-1.5 h-1.5 rounded-none bg-emerald-500 animate-pulse"></span>
-                        <span>STATUS: ACTIVE &bull; DHAKA, BD</span>
+                        <span>DHAKA, BD &bull; AVAILABLE FOR WORK</span>
                     </div>
 
                 </div>
 
                 <!-- Persona Switcher Selector -->
-                <div class="flex items-center gap-1.5 mt-6 font-mono text-[11px] p-1 bg-surface/85 border border-brand-y/40 rounded-none shadow-sm">
-                    <span class="px-2 text-brand-x/60 text-[10px] font-bold">MODE:</span>
+                <div class="flex items-center gap-1 mt-6 font-mono text-[11px] p-1 bg-surface/85 border border-brand-y/40 rounded-none shadow-sm">
+                    <span class="px-2 text-brand-x/60 text-[10px] font-bold">PERSONA:</span>
                     <button
                         @click="setPersona('ascii')"
                         @mouseenter="playHover"
-                        class="px-2.5 py-1 rounded-none transition-all cursor-pointer flex items-center gap-1"
+                        class="px-2.5 py-1 rounded-none transition-all cursor-pointer"
                         :class="personaMode === 'ascii' ? 'bg-brand-y text-surface font-bold glow-brand-y-sm' : 'text-brand-x hover:text-brand-y'"
                     >
-                        <span>ASCII ART</span>
+                        ASCII ART
                     </button>
                     <button
                         @click="setPersona('formal')"
@@ -173,37 +178,43 @@ defineExpose({ avatarRef });
 
             </div>
 
-            <!-- RIGHT: Stats & Actions (4 cols on desktop) -->
-            <div class="lg:col-span-4 order-3 space-y-4 sm:space-y-5 text-center lg:text-right">
+            <!-- RIGHT: Engineering Pillars & Actions (4 cols on desktop) -->
+            <div class="lg:col-span-4 order-3 space-y-5 text-left">
                 
-                <!-- Tactical Stats -->
-                <div class="grid grid-cols-2 gap-2.5 sm:gap-3">
-                    <div class="p-3 bg-surface/75 border border-brand-y/30 rounded-none hover:border-brand-y/60 hover-lift transition-colors">
-                        <span class="block font-mono text-xl sm:text-2xl font-black text-brand-y">03+</span>
-                        <span class="block font-mono text-[10px] sm:text-xs text-brand-x/70 uppercase">Years Experience</span>
+                <!-- Engineering Pillars Panel -->
+                <div class="border border-brand-y/30 bg-surface/75 p-4 rounded-none shadow-sm font-mono space-y-3">
+                    <div class="text-[11px] font-bold text-brand-y tracking-wider flex items-center gap-1.5 pb-2 border-b border-brand-y/20">
+                        <span class="w-1.5 h-1.5 bg-brand-y inline-block"></span>
+                        <span>CORE COMPETENCIES</span>
                     </div>
-                    <div class="p-3 bg-surface/75 border border-brand-y/30 rounded-none hover:border-brand-y/60 hover-lift transition-colors">
-                        <span class="block font-mono text-xl sm:text-2xl font-black text-brand-y">08+</span>
-                        <span class="block font-mono text-[10px] sm:text-xs text-brand-x/70 uppercase">Deployed Projects</span>
-                    </div>
-                    <div class="p-3 bg-surface/75 border border-brand-y/30 rounded-none hover:border-brand-y/60 hover-lift transition-colors">
-                        <span class="block font-mono text-xl sm:text-2xl font-black text-brand-y">BSc</span>
-                        <span class="block font-mono text-[10px] sm:text-xs text-brand-x/70 uppercase">Physics Foundation</span>
-                    </div>
-                    <div class="p-3 bg-surface/75 border border-brand-y/30 rounded-none hover:border-brand-y/60 hover-lift transition-colors">
-                        <span class="block font-mono text-xl sm:text-2xl font-black text-brand-y">100%</span>
-                        <span class="block font-mono text-[10px] sm:text-xs text-brand-x/70 uppercase">Responsive Code</span>
-                    </div>
+                    <ul class="space-y-2 text-xs text-brand-x/85">
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-y font-bold">01.</span>
+                            <span><strong>Physics Rigor</strong>: Analytical mindset, scientific modeling, and mathematical logic.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-y font-bold">02.</span>
+                            <span><strong>Runtime Precision</strong>: Deno 2 + Vite + Tailwind v4 performance stack.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-y font-bold">03.</span>
+                            <span><strong>Modular UI</strong>: Reactive Vue 3, Alpine, and accessible architectures.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-brand-y font-bold">04.</span>
+                            <span><strong>Enterprise Web</strong>: Headless WordPress, PHP backends, and robust deployments.</span>
+                        </li>
+                    </ul>
                 </div>
 
                 <!-- Tactical Call To Actions -->
-                <div class="flex flex-col gap-2.5 items-center lg:items-end">
+                <div class="flex flex-col sm:flex-row lg:flex-col gap-2.5">
                     <button
                         @click="goToSlide(3); playClick()"
                         @mouseenter="playHover"
-                        class="w-full sm:w-auto px-5 sm:px-6 py-2.5 sm:py-3 bg-brand-y hover:bg-surface text-surface hover:text-brand-y border-2 border-brand-y font-mono font-bold text-xs sm:text-sm uppercase tracking-wider rounded-none transition-all duration-300 glow-brand-y-sm cursor-pointer flex items-center justify-center lg:justify-end gap-2 group hover-lift"
+                        class="px-5 py-2.5 bg-brand-y hover:bg-surface text-surface hover:text-brand-y border-2 border-brand-y font-mono font-bold text-xs uppercase tracking-wider rounded-none transition-all duration-300 glow-brand-y-sm cursor-pointer flex items-center justify-center gap-2 group hover-lift"
                     >
-                        <span>DEPLOY MISSIONS</span>
+                        <span>EXPLORE 8 MISSIONS</span>
                         <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                         </svg>
@@ -212,26 +223,12 @@ defineExpose({ avatarRef });
                     <button
                         @click="goToSlide(6); playClick()"
                         @mouseenter="playHover"
-                        class="w-full sm:w-auto px-5 sm:px-6 py-2.5 sm:py-3 bg-transparent hover:bg-brand-y/15 text-brand-y border-2 border-brand-y/70 hover:border-brand-y font-mono font-bold text-xs sm:text-sm uppercase tracking-wider rounded-none transition-all duration-300 cursor-pointer flex items-center justify-center lg:justify-end gap-2 hover-lift"
+                        class="px-5 py-2.5 bg-transparent hover:bg-brand-y/15 text-brand-y border-2 border-brand-y/70 hover:border-brand-y font-mono font-bold text-xs uppercase tracking-wider rounded-none transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 hover-lift"
                     >
-                        <span>DISPATCH COMMS</span>
+                        <span>DISPATCH MESSAGE</span>
                     </button>
-
-                    <RouterLink
-                        to="/resume"
-                        @mouseenter="playHover"
-                        @click="playClick"
-                        class="px-4 py-2.5 sm:py-3 bg-surface/80 hover:bg-brand-y/20 text-brand-x hover:text-brand-y border border-brand-y/40 font-mono text-xs uppercase tracking-wider rounded-none transition-all hover-lift"
-                    >
-                        📄 RÉSUMÉ
-                    </RouterLink>
                 </div>
 
-                <!-- Terminal hint -->
-                <div class="font-mono text-[10px] text-brand-x/40 space-y-0.5 hidden lg:block">
-                    <p><span class="text-brand-y">$</span> cat position.txt <span class="opacity-60">// Available for opportunities</span></p>
-                    <p><span class="text-brand-y">$</span> cat stack.txt <span class="opacity-60">// Vue, Alpine, Tailwind, PHP</span></p>
-                </div>
             </div>
 
         </div>
