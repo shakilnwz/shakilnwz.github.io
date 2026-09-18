@@ -1,44 +1,29 @@
 <script setup>
-import { provide } from 'vue'
-import icons from './assets/icons/icons.json'
-import Layout from './layout/Layout.vue'
-import { useFadeSlide } from './composables/useGsapTransition'
+import { provide } from 'vue';
+import icons from './assets/icons/icons.json';
+import Layout from './layout/Layout.vue';
 
-const { beforeEnter, enter, leave } = useFadeSlide(0.5)
-
-// make icons available to all component
-provide('icons', icons)
-
+// Provide icons globally
+provide('icons', icons);
 </script>
 
 <template>
-        <Layout>
-
-            <RouterView v-slot="{ Component }">
-                <Transition 
-                @before-enter="beforeEnter" 
-                @enter="enter" 
-                @leave="leave">
-                    <component :is="Component" />
-                </Transition>
-            </RouterView>
-        </Layout>
+    <Layout>
+        <RouterView v-slot="{ Component }">
+            <Transition name="page-fade" mode="out-in">
+                <component :is="Component" />
+            </Transition>
+        </RouterView>
+    </Layout>
 </template>
 
 <style>
-/* .slide-fade-enter-active { */
-/*     transition: all 0.3s ease-out; */
-/*     transition-delay: 0.3s; */
-/* } */
-/**/
-/* .slide-fade-leave-active { */
-/*     transition: all 0.3s ease-in; */
-/* } */
-/**/
-/* .slide-fade-enter-from, */
-/* .slide-fade-leave-to { */
-/*     transform: translateX(20px); */
-/*     opacity: 0; */
-/* } */
-
+.page-fade-enter-active,
+.page-fade-leave-active {
+    transition: opacity 0.2s ease;
+}
+.page-fade-enter-from,
+.page-fade-leave-to {
+    opacity: 0;
+}
 </style>

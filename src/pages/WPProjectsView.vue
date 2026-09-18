@@ -36,8 +36,8 @@ onMounted(() => {
         <div class="space-y-8 sm:space-y-16">
 
             <a class="project-card " v-for="(post, index) in posts" :key="index" :href="post.link" target="_blank">
-                <span class="basis-full block rounded">
-                    <img class="rounded-2xl h-full object-cover" :src="post._embedded?.['wp:featuredmedia']?.[0]?.source_url" :alt="post.title">
+                <span class="basis-full block rounded-none">
+                    <img class="rounded-none h-full object-cover" :src="post._embedded?.['wp:featuredmedia']?.[0]?.source_url" :alt="post.title">
                 </span>
                 <span class="basis-full space-y-3 px-2">
                     <h3>{{ post.title.rendered }}</h3>
@@ -62,10 +62,10 @@ onMounted(() => {
 
 
 .project-card {
-    @apply flex h-fit flex-col relative sm:flex-row sm:even:flex-row-reverse gap-4 hover:border-brand-y/90 border-b-6 border-transparent rounded-3xl transition-all overflow-hidden;
+    @apply flex h-fit flex-col relative sm:flex-row sm:even:flex-row-reverse gap-4 hover:border-brand-y/90 border-b-6 border-transparent rounded-none transition-all overflow-hidden;
 
     &:before {
-        @apply absolute text-center inset-full rounded-t-3xl bottom-0 text-transparent content-['View_Project'] font-bold py-4 transition-all;
+        @apply absolute text-center inset-full rounded-none bottom-0 text-transparent content-['View_Project'] font-bold py-4 transition-all;
     }
 
     &:hover:before {

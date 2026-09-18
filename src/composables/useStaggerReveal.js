@@ -1,10 +1,8 @@
 // useStaggerReveal.js
-import { ref, onMounted, onUnmounted } from 'vue'
+import { onUnmounted } from 'vue'
 import gsap from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-
-export function useStaggerReveal(containerRef, options = {}) {
+export function useStaggerReveal(_containerRef, options = {}) {
     const {
         stagger = 0.1,
         start = "top 80%",

@@ -32,9 +32,9 @@ const printPage = () => window.print();
         <!-- avater -->
         <div class="w-full grid place-items-center pb-10">
           <div
-            class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/90 dark:to-brand-x/90 max-w-40 aspect-square overflow-hidden rounded-full"
+            class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/90 dark:to-brand-x/90 max-w-40 aspect-square overflow-hidden rounded-none"
           >
-            <!-- class="max-w-40 aspect-square rounded-full overflow-hidden"> -->
+            <!-- class="max-w-40 aspect-square rounded-none overflow-hidden"> -->
             <img
               class="relative z-10 w-40 object-contain"
               :src="avatar"
@@ -203,7 +203,7 @@ ul.skills {
   @apply flex flex-row flex-wrap gap-1.5;
 
   & > li {
-    @apply bg-brand-y/30 font-bold w-fit rounded p-1.5;
+    @apply bg-brand-y/30 font-bold w-fit rounded-none p-1.5;
   }
 }
 ul.interests {

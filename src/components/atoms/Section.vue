@@ -6,7 +6,7 @@ const setup = defineProps(
 )
 </script>
 <template>
-    <div class="border-dashed border-b border-brand-y/50">
+    <div class="border-dashed border-b border-brand-y/50 print:border-none">
         <section 
             :class="[
                 {

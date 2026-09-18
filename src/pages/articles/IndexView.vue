@@ -15,7 +15,7 @@ const thumbs = { denovite }
             <!-- article card -->
             <a class="article-card flex h-fit flex-col relative sm:flex-row gap-4 hover:border-brand-y/90 border-b-6 border-transparent transition-all overflow-hidden"
                 v-for="(article, index) in articles" :key="index" :href="article.link" target="_blank">
-                <span class="basis-full block rounded">
+                <span class="basis-full block rounded-none">
                     <img class=" h-full object-cover" :src="thumbs[article.thumbnail]" :alt="article.title">
                 </span>
                 <span class="basis-full space-y-4 px-2">

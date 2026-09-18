@@ -131,10 +131,9 @@ onUnmounted(()=>{
 
 <style scoped>
 .navlinkwrap{
-    border-radius: 12px;
-    corner-shape: square bevel square bevel;
+    border-radius: 0;
     @media (max-width: 768px){
-        border-radius: 0px;
+        border-radius: 0;
     }
 }
 

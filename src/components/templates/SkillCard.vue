@@ -22,7 +22,7 @@ const data = defineProps({
         <!-- svg icon -->
         <div class="w-12 h-12 aspect-square sm:h-25 sm:w-25 grid place-items-center">
             <div :class="{
-                'w-2 h-2 shrink-0 bg-surface rounded-full shadow-brand-y shadow-sm grid place-items-center transition-all duration-500': true,
+                'w-2 h-2 shrink-0 bg-surface rounded-none shadow-brand-y shadow-sm grid place-items-center transition-all duration-500': true,
                 'w-full h-full': data.isVisible
 
             }">

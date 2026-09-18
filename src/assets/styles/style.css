@@ -3,6 +3,10 @@
 @variant dark (&:where(.dark, .dark *));
 
 @layer base {
+    *, *::before, *::after {
+        border-radius: 0 !important;
+    }
+
     :root {
         --color-brand-x: oklch(32.87% 0.1235 262.39);
         --color-brand-y: oklch(66.38% 0.1751 273.13);
@@ -45,4 +49,116 @@
     h2 {
         @apply text-4xl sm:text-5xl font-bold uppercase text-brand-y;
     }
+
+    /* Sharp HUD Block Styles - Zero Roundness */
+    .hud-card {
+        @apply rounded-none border border-brand-y/35 bg-surface/80 backdrop-blur-md transition-all duration-300;
+    }
+    .hud-card:hover {
+        @apply border-brand-y/70;
+        box-shadow: 0 0 8px -2px var(--color-brand-y);
+    }
+    .hud-card-sm {
+        @apply rounded-none border border-brand-y/30 bg-surface/75 backdrop-blur-sm transition-all duration-200;
+    }
+    .hud-card-sm:hover {
+        @apply border-brand-y/60;
+    }
+    .hud-btn {
+        @apply rounded-none border border-brand-y font-mono font-bold transition-all duration-300;
+    }
+    .hud-badge {
+        @apply rounded-none px-2.5 py-0.5 font-mono text-[11px] font-bold border border-brand-y/30 bg-brand-y/15 text-brand-y;
+    }
+
+    /* Zero roundness aliases */
+    .clip-chamfer {
+        @apply rounded-none;
+    }
+    .clip-chamfer-sm {
+        @apply rounded-none;
+    }
+    .clip-chamfer-tr {
+        @apply rounded-none;
+    }
+    .clip-chamfer-bl {
+        @apply rounded-none;
+    }
+    .clip-badge {
+        @apply rounded-none;
+    }
+
+    /* Glows */
+    .glow-brand-y {
+        box-shadow: 0 0 8px -2px var(--color-brand-y);
+    }
+    .glow-brand-y-sm {
+        box-shadow: 0 0 12px -2px var(--color-brand-y);
+    }
+    .text-glow {
+        text-shadow: 0 0 16px var(--color-brand-y);
+    }
+    .text-glow-strong {
+        text-shadow: 0 0 10px var(--color-brand-y), 0 0 25px var(--color-brand-y);
+    }
+
+    /* Cyber grid */
+    .cyber-grid {
+        background-size: 32px 32px;
+        background-image: 
+            linear-gradient(to right, rgba(102, 60, 240, 0.05) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(102, 60, 240, 0.05) 1px, transparent 1px);
+    }
+    .dark .cyber-grid {
+        background-image: 
+            linear-gradient(to right, rgba(168, 85, 247, 0.08) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(168, 85, 247, 0.08) 1px, transparent 1px);
+    }
+
+    /* Hover lift micro-interaction */
+    .hover-lift {
+        @apply transition-transform duration-300;
+        transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hover-lift:hover {
+        transform: translateY(-2px);
+    }
+
+    /* Focus ring for keyboard accessibility */
+    .hud-btn:focus-visible {
+        outline: 2px solid var(--color-brand-y);
+        outline-offset: 2px;
+    }
+
+    /* Staggered entrance animation */
+    .animate-enter {
+        animation: slideEnter 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    @keyframes slideEnter {
+        from {
+            opacity: 0;
+            transform: translateY(12px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Custom Anime Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--color-brand-y);
+    border-radius: 0;
+    opacity: 0.7;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-brand-x);
 }

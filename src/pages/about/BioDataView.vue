@@ -32,7 +32,7 @@ const printPage = () => window.print();
         <!-- avatar -->
         <div class="w-full grid place-items-center pb-8">
           <div
-            class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/90 dark:to-brand-x/90 max-w-40 aspect-square overflow-hidden rounded-full"
+            class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/90 dark:to-brand-x/90 max-w-40 aspect-square overflow-hidden rounded-none"
           >
             <img
               class="relative z-10 w-40 object-contain"

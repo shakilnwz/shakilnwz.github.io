@@ -29,7 +29,6 @@ const link = defineProps(
 </template>
 <style>
 .clipped-btn{
-    border-radius: 12px;
-    corner-shape: square bevel square bevel;
+    border-radius: 0;
 }
 </style>

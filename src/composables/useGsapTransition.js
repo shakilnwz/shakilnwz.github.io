@@ -1,7 +1,7 @@
 // useGsapTransition.js
 import gsap from 'gsap'
 
-export function useFadeSlide(duration = 0.4) {
+export function useFadeSlide(_duration = 0.4) {
     const beforeEnter = (el) => {
         gsap.set(el, { autoAlpha: 0, scale: 0.8, xPercent: -100 });
     }

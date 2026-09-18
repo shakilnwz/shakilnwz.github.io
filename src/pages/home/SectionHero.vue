@@ -25,7 +25,7 @@ const iconList = inject('icons');
         <!--         :style="cursorPos.style.value"  -->
         <!--         class=" -->
         <!--         transition-all -->
-        <!--         rounded-3xl  -->
+        <!--         rounded-none  -->
         <!--         duration-300  -->
         <!--         h-50 -->
         <!--         group-hover:sm:h-full  -->
@@ -49,7 +49,7 @@ const iconList = inject('icons');
 
             <div class="sm:row-span-2 sm:justify-self-end justify-self-center place-self-center">
                 <div 
-                    class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/30 dark:to-brand-x/90 max-w-80 aspect-square rounded-full shadow-[0_0_9px_rgba(0,0,0,0.5)] overflow-hidden">
+                    class="bg-radial from-brand-x/90 to-brand-y/30 to-45% dark:from-brand-y/30 dark:to-brand-x/90 max-w-80 aspect-square rounded-none shadow-[0_0_9px_rgba(0,0,0,0.5)] overflow-hidden">
 
                     <img
                         class="relative z-10 w-80 object-contain"

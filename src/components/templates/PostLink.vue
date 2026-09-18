@@ -34,7 +34,7 @@ const articleData = defineProps({
         }">
             <div :class="{
                 'flex flex-row justify-between': articleData.type == 'article',
-                'bg-brand-x/30 w-full h-6 rounded-lg': !articleData.title,
+                'bg-brand-x/30 w-full h-6 rounded-none': !articleData.title,
             }">
                 <h3 class="font-bold">
                     {{ articleData.title }}
@@ -44,7 +44,7 @@ const articleData = defineProps({
                 </span>
             </div>
             <p :class="{
-                'bg-brand-x/20 w-full h-12 rounded-lg mt-2': !articleData.summary,
+                'bg-brand-x/20 w-full h-12 rounded-none mt-2': !articleData.summary,
                 'hidden' : articleData.type == 'project'
             }">
                 {{ articleData.summary?.substring(0, 45).concat('...') }}
@@ -55,8 +55,7 @@ const articleData = defineProps({
 
 <style scoped>
 .post-comp{
-    border-radius: 24px;
-    corner-shape: square bevel square bevel;
+    border-radius: 0;
     overflow: hidden;
 }
 </style>

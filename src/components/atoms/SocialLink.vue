@@ -38,7 +38,6 @@ const content = defineProps(
 </template>
 <style scoped>
 .social-link{
-    border-radius: 6px;
-    corner-shape: square bevel square bevel;
+    border-radius: 0;
 }
 </style>
