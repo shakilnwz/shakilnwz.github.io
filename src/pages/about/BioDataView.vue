@@ -42,78 +42,8 @@ const printPage = () => window.print();
           </div>
         </div>
 
-        <!-- Personal Info -->
-        <h2>Personal Info</h2>
-        <ul class="info-list">
-          <li>
-            <span class="label">Date of Birth:</span>
-            <span class="value">{{ bioContent.personalInfo.dateOfBirth }}</span>
-          </li>
-          <li>
-            <span class="label">Blood Group:</span>
-            <span class="value font-bold text-brand-x">{{ bioContent.personalInfo.bloodGroup }}</span>
-          </li>
-          <li>
-            <span class="label">Height:</span>
-            <span class="value">{{ bioContent.personalInfo.height }}</span>
-          </li>
-          <li>
-            <span class="label">Marital Status:</span>
-            <span class="value">{{ bioContent.personalInfo.maritalStatus }}</span>
-          </li>
-          <li>
-            <span class="label">Religion:</span>
-            <span class="value">{{ bioContent.personalInfo.religion }}</span>
-          </li>
-          <li>
-            <span class="label">Nationality:</span>
-            <span class="value">{{ bioContent.personalInfo.nationality }}</span>
-          </li>
-        </ul>
-
-        <!-- Family Details -->
-        <h2>Family</h2>
-        <ul class="info-list">
-          <li>
-            <span class="label">Father's Name:</span>
-            <span class="value">{{ bioContent.family.fatherName }}</span>
-          </li>
-          <li>
-            <span class="label">Mother's Name:</span>
-            <span class="value">{{ bioContent.family.motherName }}</span>
-          </li>
-        </ul>
-
-        <!-- Address -->
-        <h2>Address</h2>
-        <ul class="info-list address-list">
-          <li>
-            <span class="label">Present Address:</span>
-            <p class="value">{{ bioContent.address.present }}</p>
-          </li>
-          <li>
-            <span class="label">Permanent Address:</span>
-            <p class="value">{{ bioContent.address.permanent }}</p>
-          </li>
-        </ul>
-      </div>
-
-      <!-- main section -->
-      <div class="col-span-2 px-6">
-        <h1 class="text-4xl font-bold text-brand-y">{{ bioContent.name }}</h1>
-        <h3 class="font-bold">{{ bioContent.title }}</h3>
-        <a class="hover:text-brand-y inline-block pb-2" :href="bioContent.website.url">
-          🌏
-          <span class="underline underline-offset-1">{{ bioContent.website.label }}</span>
-        </a>
-
-        <!-- bio summary -->
-        <p class="text-justify pb-4 pt-1">
-          {{ bioContent.bio }}
-        </p>
-
-        <!-- contact / socials -->
-        <ul class="gap-2 grid grid-flow-row sm:grid-rows-2 sm:grid-flow-col pb-4">
+        <!-- social / contact links -->
+        <ul class="gap-2 flex flex-col pb-4">
           <li>
             <SocialLink
               :textHighlight="bioContent.contact.email"
@@ -148,6 +78,33 @@ const printPage = () => window.print();
           </li>
         </ul>
 
+        <!-- address -->
+        <ul class="info-list address-list mt-4">
+          <li>
+            <span class="label">Present Address:</span>
+            <p class="value">{{ bioContent.address.present }}</p>
+          </li>
+          <li>
+            <span class="label">Permanent Address:</span>
+            <p class="value">{{ bioContent.address.permanent }}</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- main section -->
+      <div class="col-span-2 px-6">
+        <h1 class="text-4xl font-bold text-brand-y">{{ bioContent.name }}</h1>
+        <h3 class="font-bold">{{ bioContent.title }}</h3>
+        <a class="hover:text-brand-y inline-block pb-2.5" :href="bioContent.website.url">
+          🌏
+          <span class="underline underline-offset-1">{{ bioContent.website.label }}</span>
+        </a>
+
+        <!-- bio summary -->
+        <p class="text-justify pb-5 pt-1">
+          {{ bioContent.bio }}
+        </p>
+
         <!-- work history (history only, no detail) -->
         <h2>Work History</h2>
         <ul class="workhistory">
@@ -169,6 +126,40 @@ const printPage = () => window.print();
           </li>
         </ul>
 
+        <h2 class="!mb-2">Personal Info</h2>
+        <table class="personal-info-table w-full text-sm border-separate border-spacing-2 pb-4">
+          <tbody>
+            <tr
+              v-for="(row, key) in bioContent.personalInfoRows"
+              :key="key"
+              class="[&_td]:border-b  [&_td]:border-dashed [&_td]:border-brand-x/20 last:[&_td]:border-b-0 hover:bg-base-x/30 transition-colors"
+            >
+              <td
+                class="py-1.5 pr-4 font-bold text-brand-x/90 whitespace-nowrap label-cell"
+                v-text="bioContent.personalInfoLabels[key]"
+              ></td>
+              <td
+                class="py-1.5 text-right value-cell"
+                :class="key === 'bloodGroup' ? 'font-bold text-brand-x' : ''"
+                v-html="row"
+              ></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- Family Details -->
+        <h2>Family</h2>
+        <ul class="info-list">
+          <li class="border-b pb-1.5 mb-1.5 border-brand-x/20 border-dashed">
+            <span class="label">Father's Name:</span>
+            <span class="value">{{ bioContent.family.fatherName }}</span>
+          </li>
+          <li>
+            <span class="label">Mother's Name:</span>
+            <span class="value">{{ bioContent.family.motherName }}</span>
+          </li>
+        </ul>
+
         <!-- education -->
         <h2>Education</h2>
         <ul class="education">
@@ -176,9 +167,11 @@ const printPage = () => window.print();
             v-for="(education, index) in bioContent.education"
             :key="index"
           >
-            <strong>{{ education.class }} - {{ education.major }}</strong>
+            <span class="flex flex-col justify-between">
+              <strong>{{ education.class }} - {{ education.major }}</strong> 
+              <span>{{ education.passYear }}</span> 
+            </span>
             <p>{{ education.institute }}</p>
-            <p>{{ education.passYear }}</p>
           </li>
         </ul>
       </div>
@@ -202,11 +195,11 @@ const printPage = () => window.print();
 }
 
 .biodata {
-  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-hidden gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-6;
+  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-hidden gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-9;
 }
 
 ul.info-list {
-  @apply space-y-1.5 pb-4;
+  @apply pb-5;
   & > li {
     @apply flex flex-row justify-between items-baseline text-xs sm:text-sm;
     & .label {
@@ -228,7 +221,7 @@ ul.address-list {
 }
 
 ul.workhistory {
-  @apply space-y-2 pb-4;
+  @apply space-y-2 pb-5;
   & > li {
     @apply border-b border-dashed border-brand-y/20 pb-2 last:border-b-0;
   }
@@ -245,10 +238,10 @@ ul.education {
 }
 
 ul {
-  @apply pt-1;
+  @apply pt-2;
 
   &:not(:last-of-type) {
-    @apply pb-4;
+    @apply pb-5;
   }
 }
 
@@ -267,5 +260,12 @@ h2:not(.bioheader) {
   &::before {
     @apply content-['❖\0020'];
   }
+}
+
+.personal-info-table {
+  border-spacing: 0;
+}
+.personal-info-table td {
+  vertical-align: top;
 }
 </style>

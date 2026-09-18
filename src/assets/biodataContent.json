@@ -5,7 +5,7 @@
         "label": "shakilnwz.github.io",
         "url": "https://shakilnwz.github.io"
     },
-    "bio": "Driven and goal-oriented web developer with over 3 years of experience in creating responsive, optimized, and user-focused websites. Committed to leveraging modern web technologies to build fast, feature-rich, and accessible online experiences.",
+    "bio": "Crafting modern, feature-rich sites where practical engineering meets usable design. Over 3 years of experience building responsive, optimized, accessible web experiences that users can count on.",
     "personalInfo": {
         "dateOfBirth": "04-Nov-1997",
         "bloodGroup": "O+",
@@ -15,12 +15,30 @@
         "nationality": "Bangladeshi",
         "gender": "Male"
     },
+    "personalInfoLabels": [
+        "Date of Birth",
+        "Blood Group",
+        "Height",
+        "Marital Status",
+        "Religion",
+        "Nationality",
+        "Gender"
+    ],
+    "personalInfoRows": [
+        "04-Nov-1997",
+        "O+",
+        "5' 4\"",
+        "Unmarried",
+        "Islam",
+        "Bangladeshi",
+        "Male"
+    ],
     "family": {
-        "fatherName": "Father's Name",
-        "motherName": "Mother's Name"
+        "fatherName": "Alamgir Hosen",
+        "motherName": "Sabina Yeasmin"
     },
     "address": {
-        "present": "Rampura, Dhaka, Bangladesh",
+        "present": "Dhaka, Bangladesh",
         "permanent": "Satkhira, Khulna, Bangladesh"
     },
     "contact": {
@@ -48,18 +66,19 @@
             "institute": "Shimanta Adarsha College, Satkhira",
             "passYear": 2014
         }
+
     ],
     "workHistory": [
         {
             "jobtitle": "Frontend Developer",
             "company": "Genforge LLC",
-            "location": "Full Time",
+            "location": "Dhaka",
             "startdate": "1st May 2026",
             "enddate": "Present"
         },
         {
             "jobtitle": "Freelance Software Developer",
-            "company": "Freelance Marketplace / Future Innovation Ltd. / Genforge.com",
+            "company": "Freelance Marketplace / Future Innovation Ltd.",
             "location": "Work From Home",
             "startdate": "April 2023",
             "enddate": "Present"
