@@ -7,32 +7,63 @@ const iconList = inject('icons')
 const name = ref('');
 const email = ref('');
 const message = ref('');
+const isLoading = ref(false);
 
-const submitToGoogleForm = async ()=>{
-    const formId = "1FAIpQLSdOIQQL_gZwrQX9eIrKn22ynVThxyhxQU73g_aKYpd-gcZoPg"; // Replace with your Google Form ID
-    const url = `https://docs.google.com/forms/d/e/${formId}/formResponse`;
-    //entry.252721265
-    //entry.1305900489
-    //entry.509312173
-    const formData = new FormData();
-    formData.append("entry.252721265", name.value); // Replace with your Name field's entry ID
-    formData.append("entry.1305900489", email.value); // Replace with your Email field's entry ID
-    formData.append("entry.509312173", message.value); // Replace with your Message field's entry ID
+const toast = ref({
+    show: false,
+    type: 'success',
+    message: ''
+});
+
+let toastTimeout = null;
+
+const showToast = (type, msg) => {
+    if (toastTimeout) clearTimeout(toastTimeout);
+    toast.value = { show: true, type, message: msg };
+    toastTimeout = setTimeout(() => {
+        toast.value.show = false;
+    }, 5000);
+};
+
+const closeToast = () => {
+    if (toastTimeout) clearTimeout(toastTimeout);
+    toast.value.show = false;
+};
+
+const submitForm = async () => {
+    if (isLoading.value) return;
+
+    isLoading.value = true;
 
     try {
-        await fetch(url, {
-            method: "POST",
-            body: formData,
-            mode: "no-cors", // Required for Google Forms
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                name: name.value,
+                email: email.value,
+                message: message.value,
+            }),
         });
-        alert("Message sent successfully!");
-        name.value = ""
-        email.value = "" 
-        message.value = "" // Reset form
+
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+            throw new Error(data.error || 'Failed to send message. Please try again.');
+        }
+
+        showToast('success', data.message || 'Message sent successfully!');
+        name.value = '';
+        email.value = '';
+        message.value = '';
     } catch (error) {
-        alert("There was an error sending your message. Please try again.");
+        showToast('error', error.message || 'There was an error sending your message. Please try again.');
+    } finally {
+        isLoading.value = false;
     }
-}
+};
 
 </script>
 <template>
@@ -74,7 +105,7 @@ const submitToGoogleForm = async ()=>{
                 </div>
                 <div class="bg-brand-y/20 grow p-8 shadow hover:bg-brand-y/15 transition-all">
                     <h3 class="text-2xl text-brand-y font-bold pb-4">Or Send a Message</h3>
-                    <form @submit.prevent="submitToGoogleForm">
+                    <form @submit.prevent="submitForm">
                         <label>
                             Your Name
                             <input type='text' v-model="name" name="name" required>
@@ -85,23 +116,66 @@ const submitToGoogleForm = async ()=>{
                         </label>
                         <label>
                             Message
-                            <textarea type='email' v-model="message" name="message"></textarea>
+                            <textarea type='email' v-model="message" name="message" required></textarea>
                         </label>
                         <button
-                            class="cursor-pointer bg-brand-y hover:bg-surface text-surface hover:text-brand-y text-lg/4.5 uppercase justify-center font-bold border-brand-y border-1 w-fit flex flex-row flex-wrap items-center gap-x-2  px-6 py-3 transition-all duration-300" 
+                            type="submit"
+                            :disabled="isLoading"
+                            class="cursor-pointer bg-brand-y hover:bg-surface text-surface hover:text-brand-y text-lg/4.5 uppercase justify-center font-bold border-brand-y border-1 w-fit flex flex-row flex-wrap items-center gap-x-2  px-6 py-3 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed" 
                         >
-                            <svg  class="fill-current h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                            <svg v-if="isLoading" class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            <svg v-else class="fill-current h-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
                                 <path
                                     fill-rule="evenodd"
                                     :d="iconList.email"
                                     clip-rule="evenodd"
                                 />
                             </svg>
-                            Send Message
+                            <span>{{ isLoading ? 'Sending...' : 'Send Message' }}</span>
                         </button>
                     </form>
                 </div>
             </div>
+
+            <!-- Toast notification -->
+            <Teleport to="body">
+                <Transition
+                    enter-active-class="transition-all duration-300 ease-out"
+                    enter-from-class="opacity-0 translate-y-4 sm:translate-y-0 sm:translate-x-4"
+                    enter-to-class="opacity-100 translate-y-0 sm:translate-x-0"
+                    leave-active-class="transition-all duration-200 ease-in"
+                    leave-from-class="opacity-100 translate-y-0 sm:translate-x-0"
+                    leave-to-class="opacity-0 translate-y-4 sm:translate-y-0 sm:translate-x-4"
+                >
+                    <div
+                        v-if="toast.show"
+                        class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-5 py-4 border shadow-2xl backdrop-blur-md max-w-sm w-[calc(100vw-3rem)] sm:w-auto"
+                        :class="toast.type === 'success' 
+                            ? 'bg-surface/95 border-brand-y text-brand-x' 
+                            : 'bg-surface/95 border-red-500 text-brand-x'"
+                        role="alert"
+                    >
+                        <svg v-if="toast.type === 'success'" class="h-5 w-5 shrink-0 text-brand-y" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <svg v-else class="h-5 w-5 shrink-0 text-red-500" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
+                        </svg>
+                        <p class="text-sm font-medium leading-snug">{{ toast.message }}</p>
+                        <button
+                            type="button"
+                            @click="closeToast"
+                            class="ml-auto text-brand-x/60 hover:text-brand-x cursor-pointer p-1 text-lg leading-none"
+                            aria-label="Close"
+                        >
+                            &times;
+                        </button>
+                    </div>
+                </Transition>
+            </Teleport>
 
 
             <!-- TODO: add contact detail -->

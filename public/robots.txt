@@ -1,0 +1,61 @@
+# ==============================================================================
+# Robots.txt for Shakil Nawaz - Frontend Developer & Web Developer Portfolio
+# Website: https://shakilnwz.pages.dev/
+# Author: Shakil Nawaz
+# Role: Frontend Developer, Vue.js Developer, Web Developer
+# Contact: shakilnwz@gmail.com
+# GitHub: https://github.com/shakilnwz
+# LinkedIn: https://www.linkedin.com/in/shakilnwz
+#
+# Keywords: Shakil Nawaz, Frontend Developer, Web Developer, Vue.js Developer,
+#           JavaScript Developer, Tailwind CSS, Vue 3, Alpine.js, PHP, WordPress,
+#           Portfolio, Web Applications, Responsive Web Design, Articles, Projects
+# ==============================================================================
+
+# Allow all search engines and crawlers
+User-agent: *
+Allow: /
+
+# Major search engine crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+# AI crawlers and LLM search agents
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# XML Sitemap
+Sitemap: https://shakilnwz.pages.dev/sitemap.xml
