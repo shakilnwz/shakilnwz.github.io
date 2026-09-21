@@ -195,7 +195,7 @@ const printPage = () => window.print();
 }
 
 .biodata {
-  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-hidden gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-9;
+  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-visible gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-9;
 }
 
 ul.info-list {
@@ -223,7 +223,7 @@ ul.address-list {
 ul.workhistory {
   @apply space-y-2 pb-5;
   & > li {
-    @apply border-b border-dashed border-brand-y/20 pb-2 last:border-b-0;
+    @apply border-b border-dashed border-brand-y/20 pb-2 last:border-b-0 break-inside-avoid;
   }
   & strong {
     @apply text-base sm:text-lg text-brand-x/90;
@@ -232,6 +232,9 @@ ul.workhistory {
 
 ul.education {
   @apply space-y-2;
+  & > li {
+    @apply break-inside-avoid;
+  }
   & strong {
     @apply text-base text-brand-x/90;
   }

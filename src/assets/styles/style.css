@@ -23,6 +23,31 @@
     }
 
     @media print {
+        html, body {
+            overflow: visible !important;
+            height: auto !important;
+        }
+
+        #smooth-wrapper {
+            position: static !important;
+            overflow: visible !important;
+            height: auto !important;
+            width: 100% !important;
+            inset: auto !important;
+        }
+
+        #smooth-content {
+            position: static !important;
+            overflow: visible !important;
+            height: auto !important;
+            width: 100% !important;
+            transform: none !important;
+        }
+
+        #smooth-content:before {
+            display: none !important;
+        }
+
         .dark {
             --color-brand-x: oklch(32.87% 0.1235 262.39);
             --color-brand-y: oklch(66.38% 0.1751 273.13);

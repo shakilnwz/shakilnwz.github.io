@@ -23,7 +23,7 @@ const route = useRoute()
 provide('route', route)
 </script>
 <template>
-    <div class="overflow-hidden">
+    <div class="overflow-hidden print:overflow-visible">
         <NavBar />
         <div id="smooth-wrapper">
             <div id="smooth-content">
@@ -48,5 +48,10 @@ provide('route', route)
 #smooth-content:before{
     content: '';
     @apply border-brand-y/50 absolute border-x border-dashed h-full max-w-7xl mx-auto block inset-0 inset-x-2 sm:inset-x-0 z-30 pointer-events-none;
+}
+@media print {
+    #smooth-content:before {
+        display: none !important;
+    }
 }
 </style>

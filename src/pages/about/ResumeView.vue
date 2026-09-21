@@ -193,11 +193,11 @@ const printPage = () => window.print();
   }
   @page {
     size: 210mm 297mm;
-    margin: 0;
+    margin: 10px 0px;
   }
 }
 .resume {
-  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-hidden gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-5;
+  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-visible gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-4;
 }
 ul.skills {
   @apply flex flex-row flex-wrap gap-1.5;
@@ -215,7 +215,7 @@ ul.interests {
 }
 
 ul.projects {
-  @apply space-y-2 pb-4;
+  @apply space-y-2 pb-3.75;
   & > li {
     @apply flex flex-row gap-2;
     &::before {
@@ -238,7 +238,7 @@ ul {
   @apply pt-1;
 
   &:not(:last-of-type) {
-    @apply pb-4;
+    @apply pb-3.75;
   }
 }
 a,

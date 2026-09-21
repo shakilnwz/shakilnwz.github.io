@@ -62,15 +62,13 @@
             ]
         },
         {
-            "jobtitle": "Freelance Software Developer",
+            "jobtitle": "Freelance Web Developer",
             "company": "Freelance Marketplace, <br> Future Innovation Ltd., <br>Genforge.com",
             "location": "Work From Home",
             "startdate": "April 2023",
             "enddate": "January 2026",
             "achievements": [
-                "Create Web apps using VueJS, Laravel",
                 "Develop fast and responsive websites using WordPress and various builders for WP (Elementor, Breakdance).",
-                "Create/set up WordPress plugins to meet clients\u2019 requirements.",
                 "Customize themes or builder default elements using php or js to match clients required design.",
                 "Customize/set up woocommerce for e-commerce functionality.",
                 "Create stunning landing pages with user friendly and interactive animation using JavaScript and CSS.",
