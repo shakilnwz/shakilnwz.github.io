@@ -1,84 +1,88 @@
 <script setup>
-import Section from '../components/atoms/Section.vue'
+import Section from "../components/atoms/Section.vue";
 
-import zuus from '../assets/projects/zuus.webp';
-import atroly from '../assets/projects/atroly.webp';
-import besomoy from '../assets/projects/besomoy.webp';
-import imaginesignage from '../assets/projects/imaginesignage.webp';
-import eliteabu from '../assets/projects/eliteabu.webp';
-import lifkoach from '../assets/projects/lifkoach.webp';
-import educavo from '../assets/projects/educavo.webp';
-import fccrwd from '../assets/projects/fccrwd.webp';
-import projects from '../assets/projects.json';
+import atroly from "../assets/projects/atroly.webp";
+import besomoy from "../assets/projects/besomoy.webp";
+import imaginesignage from "../assets/projects/imaginesignage.webp";
+import eliteabu from "../assets/projects/eliteabu.webp";
+import lifkoach from "../assets/projects/lifkoach.webp";
+import educavo from "../assets/projects/educavo.webp";
+import fccrwd from "../assets/projects/fccrwd.webp";
+import projects from "../assets/projects.json";
 
-const thumbs = {zuus, atroly, besomoy, imaginesignage, eliteabu, lifkoach, educavo, fccrwd }
-
-
+const thumbs = { atroly, besomoy, imaginesignage, eliteabu, lifkoach, educavo, fccrwd };
 </script>
 <template>
-    <Section contained>
-        <h2 class="pb-8">Projects</h2>
-        <div class="space-y-8 sm:space-y-16">
-
-            <a class="project-card" v-for="(project, index) in projects" :key="index" :href="project.link"
-                target="_blank">
-                <span class="project-thumb basis-full ">
-                    <img class=" h-full object-cover transition-all" :src="thumbs[project.thumbnail]" :alt="project.title">
-                </span>
-                <span class="basis-full space-y-3 px-2">
-                    <h3>{{ project.title }}</h3>
-                    <p class="font-light text-brand-x/90 text-base">Started: {{ project.startDate }}, Ended: {{
-                        project.endDate }}</p>
-                    <span class="project-tag">Tech/Tools Used:
-                        <ul>
-                            <li v-for="(tag, index) in project.tags" :key="index">{{ tag }} </li>
-                        </ul>
-                    </span>
-                    <p>{{ project.summary }}</p>
-                </span>
-            </a>
-        </div>
-    </Section>
+  <Section contained>
+    <h2 class="pb-8">Projects</h2>
+    <div class="space-y-8 sm:space-y-16">
+      <a
+        class="project-card"
+        v-for="(project, index) in projects"
+        :key="index"
+        :href="project.link"
+        target="_blank"
+      >
+        <span class="project-thumb basis-full">
+          <img
+            class="h-full object-cover transition-all"
+            :src="thumbs[project.thumbnail]"
+            :alt="project.title"
+          />
+        </span>
+        <span class="basis-full space-y-3 px-2">
+          <h3>{{ project.title }}</h3>
+          <p class="font-light text-brand-x/90 text-base">
+            Started: {{ project.startDate }}, Ended: {{ project.endDate }}
+          </p>
+          <span class="project-tag"
+            >Tech/Tools Used:
+            <ul>
+              <li v-for="(tag, index) in project.tags" :key="index">{{ tag }}</li>
+            </ul>
+          </span>
+          <p>{{ project.summary }}</p>
+        </span>
+      </a>
+    </div>
+  </Section>
 </template>
 
 <style scoped>
 @import "tailwindcss/theme" theme(reference);
 @import "../assets/styles/theme.css" theme(reference);
 
-
-
 .project-card {
-    @apply flex h-fit flex-col relative sm:flex-row sm:even:flex-row-reverse border-1 border-transparent hover:not-even:sm:border-e-brand-y/50 hover:even:sm:border-s-brand-y/50 gap-4 transition-all overflow-hidden;
+  @apply flex h-fit flex-col relative sm:flex-row sm:even:flex-row-reverse border-1 border-transparent hover:not-even:sm:border-e-brand-y/50 hover:even:sm:border-s-brand-y/50 gap-4 transition-all overflow-hidden;
 
+  & .project-tag {
+    @apply text-base font-bold text-brand-y block;
 
-    & .project-tag {
-        @apply text-base font-bold text-brand-y block;
-
-        & ul {
-            @apply flex flex-row flex-wrap;
-        }
-
-        & li {
-            @apply text-sm list-disc font-light ml-6 text-brand-x;
-        }
+    & ul {
+      @apply flex flex-row flex-wrap;
     }
-    & .project-thumb{
-        @apply block overflow-hidden border border-brand-y/50 relative;
-        &:before {
-            @apply absolute text-center font-bold inset-full bottom-0 text-transparent content-['View_Project'] font-bold py-4 transition-all z-1;
-        }
+
+    & li {
+      @apply text-sm list-disc font-light ml-6 text-brand-x;
     }
-    &:hover .project-thumb{
-        img{
-            @apply scale-110;
-        }
-        &:before {
-            @apply text-brand-x inset-x-0 top-auto bg-brand-y/80 backdrop-blur-sm;
-        }
+  }
+  & .project-thumb {
+    @apply block overflow-hidden border border-brand-y/50 relative;
+    &:before {
+      @apply absolute text-center font-bold inset-full bottom-0 text-transparent content-['View_Project'] font-bold py-4 transition-all z-1;
     }
+  }
+  &:hover .project-thumb {
+    img {
+      @apply scale-110;
+    }
+    &:before {
+      @apply text-brand-x inset-x-0 top-auto bg-brand-y/80 backdrop-blur-sm;
+    }
+  }
 }
 
 h3 {
-    @apply text-brand-y text-3xl font-bold;
+  @apply text-brand-y text-3xl font-bold;
 }
 </style>
