@@ -85,9 +85,9 @@ const printPage = () => window.print();
       <div class="col-span-2 px-6">
         <h1 class="text-4xl font-bold text-brand-y">Shakil Nawaz</h1>
         <h3 class="font-bold">Web Developer, Tech Nerd</h3>
-        <a class="hover:text-brand-y" href="https://shakilnwz.github.io">
+        <a class="hover:text-brand-y" href="https://shakilnwz.pages.dev">
           🌏
-          <span class="underline underline-offset-1">shakilnwz.github.io</span>
+          <span class="underline underline-offset-1">shakilnwz.pages.dev</span>
         </a>
         <p class="text-justify pb-4 pt-2">
           Driven and goal-oriented web developer with over 3 years of experience
@@ -123,7 +123,7 @@ const printPage = () => window.print();
           </li>
           <li>
             <SocialLink
-              textHighlight="Discord"
+              textHighlight="@me/shakilnwz"
               href="https://discord.com/channels/@me/shakilnwz"
               :svgd="iconList.discord"
               ariaLebel="find me on discord"
@@ -197,7 +197,7 @@ const printPage = () => window.print();
   }
 }
 .resume {
-  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-hidden gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-6;
+  @apply mx-auto max-w-[211mm] print:max-w-[210mm] grid-cols-1 sm:grid-cols-3 print:w-[210mm] print:grid-cols-3 overflow-x-auto print:overflow-hidden gap-4 sm:gap-0 grid divide-brand-y sm:divide-x-2 bg-surface w-full border-1 print:border-0 border-brand-y/40 py-5;
 }
 ul.skills {
   @apply flex flex-row flex-wrap gap-1.5;
